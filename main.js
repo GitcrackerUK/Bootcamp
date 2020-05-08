@@ -82,7 +82,7 @@
 //     console.log(sub);
 // }
 
-// let myName = 'Pawel Siwek';
+// let myName = 'Pawel ek';
 // let upper;
 // for(let letters of myName){
 //     console.log(letters.toUpperCase());
@@ -373,8 +373,7 @@
 // let double = makeDouble(23);
 // console.log(double(2));
 
-
-//nested function factories 
+//nested function factories
 // let make = function(x) {
 // 	return function(y) {  //up()
 // 		return function(z) { //mid()
@@ -383,12 +382,9 @@
 // 	};
 // };
 
-
 // let up = make(2);
 // let mid = up(3);
 // console.log(mid(4));
-
-
 
 // let makeFunc = function(x,y){
 //     return function(num){
@@ -402,8 +398,6 @@
 // let inNewMillennium = makeFunc(2000,2020);
 
 // console.log(inNewMillennium(1999));
-
-
 
 // let make = function(x,y){
 //     return function (num){
@@ -429,9 +423,195 @@
 
 // setTimeout(grumpy,1000);
 
-setTimeout(function(){
-    console.log("Called from anonymous callback function ");
-},1500)
+// setTimeout(function(){
+//     console.log("Called from anonymous callback function ");
+// },1500)
 
-const btn = document.querySelector('button');
-btn.addEventListener('click',function(){alert('Hi, how are you?')});
+// const btn = document.querySelector('button');
+// btn.addEventListener('click',function(){alert('Hi, how are you?')});
+// const btn = document.querySelector('button');
+// btn.addEventListener('click',function(){alert('Hi, how are you?')});
+
+// let array = [1,2,3,4,5,6,7,7,8,9,9,765,4,3,3,3,4,4,44,4];
+// array.forEach( (num)=> {
+//     console.log(num);
+// });
+// let printDouble=function(num){
+//     console.log(num*2);
+// }
+
+// array.forEach(printDouble);
+
+// const books = [{
+//     title: 'Good Omens',
+//     authors: ['Terry Pratchett', 'Neil Gaiman'],
+//     rating: 4.25
+//   },
+//   {
+//     title: 'Bone: The Complete Edition',
+//     authors: ['Jeff Smith'],
+//     rating: 4.42
+//   },
+//   {
+//     title: 'American Gods',
+//     authors: ['Neil Gaiman'],
+//     rating: 4.11
+//   },
+//   {
+//     title: 'A Gentleman in Moscow',
+//     authors: ['Amor Towles'],
+//     rating: 4.36
+//   }
+// ]
+
+// books.forEach((book)=>{console.log(book.rating);})
+// let total = 0;
+// let count = 0;
+// books.forEach((book)=>{
+//  total += book.rating
+//  count += 1
+// });
+
+// console.log('Average is: '+total/count);
+
+// books.forEach((book)=>{
+//     console.log(book.title);
+// })
+
+// let titles = books.map((book)=>{return book.title})
+
+// console.log(titles);
+
+// function clTitle(obj){
+//     return obj.title;
+// }
+// console.log(books.map(clTitle));
+
+// const numbers = [2,3,43,22,56,44,221,56,9];
+
+// function checkForEven(num){
+//     return{
+//         value:num,
+//         isEven:num % 2 === 0
+//     };
+// }
+
+// let resultObj = numbers.map(checkForEven);
+// console.log(resultObj);
+
+// let res = x => { }; //arrow function without parentheses as there is only one parameter
+// let res44 = (x) => { };
+// let ress = function(x){ };
+// function res1(x){ };
+
+// Wednesday 06/05/20
+
+//.map
+// const num = [2,3,33,4,423,423,554,233,];
+// const word =['qwer','ertt','wee','dfdf','mkbvk','lporr'];
+
+// let doubled = num.map(function(digit){return digit * 2});
+// let upperDot = word.map(function(word){return word.toUpperCase().split('').join('.')})
+
+// console.log(doubled);
+// console.log(upperDot);
+
+// function splitByLine(arg){
+//   return arg.toUpperCase().split('').join('-');
+// }
+
+// let splitBy = word.map(splitByLine);
+// console.log(splitBy);
+
+// // Arrow function (refresh);
+
+// let arrowNoPare = x =>{};
+// let arrowPare = () => {};
+// let arrowPareTwoPara = (x,z) => {};
+// let simplifiedArrow = x => (console.log( x * 2));
+// simplifiedArrow(3);
+
+// let fromArrowNum = num.map(x => x *10);  //short version with parentheses doesn't required return.
+
+// let arrow = x => { return x + 10} //short version with curly braces REQUIRE RETURN
+
+// console.log(fromArrowNum);
+
+let movies = [ 'The fantastic Mr. Fox', 'Mr. and Mrs. Smith', 'Mrs. Doubtfire', 'Mr. Deeds' ];
+const movie = movies.find((movie) => {
+	return movie.includes('Mrs');
+});
+
+let mrs = movie.includes('Mrs');
+console.log(mrs); //true
+console.log(movie); //Mr. and Mrs. Smith
+
+const books = [
+	{
+		title   : 'Good Omens',
+		authors : [ 'Terry Pratchett', 'Neil Gaiman' ],
+		rating  : 4.25
+	},
+	{
+		title   : 'Bone: The Complete Edition',
+		authors : [ 'Jeff Smith' ],
+		rating  : 4.42
+	},
+	{
+		title   : 'American Gods',
+		authors : [ 'Neil Gaiman' ],
+		rating  : 4.11
+	},
+	{
+		title   : 'A Gentleman in Moscow',
+		authors : [ 'Amor Towles' ],
+		rating  : 4.36
+	}
+];
+
+function check(book) {
+	return book.authors.includes('Amor Towles');
+}
+console.log(books.find(check).title);
+
+let workers = [
+	{
+		name:'James',
+		occupation:'Mechanic',
+		age:35,
+		gender:'Male'
+	},
+	{
+		name:'Don',
+		occupation:'Dentist',
+		age:'22',
+		gender:'Male'
+	},
+	{
+		name:'Janet',
+		occupation:'Waiter',
+		age:'45',
+		gender:'Female'
+	},
+	{
+		name:'Arthur',
+		occupation:'Painter',
+		age:50,
+		gender:'Male'
+	},
+	{
+		name:'Stephen',
+		occupation:'Developer',
+		age:39,
+		gender:'Male'
+	}
+];
+
+function findDentist(target){
+  return target.occupation === 'Dentist';
+}
+
+let dentist = workers.find(findDentist);
+
+// console.log(dentist.name);
+console.log(workers.find(x=>x.occupation==='Waiter').name);
