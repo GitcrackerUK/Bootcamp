@@ -429,9 +429,9 @@
 
 // setTimeout(grumpy,1000);
 
-// setTimeout(function(){
-//     console.log("Called from anonymous callback function ");
-// },1500)
+setTimeout(function(){
+    console.log("Called from anonymous callback function ");
+},1500)
 
-// const btn = document.querySelector('button');
-// btn.addEventListener('click',function(){alert('Hi, how are you?')});
+const btn = document.querySelector('button');
+btn.addEventListener('click',function(){alert('Hi, how are you?')});
