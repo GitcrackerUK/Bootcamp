@@ -613,3 +613,4 @@ let dentist = workers.find(findDentist);
 
 // console.log(dentist.name);
 console.log(workers.find(x=>x.occupation==='Waiter').name);
+
