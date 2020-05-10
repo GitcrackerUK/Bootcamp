@@ -574,53 +574,57 @@
 // }
 // console.log(books.find(check).title);
 
-let workers = [{
-		name: 'James',
-		occupation: 'Mechanic',
-		age: '35',
-		gender: 'Male'
-	},
-	{
-		name: 'Don',
-		occupation: 'Dentist',
-		age: 22,
-		gender: 'Male'
-	},
-	{
-		name: 'Janet',
-		occupation: 'Waiter',
-		age: '45',
-		gender: 'Female'
-	},
-	{
-		name: 'Arthur',
-		occupation: 'Painter',
-		age: '50',
-		gender: 'Male'
-	},
-	{
-		name: 'Stephen',
-		occupation: 'Developer',
-		age: '39',
-		gender: 'Male'
-	}
-];
-console.log(workers);
+// let workers = [{
+// 		name: 'James',
+// 		occupation: 'Mechanic',
+// 		age: '35',
+// 		gender: 'Male'
+// 	},
+// 	{
+// 		name: 'Don',
+// 		occupation: 'Dentist',
+// 		age: 22,
+// 		gender: 'Male'
+// 	},
+// 	{
+// 		name: 'Janet',
+// 		occupation: 'Waiter',
+// 		age: '45',
+// 		gender: 'Female'
+// 	},
+// 	{
+// 		name: 'Arthur',
+// 		occupation: 'Painter',
+// 		age: '50',
+// 		gender: 'Male'
+// 	},
+// 	{
+// 		name: 'Stephen',
+// 		occupation: 'Developer',
+// 		age: '39',
+// 		gender: 'Male'
+// 	}
+// ];
+// console.log(workers);
 
-function findDentist(target) {
-	return target.occupation === 'Dentist';
-}
-let sortUp = workers.sort((a, b) => a.age - b.age);
-console.log(sortUp);
+// console.log(dentist.name);
+
+// console.log(workers.find(x=>x.occupation==='Waiter').name);
+
+// function findDentist(target) {
+// 	return target.occupation === 'Dentist';
+// }
+// let sortUp = workers.sort((a, b) => a.age - b.age);
+// console.log(sortUp);
 
 
-let stringAge = []
-for (let worker of workers) {
-	worker.age = parseInt(worker.age);
-	stringAge.push(parseInt(worker.age));
-}
+// let stringAge = []
+// for (let worker of workers) {
+// 	worker.age = parseInt(worker.age);
+// 	stringAge.push(parseInt(worker.age));
+// }
 
-console.log(workers);
+// console.log(workers);
 
 
 // let word = 'what is this ?'
@@ -639,47 +643,212 @@ console.log(workers);
 // })
 // console.log(reduced);
 
+// let rest = array.reduce((total, current) => {
+// 	return total + current;
+// });
+// console.log(rest);
+
+// let max = array.reduce((total, current) => {
+// 	return Math.max(total, current);
+// });
+// console.log(max);
+
+// let min = array.reduce((total, current) => {
+// 	return Math.min(total, current)
+// })
+
+// console.log(min);
 
 
-let rest = array.reduce((total, current) => {
-	return total + current;
-});
+// function reduced(array) {
+// 	let sum = 0
+// 	for (let i = 0; i < array.length - 1; i++) {
+// 		sum += sum + array[i]
+// 	}
+// 	return sum;
+// }
+
+// let myArray = [2, 3, 4, 2, 1, 2, 343, 23]
+
+// for (var i = 0; i < Arr.length; i++){
+// 	console.log(`Outer ${Arr[i]}`);
+// 	for (var j = 0; j < i; j++){
+
+// 		console.log(`Inner ${Arr[j]}`);
+// 	}
+// }
+
+
+// let redu = Arr.reduce((total, current) => total + current);
+// console.log(redu);
+// let mult = Arr.reduce((t, cv) => {
+// 	if (t > 0 && cv > 0) {
+// 		return t * cv
+// 	} else {
+// 		return t + cv
+// 	}
+// });
+
+// console.log(mult);
+// var Arr = [1, 7, 2, 8, 3, 4, 5, 0, 9];
+
+// let maX = Arr.reduce((max, currentValue) => {
+// 	if (max > currentValue) return max;
+// 	return currentValue;
+// }, );
+
+// console.log(maX);
+
+
+// function maxxMath(array) {
+// 	let max = array.reduce((t, cv) => {
+// 		return Math.max(t, cv);
+// 	});
+// 	console.log(`This is form function and Math.max() ${max}`);
+
+
+// };
+// maxxMath(Arr);
+
+
+// let min = Arr.reduce((t, cv) => {
+// 	return Math.min(t, cv);
+// },);
+
+
+// console.log(min);
+
+
+// let red = [10, 20, 30, 40, 50].reduce((t, cv) => {
+// 	return t + cv;
+// }, 1000);
+
+// console.log(red);
+
+// function randomY(array, itemsInArray = 5) {
+// 	for (let i = 0; i < itemsInArray; i++) {
+// 		if (Math.floor(Math.random() * 2) + 1 === 1) {
+// 			array.push('Y');
+// 		} else {
+// 			array.push('N');
+// 		}
+// 	};
+// 	return array;
+// }
+
+// let votes = [];
+// randomY(votes, 10);
+// console.log(votes);
+
+// let results = votes.reduce((tot, cur) => {
+// 	if (tot[cur]) {
+// 		console.log(tot[cur]);
+// 		tot[cur]++;
+// 	} else {
+// 		tot[cur] = 1;
+// 	}
+// 	return tot
+// }, {})
+
+// console.log(results);
+
+
+const books = [{
+		title: 'Good Omens',
+		authors: ['Terry Pratchett', 'Neil Gaiman'],
+		rating: 4.25,
+		genres: ['fiction', 'fantasy']
+	},
+	{
+		title: 'Changing My Mind',
+		authors: ['Zadie Smith'],
+		rating: 3.83,
+		genres: ['nonfiction', 'essays']
+	},
+	{
+		title: 'Bone: The Complete Edition',
+		authors: ['Jeff Smith'],
+		rating: 4.42,
+		genres: ['fiction', 'graphic novel', 'fantasy']
+	},
+	{
+		title: 'American Gods',
+		authors: ['Neil Gaiman'],
+		rating: 4.11,
+		genres: ['fiction', 'fantasy']
+	},
+	{
+		title: 'A Gentleman in Moscow',
+		authors: ['Amor Towles'],
+		rating: 4.36,
+		genres: ['fiction', 'historical fiction']
+	},
+	{
+		title: 'The Name of the Wind',
+		authors: ['Patrick Rothfuss'],
+		rating: 4.54,
+		genres: ['fiction', 'fantasy']
+	},
+	{
+		title: 'The Overstory',
+		authors: ['Richard Powers'],
+		rating: 4.19,
+		genres: ['fiction', 'short stories']
+	},
+	{
+		title: 'A Truly Horrible Book',
+		authors: ['Xavier Time'],
+		rating: 2.18,
+		genres: ['fiction', 'garbage']
+	},
+	{
+		title: 'The Way of Kings',
+		authors: ['Brandon Sanderson'],
+		rating: 4.65,
+		genres: ['fantasy', 'epic']
+	},
+	{
+		title: 'Lord of the flies',
+		authors: ['William Golding'],
+		rating: 3.67,
+		genres: ['fiction']
+	}
+]
+
+// let bookRating = books.reduce((groupedBooks, book) => {
+// 	const key = Math.floor(book.rating);
+// 	if (!groupedBooks[key]) groupedBooks[key] = [];
+// 	groupedBooks[key].push(book)
+// 	return groupedBooks;
+// },{});
+
+// console.log(bookRating);
+
+let rest = books.reduce((obj, book) => {
+	const key = Math.floor(book.rating);
+	if (!obj[key]) obj[key] = [];
+	obj[key].push(book);
+
+	return obj;
+}, {});
+
+
 console.log(rest);
 
-let max = array.reduce((total, current) => {
-	return Math.max(total, current);
-});
-console.log(max);
-
-let min = array.reduce((total, current) => {
-	return Math.min(total, current)
-})
-
-console.log(min);
+//genres
 
 
-function reduced(array) {
-	let sum = 0
-	for (let i = 0; i < array.length - 1; i++) {
-		sum += sum + array[i]
-	}
-	return sum;
-}
+//assign to let 
+//create arrow func with obj as initial value of BookGroup
+//assign obj.key variable =>   let key = obj.key
+// create condition to create array in property if not present or push() to existing property array
+//return object with properties
 
-let myArray = [2, 3, 4, 2, 1, 2, 343, 23]
-var Arr = [1, 7, 2, 8, 3, 4, 5, 0, 9];
+let sortByGenre = books.reduce((obj, book) => {
+	let key = book.genres;
+	if (!obj[key]) obj[key] = [];
+	obj[key].push(book.authors);
+	return obj;
+}, {});
 
-for (var i = 1; i < Arr.length; i++)
-
-    for (var j = 0; j < i; j++)
-        if (Arr[i] < Arr[j]) {
-let str = 'str'
-		str
-        //   var x = Arr[i];
-        //   Arr[i] = Arr[j];
-        //   Arr[j] = x;
-        }
-
-// console.log(dentist.name);
-console.log(workers.find(x=>x.occupation==='Waiter').name);
-
+console.log(sortByGenre);
