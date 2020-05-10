@@ -429,6 +429,8 @@
 
 // const btn = document.querySelector('button');
 // btn.addEventListener('click',function(){alert('Hi, how are you?')});
+// const btn = document.querySelector('button');
+// btn.addEventListener('click',function(){alert('Hi, how are you?')});
 
 // let array = [1,2,3,4,5,6,7,7,8,9,9,765,4,3,3,3,4,4,44,4];
 // array.forEach( (num)=> {
@@ -535,81 +537,148 @@
 
 // console.log(fromArrowNum);
 
-let movies = [ 'The fantastic Mr. Fox', 'Mr. and Mrs. Smith', 'Mrs. Doubtfire', 'Mr. Deeds' ];
-const movie = movies.find((movie) => {
-	return movie.includes('Mrs');
+// let movies = [ 'The fantastic Mr. Fox', 'Mr. and Mrs. Smith', 'Mrs. Doubtfire', 'Mr. Deeds' ];
+// const movie = movies.find((movie) => {
+// 	return movie.includes('Mrs');
+// });
+
+// let mrs = movie.includes('Mrs');
+// console.log(mrs); //true
+// console.log(movie); //Mr. and Mrs. Smith
+
+// const books = [
+// 	{
+// 		title   : 'Good Omens',
+// 		authors : [ 'Terry Pratchett', 'Neil Gaiman' ],
+// 		rating  : 4.25
+// 	},
+// 	{
+// 		title   : 'Bone: The Complete Edition',
+// 		authors : [ 'Jeff Smith' ],
+// 		rating  : 4.42
+// 	},
+// 	{
+// 		title   : 'American Gods',
+// 		authors : [ 'Neil Gaiman' ],
+// 		rating  : 4.11
+// 	},
+// 	{
+// 		title   : 'A Gentleman in Moscow',
+// 		authors : [ 'Amor Towles' ],
+// 		rating  : 4.36
+// 	}
+// ];
+
+// function check(book) {
+// 	return book.authors.includes('Amor Towles');
+// }
+// console.log(books.find(check).title);
+
+let workers = [{
+		name: 'James',
+		occupation: 'Mechanic',
+		age: '35',
+		gender: 'Male'
+	},
+	{
+		name: 'Don',
+		occupation: 'Dentist',
+		age: 22,
+		gender: 'Male'
+	},
+	{
+		name: 'Janet',
+		occupation: 'Waiter',
+		age: '45',
+		gender: 'Female'
+	},
+	{
+		name: 'Arthur',
+		occupation: 'Painter',
+		age: '50',
+		gender: 'Male'
+	},
+	{
+		name: 'Stephen',
+		occupation: 'Developer',
+		age: '39',
+		gender: 'Male'
+	}
+];
+console.log(workers);
+
+function findDentist(target) {
+	return target.occupation === 'Dentist';
+}
+let sortUp = workers.sort((a, b) => a.age - b.age);
+console.log(sortUp);
+
+
+let stringAge = []
+for (let worker of workers) {
+	worker.age = parseInt(worker.age);
+	stringAge.push(parseInt(worker.age));
+}
+
+console.log(workers);
+
+
+// let word = 'what is this ?'
+//  let arrow = [1,'3',undefined,'undefined',false,0,word,]
+
+//  for(let i of arrow){
+// 		 console.log(`${i} is ${typeof i}`);
+// //  }
+
+// console.log(workers.sort((a,b)=>{a.age-b.age;}));
+
+// let array = [1,2,3,4,5,6];
+
+// let reduced = array.reduce((total,currentValue)=>{
+// 	return total + currentValue; 
+// })
+// console.log(reduced);
+
+
+
+let rest = array.reduce((total, current) => {
+	return total + current;
 });
+console.log(rest);
 
-let mrs = movie.includes('Mrs');
-console.log(mrs); //true
-console.log(movie); //Mr. and Mrs. Smith
+let max = array.reduce((total, current) => {
+	return Math.max(total, current);
+});
+console.log(max);
 
-const books = [
-	{
-		title   : 'Good Omens',
-		authors : [ 'Terry Pratchett', 'Neil Gaiman' ],
-		rating  : 4.25
-	},
-	{
-		title   : 'Bone: The Complete Edition',
-		authors : [ 'Jeff Smith' ],
-		rating  : 4.42
-	},
-	{
-		title   : 'American Gods',
-		authors : [ 'Neil Gaiman' ],
-		rating  : 4.11
-	},
-	{
-		title   : 'A Gentleman in Moscow',
-		authors : [ 'Amor Towles' ],
-		rating  : 4.36
+let min = array.reduce((total, current) => {
+	return Math.min(total, current)
+})
+
+console.log(min);
+
+
+function reduced(array) {
+	let sum = 0
+	for (let i = 0; i < array.length - 1; i++) {
+		sum += sum + array[i]
 	}
-];
-
-function check(book) {
-	return book.authors.includes('Amor Towles');
-}
-console.log(books.find(check).title);
-
-let workers = [
-	{
-		name:'James',
-		occupation:'Mechanic',
-		age:35,
-		gender:'Male'
-	},
-	{
-		name:'Don',
-		occupation:'Dentist',
-		age:'22',
-		gender:'Male'
-	},
-	{
-		name:'Janet',
-		occupation:'Waiter',
-		age:'45',
-		gender:'Female'
-	},
-	{
-		name:'Arthur',
-		occupation:'Painter',
-		age:50,
-		gender:'Male'
-	},
-	{
-		name:'Stephen',
-		occupation:'Developer',
-		age:39,
-		gender:'Male'
-	}
-];
-
-function findDentist(target){
-  return target.occupation === 'Dentist';
+	return sum;
 }
 
-let dentist = workers.find(findDentist);
+let myArray = [2, 3, 4, 2, 1, 2, 343, 23]
+var Arr = [1, 7, 2, 8, 3, 4, 5, 0, 9];
+
+for (var i = 1; i < Arr.length; i++)
+
+    for (var j = 0; j < i; j++)
+        if (Arr[i] < Arr[j]) {
+let str = 'str'
+		str
+        //   var x = Arr[i];
+        //   Arr[i] = Arr[j];
+        //   Arr[j] = x;
+        }
 
 // console.log(dentist.name);
 console.log(workers.find(x=>x.occupation==='Waiter').name);
