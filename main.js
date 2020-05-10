@@ -852,3 +852,5 @@ let sortByGenre = books.reduce((obj, book) => {
 }, {});
 
 console.log(sortByGenre);
+
+// Sunday finish
