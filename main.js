@@ -824,13 +824,13 @@ const books = [{
 
 // console.log(bookRating);
 
-let rest = books.reduce((obj, book) => {
-	const key = Math.floor(book.rating);
-	if (!obj[key]) obj[key] = [];
-	obj[key].push(book);
+// let rest = books.reduce((obj, book) => {
+// 	const key = Math.floor(book.rating);
+// 	if (!obj[key]) obj[key] = [];
+// 	obj[key].push(book);
 
-	return obj;
-}, {});
+// 	return obj;
+// }, {});
 
 
 console.log(rest);
