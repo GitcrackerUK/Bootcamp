@@ -844,13 +844,13 @@ console.log(rest);
 // create condition to create array in property if not present or push() to existing property array
 //return object with properties
 
-let sortByGenre = books.reduce((obj, book) => {
-	let key = book.genres;
-	if (!obj[key]) obj[key] = [];
-	obj[key].push(book.authors);
-	return obj;
-}, {});
+// let sortByGenre = books.reduce((obj, book) => {
+// 	let key = book.genres;
+// 	if (!obj[key]) obj[key] = [];
+// 	obj[key].push(book.authors);
+// 	return obj;
+// }, {});
 
-console.log(sortByGenre);
+// console.log(sortByGenre);
 
-// Sunday finish
+// // Sunday finish
