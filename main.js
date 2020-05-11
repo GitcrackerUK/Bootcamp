@@ -854,3 +854,72 @@
 // console.log(sortByGenre);
 
 // // Sunday finish
+
+// monday 11.05.20
+
+// function def(a, s) {
+// 	if (typeof a === "number" && typeof s === "number") {
+// 		return a * s
+// 	}
+// 	if (typeof a === "undefined" && typeof s === "undefined") {
+// 		return "There are no numbers";
+// 	}
+// 	if (a = typeof a === "undefined" ? a = 1 : a) {
+// 		return a * s
+// 	}if(s = typeof s === "undefined" ? s = 1 : s){
+// 		return a*s
+// 	}
+// }
+// let word;
+// let letters;
+// // console.log(def(word,letters));
+// console.log(def(word, 5));
+// console.log(def(6, 5));
+
+
+// let greet = (person, greeting = "HI")=>{
+// 	console.log(greeting+person);
+// };
+// let person="Jakub"
+// console.log(greet(person));
+
+// let defArray = (a,b={John:"Dad"})=>{
+// console.log(a+b);
+// };
+
+// defArray("Hello")
+// console.log({John:"Dad"});
+
+// let nums = [2,3,4,454,54,333,5,6,7,85,55];
+
+// console.log(Math.max(...nums));
+
+// console.log(Math.min(...nums));
+
+// console.log(...nums);
+
+// let colors =['red','Yellow','green','purple']
+
+// let spread = (a,b,c,d)=>{
+// 	console.log("a:",a);
+// 	console.log("b:",b);
+// 	console.log("c:",c);
+// 	console.log("d:",d);
+// };
+
+// spread(...colors);
+
+let arr1 = [1,2,3,4];
+let arr2 = [5,6,7,8];
+let arr3 = [9,10,11];
+
+let arrSum= arr1.concat(arr2);
+let arrSum1= arr1.concat(arr2);
+console.log(arrSum===arrSum1);
+
+let spred = [...arr1,...arr2,...arr3];
+let spred1 = [...arr1,...arr2,...arr3];
+console.log(spred===spred1);
+
+let reverseSpread = [...arr3,...arr2,...arr1];
+console.log(reverseSpread);
