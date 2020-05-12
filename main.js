@@ -928,33 +928,37 @@
 //////////////////////////
 //night coding
 
-let raceResults = [
-    'Fast one',
-    'Fast but not fastest',
-    'average',
-    'slower than rest',
-    'The slowest',
-    'Captain slow'
-]
+// let raceResults = [
+//     'Fast one',
+//     'Fast but not fastest',
+//     'average',
+//     'slower than rest',
+//     'The slowest',
+//     'Captain slow'
+// ]
 
-// let gold = raceResults[0];
-// let silver = raceResults[1];
-// let bronze = raceResults[2];
-let [gold,silver,bronze] = raceResults;
-console.log(gold);
-console.log(silver);
+// // let gold = raceResults[0];
+// // let silver = raceResults[1];
+// // let bronze = raceResults[2];
+// let [gold,silver,bronze] = raceResults;
+// console.log(gold);
+// console.log(silver);
 
-let [first,,third,,,sixth]=raceResults;
-console.log(first,third,sixth);
+// let [first,,third,,,sixth]=raceResults;
+// console.log(first,third,sixth);
 
-let [winner,...others]=raceResults;
-console.log("The winner is: "+winner);
-for (const iterator of others) {
-    console.log(`Rest of the runners: ${iterator}`);
-}
+// let [winner,...others]=raceResults;
+// console.log("The winner is: "+winner);
+// for (const iterator of others) {
+//     console.log(`Rest of the runners: ${iterator}`);
+// }
 
-// let [to,mid,bottom]="Pawel";
-let {to,mid,bottom}=this;
-console.log( to );
-console.log(mid);
-console.log(bottom);
+let runner={
+    first:"Tony",
+    last:"Smith",
+    age:35,
+    title:"Sir"
+};
+
+let {first,last}=runner;
+console.log(first);
