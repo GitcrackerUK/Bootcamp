@@ -1051,11 +1051,11 @@
 
 // sum("Pawel","Siwek","Mr","Boss","Sir")
 
-let sum = (...nums)=>(nums.reduce((t,cv)=> t*cv))
-console.log(sum(1,2,3,3));
+// let sum = (...nums)=>(nums.reduce((t,cv)=> t*cv))
+// console.log(sum(1,2,3,3));
 
 //////////////////////////
-//night coding
+//night coding Tuesday 12/05/20
 
 // let raceResults = [
 //     'Fast one',
@@ -1082,42 +1082,196 @@ console.log(sum(1,2,3,3));
 //     console.log(`Rest of the runners: ${iterator}`);
 // }
 
-let runner={
-    first:"Tony",
-    last:"Smith",
-    age:35,
-    title:"Sir"
-};
-
-let {first,last}=runner;
-console.log(first);
-let raceResults = [
-    'Fast one',
-    'Fast but not fastest',
-    'average',
-    'slower than rest',
-    'The slowest',
-    'Captain slow'
-]
+// let raceResults = [
+//     'Fast one',
+//     'Fast but not fastest',
+//     'average',
+//     'slower than rest',
+//     'The slowest',
+//     'Captain slow'
+// ]
 
 // let gold = raceResults[0];
 // let silver = raceResults[1];
 // let bronze = raceResults[2];
-let [gold,silver,bronze] = raceResults;
-console.log(gold);
-console.log(silver);
+// let [gold,silver,bronze] = raceResults;
+// console.log(gold);
+// console.log(silver);
 
-let [first,,third,,,sixth]=raceResults;
-console.log(first,third,sixth);
+// let [first,,third,,,sixth]=raceResults;
+// console.log(first,third,sixth);
 
-let [winner,...others]=raceResults;
-console.log("The winner is: "+winner);
-for (const iterator of others) {
-    console.log(`Rest of the runners: ${iterator}`);
-}
+// let [winner,...others]=raceResults;
+// console.log("The winner is: "+winner);
+// for (const iterator of others) {
+//     console.log(`Rest of the runners: ${iterator}`);
+// }
 
-// let [to,mid,bottom]="Pawel";
-let {to,mid,bottom}=this;
-console.log( to );
-console.log(mid);
-console.log(bottom);
+// // let [to,mid,bottom]="Pawel";
+// let {to,mid,bottom}=this;
+// console.log( to );
+// console.log(mid);
+// console.log(bottom);
+
+// let runner={
+//     first:"Tony",
+//     last:"Smith",
+//     age:35,
+//     title:"Sir"
+// };
+
+// // let {first,last}=runner;
+// // console.log(first);
+// // console.log(last);
+
+// let {first,last,city}=runner;
+// city="Reading"
+
+// console.log(city);
+
+// let { first:prime}=runner
+// console.log(prime);
+
+// let { last:surname}=runner;
+// console.log(surname);
+
+// let { first:firstName, last:lastName, ...otherPara } = runner
+
+// console.log(firstName);
+// console.log(lastName);
+// console.log(otherPara);
+
+// const results = [{
+//         first: "Eliud",
+//         last: "Kipchoge", //
+//         country: "Kenya",
+//     },
+//     {
+//         first: 'Feyisa', //
+//         last: 'Lilesa',
+//         country: 'Ethiopia'
+//     },
+//     {
+//         first: 'Galen',
+//         last: 'Rupp', //
+//         country: 'United States'
+//     }
+// ]
+
+// let  [,{country}]=results;
+// // console.log(country);
+// let [,,third]=results
+// let [first,...rest]=results
+
+// console.log(first);
+
+// let [,{first}]=results;
+// console.log(first);
+
+// let[,,{first}]=results
+// console.log(first);
+
+// let response = [
+//     'HTTP', '200 OK', 'application'
+// ]
+
+// function display([protocol, response, content]) {
+//     // console.log(`Protocol: ${protocol}`);
+//     console.log(`Status: ${response}`);
+// }
+
+// display(response);
+
+// let runner = {
+//     first: "Eliud",
+//     last: "Kipchoge", 
+//     country: "Kenya",
+// }
+// function display({first,last,...rest}){
+//     console.log(first,last);
+//     console.log(rest);
+// }
+
+// display(runner);
+
+// function display(person){
+//     let {first,last,...rest}=person;
+//     console.log(first,last);
+//     console.log(rest);
+// }
+
+// display(runner);
+
+// const getStats = (arr) => {
+//     const max = Math.max(...arr);
+//     const min = Math.min(...arr);
+//     const sum = arr.reduce((sum, r) => sum + r);
+//     const avg = sum / arr.length;
+//     // Using the new shorthand property syntax:
+//     return {
+//         max,
+//         min,
+//         sum,
+//         avg
+//     }
+// }
+// const reviews = [4.5, 5.0, 3.44, 2.8, 3.5, 4.0, 3.5]
+
+// console.log(getStats(reviews));
+
+
+// function pickCard() {
+//     const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
+//     const values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+
+//     function pick(arr) {
+//         //return random element from arr
+//         const idx = Math.floor(Math.random() * arr.length);
+//         return arr[idx];
+//     }
+
+//     let card = pick(suits);
+//     let color = pick(values);
+//     return {
+//         card,
+//         color,
+//     }
+// }
+// console.log(pickCard());
+
+// find not consecutive
+
+// let notCon = (arr) => {
+//     for (let i = 0; i < arr.length-1; ++i) {
+//         if ((arr[i + 1] - arr[i]) !== 1) {
+//             return arr[i + 1]
+//         }
+//     }
+//     return null
+// }
+// console.log(notCon([1, 2,3, 4,5, 6, 7, 8]));
+
+// function XO(str) {
+//     let strLower =str.toLowerCase();
+//     let x=0;
+//     let y=0;
+//     for(let i of strLower){
+//         if(i === "x"){
+//             x+=1
+//         }else{
+//             y+=1
+//         }
+//     }
+//     if(x===y)return true;
+//     return false;
+
+// }
+// console.log(XO("xo"))
+
+// function sortByLength (array) {
+//  return array.sort((a,b)=>a.length - b.length)
+//   };
+
+//   let sorted = sortByLength(["Beg", "Life", "I", "To"]);
+
+//   console.log(sorted);
