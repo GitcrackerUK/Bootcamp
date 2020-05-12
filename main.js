@@ -1053,3 +1053,37 @@
 
 let sum = (...nums)=>(nums.reduce((t,cv)=> t*cv))
 console.log(sum(1,2,3,3));
+
+//////////////////////////
+//night coding
+
+let raceResults = [
+    'Fast one',
+    'Fast but not fastest',
+    'average',
+    'slower than rest',
+    'The slowest',
+    'Captain slow'
+]
+
+// let gold = raceResults[0];
+// let silver = raceResults[1];
+// let bronze = raceResults[2];
+let [gold,silver,bronze] = raceResults;
+console.log(gold);
+console.log(silver);
+
+let [first,,third,,,sixth]=raceResults;
+console.log(first,third,sixth);
+
+let [winner,...others]=raceResults;
+console.log("The winner is: "+winner);
+for (const iterator of others) {
+    console.log(`Rest of the runners: ${iterator}`);
+}
+
+// let [to,mid,bottom]="Pawel";
+let {to,mid,bottom}=this;
+console.log( to );
+console.log(mid);
+console.log(bottom);
