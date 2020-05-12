@@ -909,17 +909,52 @@
 
 // spread(...colors);
 
-let arr1 = [1,2,3,4];
-let arr2 = [5,6,7,8];
-let arr3 = [9,10,11];
+// let arr1 = [1,2,3,4];
+// let arr2 = [5,6,7,8];
+// let arr3 = [9,10,11];
 
-let arrSum= arr1.concat(arr2);
-let arrSum1= arr1.concat(arr2);
-console.log(arrSum===arrSum1);
+// let arrSum= arr1.concat(arr2);
+// let arrSum1= arr1.concat(arr2);
+// console.log(arrSum===arrSum1);
 
-let spred = [...arr1,...arr2,...arr3];
-let spred1 = [...arr1,...arr2,...arr3];
-console.log(spred===spred1);
+// let spred = [...arr1,...arr2,...arr3];
+// let spred1 = [...arr1,...arr2,...arr3];
+// console.log(spred===spred1);
 
-let reverseSpread = [...arr3,...arr2,...arr1];
-console.log(reverseSpread);
+// let reverseSpread = [...arr3,...arr2,...arr1];
+// console.log(reverseSpread);
+
+
+//////////////////////////
+//night coding
+
+let raceResults = [
+    'Fast one',
+    'Fast but not fastest',
+    'average',
+    'slower than rest',
+    'The slowest',
+    'Captain slow'
+]
+
+// let gold = raceResults[0];
+// let silver = raceResults[1];
+// let bronze = raceResults[2];
+let [gold,silver,bronze] = raceResults;
+console.log(gold);
+console.log(silver);
+
+let [first,,third,,,sixth]=raceResults;
+console.log(first,third,sixth);
+
+let [winner,...others]=raceResults;
+console.log("The winner is: "+winner);
+for (const iterator of others) {
+    console.log(`Rest of the runners: ${iterator}`);
+}
+
+// let [to,mid,bottom]="Pawel";
+let {to,mid,bottom}=this;
+console.log( to );
+console.log(mid);
+console.log(bottom);
