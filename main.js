@@ -924,6 +924,135 @@
 // let reverseSpread = [...arr3,...arr2,...arr1];
 // console.log(reverseSpread);
 
+// let array = [1,2,3,4,5];
+
+// console.log(...array);
+// // console.log(Math.max(array));
+// let array = ["red","green","blue","yellow","gray"];
+// let spred = function(a,b,c,d,e){
+//     console.log("a:",a);
+//     console.log("b:",b);
+//     console.log("c:",c);
+//     console.log("d:",d);
+//     console.log("e:",e);
+// };
+
+// spred(...array)
+
+// let listNames = ['Pawel','Tony','Jack']
+
+// console.log(...listNames);
+
+// console.log(..."papa kazik");
+
+// let arr1 = [1,2,3,4,5]
+// let arr2 = [6,7,8,9,10]
+// let arr3 = [...arr1,...arr2]
+// console.log(arr3);
+
+// let list = [..."abs",..."dsf","adad"];
+
+// console.log(list);
+
+
+// let list1 = [1,2,3,4,5]
+// let list2 = [6,7,8,9,10]
+// let list3;
+// console.log(list3 = [...list1,...list2]);
+
+// const feline = {
+//     legs:4,
+//     family:'Felidae'
+// };
+// const canine ={
+//     family:'Caninae',
+//     furry:true
+// };
+// let butane = {
+//     ...feline,
+//     ...canine,
+//     adorable:true,
+// };
+// console.log(butane);
+
+// let houseCat={
+// legs:4,
+// nails:true,
+// furry:true,
+// character:"crazy"
+// }
+
+// let myCat ={
+//     color:"Black",
+//     ...houseCat,
+//     ...butane,
+//     length:this.length
+// }
+
+// console.log(myCat);
+
+// let obj = {}; 
+
+// let copy = { 
+
+// ...obj 
+
+// }; 
+
+// console.log(obj === copy); // false 
+
+
+// function check(a,b,c){ 
+// let arg = arguments;
+// console.log(arg);
+// let arg1 = [];
+// for(let i of arg){
+//     arg1.push(i);
+// }
+// console.log(arg1);
+// }
+// let arr = [1,2,3,4,5]
+// check(...arr);
+
+// let max = Math.max(...arr);
+
+// console.log(max);
+
+// function sum(){
+//     let arr = [...arguments]
+//     return arr.reduce((t,cv)=>{
+//         return t+cv ;
+//     })
+// }
+// console.log(sum(1,2,3,4,5));
+
+// function fulName(first,last){
+// console.log(arguments);
+// }
+
+// fulName("Tom","John",
+// "Junior")
+
+// function myNames(...list){
+//     let total = 0;
+//     for(let i of list){
+//         total += i
+//     }
+//     return total;
+// };
+
+// console.log(myNames(1,2,3,4,5))
+
+// function sum(first,last,...titles){
+//     console.log(`First: ${first}`);
+//     console.log(`Last: ${last}`);
+//     console.log(`titles: ${titles}`);
+// }
+
+// sum("Pawel","Siwek","Mr","Boss","Sir")
+
+let sum = (...nums)=>(nums.reduce((t,cv)=> t*cv))
+console.log(sum(1,2,3,3));
 
 //////////////////////////
 //night coding
@@ -962,3 +1091,33 @@ let runner={
 
 let {first,last}=runner;
 console.log(first);
+let raceResults = [
+    'Fast one',
+    'Fast but not fastest',
+    'average',
+    'slower than rest',
+    'The slowest',
+    'Captain slow'
+]
+
+// let gold = raceResults[0];
+// let silver = raceResults[1];
+// let bronze = raceResults[2];
+let [gold,silver,bronze] = raceResults;
+console.log(gold);
+console.log(silver);
+
+let [first,,third,,,sixth]=raceResults;
+console.log(first,third,sixth);
+
+let [winner,...others]=raceResults;
+console.log("The winner is: "+winner);
+for (const iterator of others) {
+    console.log(`Rest of the runners: ${iterator}`);
+}
+
+// let [to,mid,bottom]="Pawel";
+let {to,mid,bottom}=this;
+console.log( to );
+console.log(mid);
+console.log(bottom);
