@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 // for (let i = 1; i <= 10; i += 3) {
 // 	console.log('lol', i);
 // }
@@ -1355,19 +1355,136 @@
 // console.log(disemvowel('wewew'));
 
 //"A" and "T" are complements of each other, as "C" and "G". 
-function DNA(str) {
-    let converted =[]
-    for(let letter of str){
-       if(letter=="A"){
-           converted.push("T")
-       }else if(letter === "T"){
-        converted.push("A")
-       }else if(letter==="G"){
-           converted.push("C");
-       }else{
-           converted.push("G")
-       }
+// function DNA(str) {
+//     let converted =[]
+//     for(let letter of str){
+//        if(letter=="A"){
+//            converted.push("T")
+//        }else if(letter === "T"){
+//         converted.push("A")
+//        }else if(letter==="G"){
+//            converted.push("C");
+//        }else{
+//            converted.push("G")
+//        }
+//     }
+//         return converted.join('')
+//     }
+//     console.log(DNA('ATTGC'));
+
+
+// function dna(dna) {
+//     let obj = {
+//         'A': 'T',
+//         'T': 'A',
+//         'G': 'C',
+//         'C': 'G'
+//     }
+//     return dna.split('').map((k)=> obj[k]).join('')
+// }
+// console.log(dna("ATGC"));
+
+// let position = "Manager";
+// let position2 = "Supervisor";
+// let position3 = "Sales";
+
+// let person = "John";
+// let person1 = "Denis";
+// let person2 = "Tonny";
+
+// let team = {
+//     [position]: person,
+//     [position2]: person1,
+//     [position3]: person2
+// }
+
+// console.log(team);
+
+// let ret = "Fox";
+// let bos = "Wolf";
+
+// function addProp(obj,k,v){
+//     let copy = {
+//         ...obj
+//     }
+//     copy[k]=v;
+//     return copy;
+// }
+// let updatedTeam = addProp(team,"Cleaner","Mr.Jones")
+// console.log(updatedTeam);
+
+// let add = (obj,k,v)=> ({...obj,[k]:v});
+
+// console.log(add(team,"Seciurity","Jame"));
+
+
+
+// let math = {
+//     x: 20,
+//     y: 10,
+//     add: function (x, y) {
+//         return `Adding from parameters ${x+y},\n and adding object variables ${this.x+this.y}`
+//     },
+//     multi: function (x, y) {
+//         return x * y;
+//     },
+//     multiThis: function () {
+//         return this.x + this.y;
+//     },
+//     numbers: [1, 2, 3, 4, 5],
+//     map: function () {
+//         return this.numbers.map((item) => item * 10)
+//     },
+//     log(){
+//         console.log(window);
+//     }
+// }
+
+
+// console.log(math.add(3, 4));
+// console.log(math.multi(3, 4));
+// console.log(math.multiThis());
+// // console.log(math.log());
+// // console.log(math);
+
+
+// let test = {
+//     Logged() {
+//         console.log("Loged In");
+//     },
+//     Logout(){
+//         console.log("You are Logged out!");
+//     }
+// }
+
+// test.Logged();
+// test.Logout();
+
+// function checkThis(){
+// console.log("Hello");
+// // console.log(this);
+// }
+// checkThis()
+
+// console.log(window);
+
+let person = {
+    firstName: "John",
+    surname: "Smith",
+    nick: "Papa",
+    fullName() {
+        let {
+            firstName,
+            surname,
+            nick
+        } = this;
+        return firstName + surname + nick;
+        ;
+    },
+    call(){
+       console.log(this.fullName());
     }
-        return converted.join('')
-    }
-    console.log(DNA('ATTGC'));
+}
+person.call()
+person.nick = "King"
+person.fullName()
