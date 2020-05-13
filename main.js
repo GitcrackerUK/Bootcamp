@@ -227,7 +227,7 @@
 //     	let lowered = sentence.toLowerCase();
 //         let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 //     	for (let char of alphabet) {
-//     		if (!lowered.includes(char)) return false;  // Used in this version is "includes()"... not supported in IE
+//     		if (!lowered.includes(char)) return false;  // Used in this version "includes()"... not supported in IE
 //     	}
 //     	return true;
 //     }
@@ -1275,3 +1275,99 @@
 //   let sorted = sortByLength(["Beg", "Life", "I", "To"]);
 
 //   console.log(sorted);
+// let numbers = [5, 8, 12, 19, 22]
+// function sumTwoSmallestNumbers(numbers) {  
+//  numbers.sort((a,b)=>a-b)
+//  return numbers[0]+numbers[1]
+// }
+
+// console.log(sumTwoSmallestNumbers(numbers));
+
+
+// let str = "The quick brown fox jumps dog."
+// function check(string){
+//     let alph = "abcdefghijklmnopqrstuvwxyz"
+//     let toLow = string.toLowerCase()
+//     for (let letter of alph) {
+//         if (!toLow.includes(letter)) return false; 
+//     }
+//     return true
+// }
+// console.log(check(str));
+
+
+// function isPangram(sentence) {
+//         	let lowered = sentence.toLowerCase();
+//             let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+//         	for (let char of alphabet) {
+//         		if (!lowered.includes(char)) return false;  // Used in this version "includes()"... not supported in IE
+//         	}
+//         	return true;
+//         }
+
+//     console.log(isPangram('NymPhs blitz quick vex dwarf jog')); //true
+
+
+// function high(x){
+//     let alphabet = "abcdefghijklmnopqrstuvwxyz";
+//     let wordArray = x.split(' ');
+//     let words = {};
+//     for(let item of wordArray){
+//             let splitted = item.split('')
+//             let sum = 0;
+//             for(let i= 0; i < splitted.length;i++){
+//                 sum += alphabet.indexOf(splitted[i])+1;
+//             }
+//             words[item] = sum;
+//     }
+//     let Highest =  Object.keys(words).sort((a,b)=>words[b]-words[a]);
+//     return Highest[0]
+// }
+// console.log(high('kpjlueusjupvucgqoqrhjwxps jlnztdkdklqnphejqcnzikmcu zrggpxqulauhlvpiplndsthrw dveshitxdecwvirdurchxjvar'));
+
+// let results= {
+// "man":29
+// }
+// function disemvowel(str) {
+//     let vowels = "aeiouAEIOU".split('');
+//     let coment = str.split(' ');
+//     let splitted;
+//     let reduced = [];
+//     for(let word of coment){
+//         let reducedWord = [];
+//         splitted = word.split('');
+//         for(let letter of splitted){
+//             if(!vowels.includes(letter)){
+//               reducedWord.push(letter);
+//             }
+//         }
+//         reduced.push(reducedWord.join(''));
+//     }
+
+//     return reduced.join(' ');
+//   }
+
+// console.log(disemvowel("This website is for losers LOL!"));
+
+// function disemvowel(str) {
+//     return str.replace(/[aeiouAEIOU]/gi, '');
+// }
+// console.log(disemvowel('wewew'));
+
+//"A" and "T" are complements of each other, as "C" and "G". 
+function DNA(str) {
+    let converted =[]
+    for(let letter of str){
+       if(letter=="A"){
+           converted.push("T")
+       }else if(letter === "T"){
+        converted.push("A")
+       }else if(letter==="G"){
+           converted.push("C");
+       }else{
+           converted.push("G")
+       }
+    }
+        return converted.join('')
+    }
+    console.log(DNA('ATTGC'));
