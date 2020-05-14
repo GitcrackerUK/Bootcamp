@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 // for (let i = 1; i <= 10; i += 3) {
 // 	console.log('lol', i);
 // }
@@ -1468,23 +1468,166 @@
 
 // console.log(window);
 
-let person = {
-    firstName: "John",
-    surname: "Smith",
-    nick: "Papa",
-    fullName() {
-        let {
-            firstName,
-            surname,
-            nick
-        } = this;
-        return firstName + surname + nick;
-        ;
-    },
-    call(){
-       console.log(this.fullName());
-    }
-}
-person.call()
-person.nick = "King"
-person.fullName()
+// let person = {
+//     firstName: "John",
+//     surname: "Smith",
+//     nick: "Papa",
+//     fullName() {
+//         let {
+//             firstName,
+//             surname,
+//             nick
+//         } = this;
+//         return firstName + surname + nick;
+//         ;
+//     },
+//     call(){
+//        console.log(this.fullName());
+//     }
+// }
+// person.call();
+// person.nick = "King";
+// person.fullName();
+
+
+// let annoyer = {
+//     annoyingPhrases: ["Thanks in advance", "It is what it is", "At the end of the day", "With all due respect", "At this moment in time", "Just sayin'", "YOLO"],
+//     pickPhrase() {
+//         let phrases = this.annoyingPhrases;
+//         let i = Math.floor(Math.random() * phrases.length);
+//         return phrases[i];
+//     },
+//     start() {
+//         this.inter = setInterval(()=>{
+//             console.log(this.pickPhrase());
+//         },2000);      
+//     },
+//     stop(){
+//         clearInterval(this.inter);
+//     }
+// }
+// annoyer.start();
+// annoyer.stop();
+
+/// Thursday 14/05
+
+// function to find the biggest number from combination of four calculation with * + ( )
+
+
+// function calc(a,b,c){
+//     let ra = a*(b+c);
+//     let rb = a*b*c;
+//     let rc = a+b*c;
+//     let rd = (a+b)*c;
+//     return Math.max(ra,rb,rc,rd)
+// }
+
+// return Math.max(a*(b+c),a*b*c,a+b*c,(a+b)*c,a+b+c)
+
+// function makeDeck() {
+//     const deck = [];
+//     const suits = ['hearts', 'diamonds', 'spades', 'clubs'];
+//     const values = '2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A ';
+//     for (let value of values.split(',')) {
+//         for (let suit of suits) {
+//             deck.push({
+//                 value,
+//                 suit,
+//             });
+//         }
+//     }
+//     return deck;
+// }
+// console.log(makeDeck());
+
+//  return deck
+// }
+// function drawCard(deck) {
+//     let card = deck.pop();
+//     return card;
+// }
+// const myDeck = makeDeck();
+// const card1 = drawCard(myDeck);
+// console.log(card1);
+// const card2 = drawCard(myDeck);
+// console.log(card2);
+// console.log(myDeck);
+
+// const myDeck = {
+//     deck: [],
+//     drownCard: [],
+//     suits: ['hearts', 'diamonds', 'spades', 'clubs'],
+//     values: '2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A',
+//     initializeDeck() {
+//         const {
+//             deck,
+//             values,
+//             suits
+//         } = this;
+//         for (let value of values.split(',')) {
+//             for (let suit of suits) {
+//                 deck.push({
+//                     value,
+//                     suit,
+//                 });
+//             }
+//         }
+//     },
+//     drawCard() {
+//         let card = this.deck.pop();
+//         this.drownCard.push(card);
+//         return card;
+//     }
+
+// };
+// let makeDeckFromSpread = ()=>{
+//     return {
+//         ...myDeck
+//     }
+// }
+// ;
+// let makeDeck = () => {
+//     return {
+//         deck: [],
+//         drownCard: [],
+//         suits: ['hearts', 'diamonds', 'spades', 'clubs'],
+//         values: '2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A',
+//         initializeDeck() {
+//             const {
+//                 deck,
+//                 values,
+//                 suits
+//             } = this;
+//             while (deck.length) {
+//                 deck.pop()
+//             }
+//             for (let value of values.split(',')) {
+//                 for (let suit of suits) {
+//                     deck.push({
+//                         value,
+//                         suit,
+//                     });
+//                 }
+//             }
+//             this.shuffle();
+//         },
+//         drawCard() {
+//             let card = this.deck.pop();
+//             this.drownCard.push(card);
+//             this.shuffle();
+//             return card;
+//         },
+//         shuffle() {
+//             let a = this.deck
+//             var j, x, i;
+//             for (i = a.length - 1; i > 0; i--) {
+//                 j = Math.floor(Math.random() * (i + 1));
+//                 x = a[i];
+//                 a[i] = a[j];
+//                 a[j] = x;
+//             }
+
+//         }
+
+//     }
+// }
