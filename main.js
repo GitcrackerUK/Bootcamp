@@ -1693,19 +1693,62 @@
 
 // };
 // console.log(SubtractSum());
-function solve(a, b) {
-    let la= [...a];
-    let lb=[...b];
-    let result;
-   for(let i = 0;i<la.length;i++){
-       if(lb.includes(i)){
-           result.push(i)
-       }
-   }
-   console.log(result);
-};
+// function solve(a, b) {
+//     let la = [...a];
+//     let lb = [...b];
+//     let result = [];
+//     for (let i = 0; i < la.length; i++) {
+//         if (!lb.includes(la[i])) {
+//             result.push(la[i]);
+//         }
+//     }
+//     for (let i = 0; i < lb.length; i++) {
+//         if (!la.includes(lb[i])) {
+//             result.push(lb[i]);
+//         }
+//     }
+//     return result.join('')
+// };
+// solve("xyab", "xzca");
+// solve("xyabb", "xzca");
+// solve("abcd", "xyz");
+// solve("xxx", "xzca");
 
-solve("xyab", "xzca");
+// function solve(a, b) {
+//     let result = '';
+//     for (let i = 0; i < a.length; i++) {
+//         if (!b.includes(a[i])) {
+//             result += a[i];
+//         }
+//     }
+//     for (let i = 0; i < b.length; i++) {
+//         if (!a.includes(b[i])) {
+//             result += b[i];
+//         }
+//     }
+//     return result
+// };
+
+
+// solve("xyab", "xzca");
+// solve("xyabb", "xzca");
+// solve("abcd", "xyz");
+// solve("xxx", "xzca");
+
+function solve(a, b) {
+
+
+let la = [...a];
+let lb = [...b]
+let result = []
+la.map((x)=>result.push(!lb.includes(x)));
+lb.map((x)=>result.push(!la.includes(x)));
+
+return result.join(',')
+}
+
+console.log(solve("xyab", "xzca"));
+
 solve("xyabb", "xzca");
 solve("abcd", "xyz");
 solve("xxx", "xzca");
