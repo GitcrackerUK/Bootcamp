@@ -1635,10 +1635,54 @@
 // Document Object Model
 
 
-let yellow = document.querySelector('yellow');
+// let yellow = document.querySelector('yellow');
 
 
-let mainParagraph = document.getElementById('main');
-let bike = document.getElementById('bike');
-console.log(mainParagraph);
-console.dir(bike);
+// let mainParagraph = document.getElementById('main');
+// let bike = document.getElementById('bike');
+// bike.style.width="50%";
+
+// let input=document.getElementsByTagName('input');
+// console.log(input);
+
+// let ul = document.getElementsByTagName('ul');
+// console.log(ul);
+
+// let p = document.getElementsByTagName('p')
+// console.log(p)
+
+// let li =document.getElementsByTagName('li')
+// console.log(li);
+
+// let topClass = document.getElementsByClassName('top');
+// console.log(topClass);
+
+// let bottomClass = document.getElementsByClassName('bottom')
+// console.log(bottomClass);
+
+
+
+
+// console.log(document.getElementsByTagName('form'));
+// let inputTag = document.getElementsByTagName('form')[0]
+// console.log(inputTag);
+// let specialFormInput = inputTag.getElementsByClassName('special')[0]
+// console.log(specialFormInput);
+// let h1 =document.querySelector('h1');
+// console.log(h1);
+
+// let yellow = document.querySelector('#yellow');
+// console.log(yellow);
+// console.dir(yellow)
+
+// let hOne = document.querySelector('.top h1')
+// console.log(hOne);
+// let classBottom = document.querySelector('.bottom img');
+// console.log(classBottom);
+// classBottom.style.width='50%'
+// let bottomUlSpecial= document.querySelector('.bottom ul .special');
+// bottomUlSpecial.style.color='black'
+// console.log(bottomUlSpecial.style.color='black');
+// let NestedLi = document.querySelector('.bottom ul li ul .special');
+
+// NestedLi.style.color='green'

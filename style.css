@@ -29,6 +29,9 @@ h1 {
     font-weight: 700;
 }
 /* ----------------------- */
+.special{
+    color: chartreuse;
+}
 .bottom {
     padding: 5%;
     /* text-align: center; */
