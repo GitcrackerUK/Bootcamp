@@ -1635,4 +1635,10 @@
 // Document Object Model
 
 
-let yellow = document.querySelector('#yellow');
+let yellow = document.querySelector('yellow');
+
+
+let mainParagraph = document.getElementById('main');
+let bike = document.getElementById('bike');
+console.log(mainParagraph);
+console.dir(bike);
