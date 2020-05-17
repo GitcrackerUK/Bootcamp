@@ -1633,3 +1633,6 @@
 // }
 
 // Document Object Model
+
+
+let yellow = document.querySelector('#yellow');
