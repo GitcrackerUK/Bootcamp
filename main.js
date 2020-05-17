@@ -1734,21 +1734,3 @@
 // solve("xyabb", "xzca");
 // solve("abcd", "xyz");
 // solve("xxx", "xzca");
-
-function solve(a, b) {
-
-
-let la = [...a];
-let lb = [...b]
-let result = []
-la.map((x)=>result.push(!lb.includes(x)));
-lb.map((x)=>result.push(!la.includes(x)));
-
-return result.join(',')
-}
-
-console.log(solve("xyab", "xzca"));
-
-solve("xyabb", "xzca");
-solve("abcd", "xyz");
-solve("xxx", "xzca");
