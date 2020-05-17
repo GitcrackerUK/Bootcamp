@@ -1693,3 +1693,19 @@
 
 // };
 // console.log(SubtractSum());
+function solve(a, b) {
+    let la= [...a];
+    let lb=[...b];
+    let result;
+   for(let i = 0;i<la.length;i++){
+       if(lb.includes(i)){
+           result.push(i)
+       }
+   }
+   console.log(result);
+};
+
+solve("xyab", "xzca");
+solve("xyabb", "xzca");
+solve("abcd", "xyz");
+solve("xxx", "xzca");
