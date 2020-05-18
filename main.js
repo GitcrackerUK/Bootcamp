@@ -1769,13 +1769,13 @@
     
 // }
 
-let bike = images[1]
-bike.src='https://images.pexels.com/photos/2272357/pexels-photo-2272357.jpeg?cs=srgb&dl=road-near-trees-2272357.jpg&fm=jpg';
-console.log(bike);
-let bikeId = document.querySelector('#bike');
-console.log(bikeId);
-bike.style.width='50%'
-console.log(bike);
-let body = document.querySelector('body');
-console.log(body);
-body.style.fontSize='20px'
+// let bike = images[1]
+// bike.src='https://images.pexels.com/photos/2272357/pexels-photo-2272357.jpeg?cs=srgb&dl=road-near-trees-2272357.jpg&fm=jpg';
+// console.log(bike);
+// let bikeId = document.querySelector('#bike');
+// console.log(bikeId);
+// bike.style.width='50%'
+// console.log(bike);
+// let body = document.querySelector('body');
+// console.log(body);
+// body.style.fontSize='20px'
