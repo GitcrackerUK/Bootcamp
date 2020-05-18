@@ -1686,3 +1686,96 @@
 // let NestedLi = document.querySelector('.bottom ul li ul .special');
 
 // NestedLi.style.color='green'
+// let UlLi =document.querySelector('ul .special');
+// UlLi.style.color="blue"
+// let allSpec = document.querySelectorAll('.special');
+// function changeColor(i){
+//     for (const iterator of i) {
+//         iterator.style.color='black'
+//     }
+// }
+// changeColor(allSpec);
+// for (const iterator of allSpec) {
+//     iterator.style.color="blue"
+// }
+// for(let i of document.querySelectorAll('div'))
+// console.log(i);
+// ;
+
+// let h1 =document.querySelector('h1')
+// let h1Text = h1.innerText
+
+// let ul = document.querySelector('ul')
+// let ulText = ul.innerText
+// console.log(ulText);
+// console.log(document.body.innerText);
+
+
+// let h1Text = document.querySelector('h1').innerText
+// console.log(h1Text)
+
+// let h1 = document.querySelector('h1')
+
+// h1.innerText = "Change by innerText"
+// console.log(h1.innerText = "lalala"); // Change By InnerText
+
+// let allLi = document.querySelectorAll('ul li ul li')
+// console.log(allLi);
+
+// for (const i of allLi) {
+//     i.innerText = 'changed'
+// }
+// let upperUl = document.querySelector('ul')
+
+// let upULHtml = upperUl.innerHTML
+// console.log(upULHtml);
+// upperUl.innerHTML= "<li class='special'>Tree</li> <li>Palm Tree</li> <li>One Tree</li>"
+
+// h1.innerHTML += ' ohhh yes'
+
+
+// h1.innerHTML += '<br> <b>my name is boss</b>'
+
+// let input = document.querySelector('input')
+// console.log(input.value);
+// let allInputs = document.querySelectorAll('input')
+// for (const val of allInputs) {
+//     console.log(val);
+// }
+// let firstVal = allInputs[0]
+// let secondVal = allInputs[1]
+// let range = allInputs[4]
+// console.log(secondVal);
+// secondVal.value='bababa'
+// console.dir(firstVal);
+// secondVal.value  = ''
+// console.log(range.value);
+// let name = allInputs[1];
+
+// name.placeholder='Enter your name'
+// name.placeholder += ', please'
+// let inputs = document.querySelectorAll('input')
+// console.log(inputs);
+// let surname = inputs[2]
+// console.log(surname);
+// surname.placeholder = 'Type your surname'
+
+// let a = document.querySelector('a')
+// // a.href = 'http://www.google.com'
+// // a.innerText = 'Google'
+// let images = document.querySelectorAll('img')
+// for (const img  of images) {
+//     console.log(img);
+    
+// }
+
+let bike = images[1]
+bike.src='https://images.pexels.com/photos/2272357/pexels-photo-2272357.jpeg?cs=srgb&dl=road-near-trees-2272357.jpg&fm=jpg';
+console.log(bike);
+let bikeId = document.querySelector('#bike');
+console.log(bikeId);
+bike.style.width='50%'
+console.log(bike);
+let body = document.querySelector('body');
+console.log(body);
+body.style.fontSize='20px'
