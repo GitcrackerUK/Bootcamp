@@ -1777,5 +1777,12 @@
 // bike.style.width='50%'
 // console.log(bike);
 // let body = document.querySelector('body');
-// console.log(body);
-// body.style.fontSize='20px'
+// console.log("//arrowPareTwoPara -> body", body)
+let range =document.querySelector('input[type="range"]')
+
+let minRange = range.getAttribute('min')
+console.log(minRange);
+console.log(range.max);
+range.max
+range.setAttribute('max','450');
+console.log(range.max);
