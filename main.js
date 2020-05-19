@@ -1766,7 +1766,7 @@
 // let images = document.querySelectorAll('img')
 // for (const img  of images) {
 //     console.log(img);
-    
+
 // }
 
 // let bike = images[1]
@@ -1778,11 +1778,134 @@
 // console.log(bike);
 // let body = document.querySelector('body');
 // console.log("//arrowPareTwoPara -> body", body)
-let range =document.querySelector('input[type="range"]')
+// let range =document.querySelector('input[type="range"]')
 
-let minRange = range.getAttribute('min')
-console.log(minRange);
-console.log(range.max);
-range.max
-range.setAttribute('max','450');
-console.log(range.max);
+// let minRange = range.getAttribute('min')
+// console.log(minRange);
+// console.log(range.max);
+// range.max
+// range.setAttribute('max','450');
+// console.log(range.max);
+// let li = document.querySelector('li')
+// console.dir(li.parentElement);
+// console.log(li.parentElement);
+
+// let ul = document.querySelector('ul')
+// let ulChildren = ul.children
+
+
+// console.dir(ulChildren[0].parentElement)
+
+// let ulParent = ul.parentElement
+// console.log(ulParent);
+// ulParent.style.backgroundColor = 'green'
+// let firstInBottom = ulParent.children[0]
+// console.log(firstInBottom);
+// firstInBottom.innerHTML = "<p>Hello</p>"
+// firstInBottom.innerText = 'hellloo'
+// firstInBottom.nextElementSibling.innerText = 'Hello from ul'
+// let ulSibling = firstInBottom.nextElementSibling
+
+// ulSibling.innerHTML = '<ul> <li > First Item </li> <li > Second Item </li> <li > Third Item </li> <li > Fifth Item </li> <li > Sixth Item </li> </ul > '
+
+// let allLi = document.querySelectorAll('li')
+// let i = 0
+// for (const li of allLi) {
+//   li.innerText=`This is cool ${i+=1}`
+// }
+// for (const li of allLi) {
+//   li.innerHTML += '<b> Added extra bold</b>'
+// }
+// let h1 = document.querySelectorAll('h1')
+
+// h1[1].style.fontFamily = 'ubuntu'
+// h1[1].style.color='red'
+// h1[1].style.backgroundColor='blue'
+// h1[1].style.width='70%'
+// h1[1].style.margin='auto'
+
+
+
+// for(let h of h1){
+//     h.style.color='green'
+// }
+// let h3 = document.querySelectorAll('h3')
+// let colors = ['red','green','yellow','blue','red','green','yellow','blue','red','green','yellow','blue']
+
+// h3.forEach((item, index)=>{console.log(item.innerText , index);
+// if(item.innerText=='Colt Steele'){
+//     item.innerText='Steele Colt'
+// }
+// })
+
+// h3.forEach((item,index)=> {
+//     let color = colors[index]
+//     item.style.color = color
+// })
+
+// let allLi = document.querySelectorAll('li')
+
+// allLi.forEach((item,index)=> item.style.color=colors[index])
+
+// let img = document.querySelectorAll('img')[1]
+// img.style.display='none'
+
+// let styles = getComputedStyle(img)
+// console.log(styles); 
+
+// let h1 =document.querySelector('h1')
+// let stylesH1= getComputedStyle(h1)
+// // console.log(stylesH1);
+// let todos = document.querySelector('#todos');
+// console.log(todos);
+
+// let firstTodo=document.querySelector('#todos .todo')
+
+// firstTodo.setAttribute('class','done')
+
+// firstTodo.classList.remove('done');
+// firstTodo.classList.add('todo')
+// firstTodo.classList.add('done')
+// firstTodo.classList.remove('done')
+// firstTodo.classList.toggle('done')
+// firstTodo.classList.toggle('done')
+// firstTodo.classList.add('processed')
+
+let newH2 =document.createElement('li')
+
+console.log(newH2);
+console.dir(newH2)
+newH2.innerText = 'Hello this is new element'
+console.log(newH2);
+
+let ulLi = document.querySelector('ul li ul')
+
+console.log(ulLi);
+
+ulLi.appendChild(newH2);
+newH2.classList.add('special')
+let newImg =document.createElement('img')
+
+document.querySelector('form').appendChild(newImg)
+newImg.style.width='50%'
+newImg.setAttribute('src','https://images.pexels.com/photos/4348226/pexels-photo-4348226.jpeg?cs=srgb&dl=person-holding-black-metal-tool-4348226.jpg&fm=jpg')
+
+let ul = document.createElement('ul')
+ 
+let bottom = document.querySelectorAll('.bottom')
+
+bottom[1].appendChild(ul)
+ let liForTopUl1 = document.createElement('li')
+ let liForTopUl2 = document.createElement('li')
+ liForTopUl1.innerText='This is new appended'
+ liForTopUl2.innerText='This is new prepended'
+
+ let topUl=document.querySelector('.bottom ul')
+console.log(topUl);
+topUl.prepend(liForTopUl2)
+topUl.appendChild(liForTopUl1)
+
+let midLi = document.createElement('li')
+midLi.innerText='Im middle list item!!!'
+topUl.insertBefore(midLi,rex)
+console.log(topUl);

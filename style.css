@@ -30,7 +30,7 @@ h1 {
 }
 /* ----------------------- */
 .special{
-    color: chartreuse;
+    color: rgb(0, 247, 255);
 }
 .bottom {
     padding: 5%;
@@ -42,7 +42,26 @@ h1 {
 .bottom h1 {
     color: black;
 }
-
+#todos{
+    /* text-align: center; */
+    
+    color: coral;
+}
+.todo{
+    margin: 2px;
+    background-color: cornsilk;
+}
+.done{
+color: darkgrey;
+text-decoration: line-through;
+opacity: 50%;
+}
+.processed{
+    color: black;
+    font: lighter;
+    font-family: ubuntu;
+    background-color: darkviolet;
+}
 .bottom ul {
     color: cadetblue;
     text-align: left;
