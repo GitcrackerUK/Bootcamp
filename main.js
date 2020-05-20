@@ -2020,7 +2020,7 @@ let makeChart = (games, targetTeam) => {
     const ulParent = document.createElement('ul')
     for (let game of games) {
         const gameLi = document.createElement('li')
-        gameLi.innerHTML = getScoreLine(game);
+        gameLi.innerHTML = getScoreLine(game,targetTeam);
         ulParent.appendChild(gameLi);
         gameLi.classList.add(isWinner(game,targetTeam) ? 'win' : 'lost')
     }
@@ -2041,14 +2041,8 @@ const getScoreLine = ({ homeTeam,awayTeam}) => {
         team: aTeam,
         points: aPoints
     } = awayTeam;
-
-    let GameScores;
     let GameTeams = `${aTeam} @ ${hTeam}`;
-    if (aPoints > hPoints) {
-        GameScores = `<b>${aPoints}</b> - ${hPoints}`
-    } else {
-        GameScores = `${aPoints} - <b>${hPoints}</b>`
-    }
+    let GameScores = aPoints > hPoints ? `<b>${aPoints}</b> - ${hPoints}` : `${aPoints} - <b>${hPoints}</b>`
     return `${GameTeams} ${GameScores} `;
 };
 
