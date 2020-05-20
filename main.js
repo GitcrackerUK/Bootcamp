@@ -2018,8 +2018,14 @@ let score = document.querySelector('#score') //selected parent div
 
 let makeChart = (games, targetTeam) => {
     const ulParent = document.createElement('ul')
+    const scoresHeader = document.createElement('h5')
+    // scoresHeader.style.marginBottom = "5px"
+    scoresHeader.innerText = `${targetTeam}`
+    ulParent.appendChild(scoresHeader)
+    
     for (let game of games) {
         const gameLi = document.createElement('li')
+        // gameLi.style.listStyleType="none";
         gameLi.innerHTML = getScoreLine(game,targetTeam);
         ulParent.appendChild(gameLi);
         gameLi.classList.add(isWinner(game,targetTeam) ? 'win' : 'lost')
