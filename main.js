@@ -1871,41 +1871,191 @@
 // firstTodo.classList.toggle('done')
 // firstTodo.classList.add('processed')
 
-let newH2 =document.createElement('li')
+// let newH2 =document.createElement('li')
 
-console.log(newH2);
-console.dir(newH2)
-newH2.innerText = 'Hello this is new element'
-console.log(newH2);
+// console.log(newH2);
+// console.dir(newH2)
+// newH2.innerText = 'Hello this is new element'
+// console.log(newH2);
 
-let ulLi = document.querySelector('ul li ul')
+// let ulLi = document.querySelector('ul li ul')
 
-console.log(ulLi);
+// console.log(ulLi);
 
-ulLi.appendChild(newH2);
-newH2.classList.add('special')
-let newImg =document.createElement('img')
+// ulLi.appendChild(newH2);
+// newH2.classList.add('special')
+// let newImg =document.createElement('img')
 
-document.querySelector('form').appendChild(newImg)
-newImg.style.width='50%'
-newImg.setAttribute('src','https://images.pexels.com/photos/4348226/pexels-photo-4348226.jpeg?cs=srgb&dl=person-holding-black-metal-tool-4348226.jpg&fm=jpg')
+// document.querySelector('form').appendChild(newImg)
+// newImg.style.width='50%'
+// newImg.setAttribute('src','https://images.pexels.com/photos/4348226/pexels-photo-4348226.jpeg?cs=srgb&dl=person-holding-black-metal-tool-4348226.jpg&fm=jpg')
 
-let ul = document.createElement('ul')
- 
-let bottom = document.querySelectorAll('.bottom')
+// let ul = document.createElement('ul')
 
-bottom[1].appendChild(ul)
- let liForTopUl1 = document.createElement('li')
- let liForTopUl2 = document.createElement('li')
- liForTopUl1.innerText='This is new appended'
- liForTopUl2.innerText='This is new prepended'
+// let bottom = document.querySelectorAll('.bottom')
 
- let topUl=document.querySelector('.bottom ul')
-console.log(topUl);
-topUl.prepend(liForTopUl2)
-topUl.appendChild(liForTopUl1)
+// bottom[1].appendChild(ul)
+//  let liForTopUl1 = document.createElement('li')
+//  let liForTopUl2 = document.createElement('li')
+//  liForTopUl1.innerText='This is new appended'
+//  liForTopUl2.innerText='This is new prepended'
 
-let midLi = document.createElement('li')
-midLi.innerText='Im middle list item!!!'
-topUl.insertBefore(midLi,rex)
-console.log(topUl);
+//  let topUl=document.querySelector('.bottom ul')
+// console.log(topUl);
+// topUl.prepend(liForTopUl2)
+// topUl.appendChild(liForTopUl1)
+
+// let midLi = document.createElement('li')
+// midLi.innerText='Im middle list item!!!'
+// topUl.insertBefore(midLi,rex)
+// console.log(topUl);
+
+// let h1 =document.querySelector('h1')
+// console.log(h1)
+// h1.setAttribute('class','toph1')
+
+// let h4underTopH1 =document.createElement('h4')
+// h4underTopH1.setAttribute('id','underH1')
+
+// h1.setAttribute('id','firstH1')
+// let colt = document.querySelector('#colt')
+// let topDiv =document.querySelector('.top')
+// topDiv.insertBefore(h4underTopH1,colt)
+// h4underTopH1.innerText='Hello all JavaScript lovers'
+// let att = h4underTopH1.getAttribute('id')
+// h4underTopH1.setAttribute('type','text')
+// h4underTopH1.setAttribute('placeholder','Hello')
+// let h4Attr = h4underTopH1.attributes
+// console.log(h4Attr);
+
+const warriorsGames = [{
+        awayTeam: {
+            team: 'Golden State',
+            points: 119,
+            isWinner: true
+        },
+        homeTeam: {
+            team: 'Houston',
+            points: 106,
+            isWinner: false
+        }
+    },
+    {
+        awayTeam: {
+            team: 'Golden State',
+            points: 105,
+            isWinner: false
+        },
+        homeTeam: {
+            team: 'Houston',
+            points: 127,
+            isWinner: true
+        }
+    },
+    {
+        homeTeam: {
+            team: 'Golden State',
+            points: 126,
+            isWinner: true
+        },
+        awayTeam: {
+            team: 'Houston',
+            points: 85,
+            isWinner: false
+        }
+    },
+    {
+        homeTeam: {
+            team: 'Golden State',
+            points: 92,
+            isWinner: false
+        },
+        awayTeam: {
+            team: 'Houston',
+            points: 95,
+            isWinner: true
+        }
+    },
+    {
+        awayTeam: {
+            team: 'Golden State',
+            points: 94,
+            isWinner: false
+        },
+        homeTeam: {
+            team: 'Houston',
+            points: 98,
+            isWinner: true
+        }
+    },
+    {
+        homeTeam: {
+            team: 'Golden State',
+            points: 115,
+            isWinner: true
+        },
+        awayTeam: {
+            team: 'Houston',
+            points: 86,
+            isWinner: false
+        }
+    },
+    {
+        awayTeam: {
+            team: 'Golden State',
+            points: 101,
+            isWinner: true
+        },
+        homeTeam: {
+            team: 'Houston',
+            points: 92,
+            isWinner: false
+        }
+    }
+]
+let score = document.querySelector('#score') //selected parent div
+
+
+let makeChart = (games, targetTeam) => {
+    const ulParent = document.createElement('ul')
+    for (let game of games) {
+        const gameLi = document.createElement('li')
+        gameLi.innerHTML = getScoreLine(game);
+        ulParent.appendChild(gameLi);
+        gameLi.classList.add(isWinner(game,targetTeam) ? 'win' : 'lost')
+    }
+        return ulParent;
+};
+   
+function isWinner({ homeTeam, awayTeam}, targetTeam) {
+    let target = homeTeam.team === targetTeam ? homeTeam : awayTeam;
+   return target.isWinner
+}
+
+const getScoreLine = ({ homeTeam,awayTeam}) => {
+    const {
+        team: hTeam,
+        points: hPoints
+    } = homeTeam;
+    const {
+        team: aTeam,
+        points: aPoints
+    } = awayTeam;
+
+    let GameScores;
+    let GameTeams = `${aTeam} @ ${hTeam}`;
+    if (aPoints > hPoints) {
+        GameScores = `<b>${aPoints}</b> - ${hPoints}`
+    } else {
+        GameScores = `${aPoints} - <b>${hPoints}</b>`
+    }
+    return `${GameTeams} ${GameScores} `;
+};
+
+let game1 = makeChart(warriorsGames,'Golden State')
+score.appendChild(game1);
+
+let game2 = makeChart(warriorsGames,'Houston')
+score.appendChild(game2)
+
+

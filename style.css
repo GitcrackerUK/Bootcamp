@@ -22,16 +22,22 @@ h1 {
     text-align: center;
 }
 
+#firstH1 {
+    color: darkviolet;
+}
+
 .top p {
     text-align: center;
     color: rgb(220, 20, 60);
     font-size: large;
     font-weight: 700;
 }
+
 /* ----------------------- */
-.special{
+.special {
     color: rgb(0, 247, 255);
 }
+
 .bottom {
     padding: 5%;
     /* text-align: center; */
@@ -42,26 +48,31 @@ h1 {
 .bottom h1 {
     color: black;
 }
-#todos{
+
+#todos {
     /* text-align: center; */
-    
+
     color: coral;
 }
-.todo{
+
+.todo {
     margin: 2px;
     background-color: cornsilk;
 }
-.done{
-color: darkgrey;
-text-decoration: line-through;
-opacity: 50%;
+
+.done {
+    color: darkgrey;
+    text-decoration: line-through;
+    opacity: 50%;
 }
-.processed{
+
+.processed {
     color: black;
     font: lighter;
     font-family: ubuntu;
     background-color: darkviolet;
 }
+
 .bottom ul {
     color: cadetblue;
     text-align: left;
@@ -70,12 +81,14 @@ opacity: 50%;
     font-weight: 600;
     margin: 5px 0px 5px 0px;
 }
-form{
-    padding:30px;
-    border:solid 0.7px cadetblue;
+
+form {
+    padding: 30px;
+    border: solid 0.7px cadetblue;
     width: auto;
     margin: 50px
 }
+
 .bottom img {
     display: flex;
     justify-content: center;
@@ -83,6 +96,19 @@ form{
     width: 80%;
     height: auto;
 }
-.footer{
+
+#score {
+    margin-top: 100px;
+}
+
+.win {
+    background-color: rgb(0, 255, 0.2);
+}
+
+.lost {
+    background-color: rgb(255, 0, 0.2);
+}
+
+footer {
     margin-top: 500px;
 }
