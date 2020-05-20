@@ -46,7 +46,7 @@
         <form>
             <p>
                 <label for="che">Check</label>
-                <input id='che' type="radio" >
+                <input id='che' type="radio">
             </p>
             <p>
                 <label for="">Name</label>
@@ -83,14 +83,21 @@
             <li>Kiwi</li>
         </ul>
     </div>
-    <div  id="score">
+    <div id="score">
         <h4>NBA Scores</h4>
-    
-
+    </div>
+    <div id="event">
+        <button onclick="alert('You clicked')">Click Me!</button>
+        <button onclick="console.log('clicked')">Click Me!</button>
+        <form onmouseover="console.log('Mouse over')" action="">
+            <input type="range" min="10" max="50">
+        </form>
+        <button id="clicker">Click Me</button>
     </div>
     <footer></footer>
     <script src="main.js">
     </script>
+
 </body>
 
 </html>

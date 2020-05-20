@@ -1928,134 +1928,160 @@
 // let h4Attr = h4underTopH1.attributes
 // console.log(h4Attr);
 
-const warriorsGames = [{
-        awayTeam: {
-            team: 'Golden State',
-            points: 119,
-            isWinner: true
-        },
-        homeTeam: {
-            team: 'Houston',
-            points: 106,
-            isWinner: false
-        }
-    },
-    {
-        awayTeam: {
-            team: 'Golden State',
-            points: 105,
-            isWinner: false
-        },
-        homeTeam: {
-            team: 'Houston',
-            points: 127,
-            isWinner: true
-        }
-    },
-    {
-        homeTeam: {
-            team: 'Golden State',
-            points: 126,
-            isWinner: true
-        },
-        awayTeam: {
-            team: 'Houston',
-            points: 85,
-            isWinner: false
-        }
-    },
-    {
-        homeTeam: {
-            team: 'Golden State',
-            points: 92,
-            isWinner: false
-        },
-        awayTeam: {
-            team: 'Houston',
-            points: 95,
-            isWinner: true
-        }
-    },
-    {
-        awayTeam: {
-            team: 'Golden State',
-            points: 94,
-            isWinner: false
-        },
-        homeTeam: {
-            team: 'Houston',
-            points: 98,
-            isWinner: true
-        }
-    },
-    {
-        homeTeam: {
-            team: 'Golden State',
-            points: 115,
-            isWinner: true
-        },
-        awayTeam: {
-            team: 'Houston',
-            points: 86,
-            isWinner: false
-        }
-    },
-    {
-        awayTeam: {
-            team: 'Golden State',
-            points: 101,
-            isWinner: true
-        },
-        homeTeam: {
-            team: 'Houston',
-            points: 92,
-            isWinner: false
-        }
-    }
-]
-let score = document.querySelector('#score') //selected parent div
+// const warriorsGames = [{
+//         awayTeam: {
+//             team: 'Golden State',
+//             points: 119,
+//             isWinner: true
+//         },
+//         homeTeam: {
+//             team: 'Houston',
+//             points: 106,
+//             isWinner: false
+//         }
+//     },
+//     {
+//         awayTeam: {
+//             team: 'Golden State',
+//             points: 105,
+//             isWinner: false
+//         },
+//         homeTeam: {
+//             team: 'Houston',
+//             points: 127,
+//             isWinner: true
+//         }
+//     },
+//     {
+//         homeTeam: {
+//             team: 'Golden State',
+//             points: 126,
+//             isWinner: true
+//         },
+//         awayTeam: {
+//             team: 'Houston',
+//             points: 85,
+//             isWinner: false
+//         }
+//     },
+//     {
+//         homeTeam: {
+//             team: 'Golden State',
+//             points: 92,
+//             isWinner: false
+//         },
+//         awayTeam: {
+//             team: 'Houston',
+//             points: 95,
+//             isWinner: true
+//         }
+//     },
+//     {
+//         awayTeam: {
+//             team: 'Golden State',
+//             points: 94,
+//             isWinner: false
+//         },
+//         homeTeam: {
+//             team: 'Houston',
+//             points: 98,
+//             isWinner: true
+//         }
+//     },
+//     {
+//         homeTeam: {
+//             team: 'Golden State',
+//             points: 115,
+//             isWinner: true
+//         },
+//         awayTeam: {
+//             team: 'Houston',
+//             points: 86,
+//             isWinner: false
+//         }
+//     },
+//     {
+//         awayTeam: {
+//             team: 'Golden State',
+//             points: 101,
+//             isWinner: true
+//         },
+//         homeTeam: {
+//             team: 'Houston',
+//             points: 92,
+//             isWinner: false
+//         }
+//     }
+// ]
+// let score = document.querySelector('#score') //selected parent div
 
 
-let makeChart = (games, targetTeam) => {
-    const ulParent = document.createElement('ul')
-    const scoresHeader = document.createElement('h5')
-    // scoresHeader.style.marginBottom = "5px"
-    scoresHeader.innerText = `${targetTeam}`
-    ulParent.appendChild(scoresHeader)
+// let makeChart = (games, targetTeam) => {
+//     const ulParent = document.createElement('ul')
+//     const scoresHeader = document.createElement('h5')
+//     // scoresHeader.style.marginBottom = "5px"
+//     scoresHeader.innerText = `${targetTeam}`
+//     ulParent.appendChild(scoresHeader)
     
-    for (let game of games) {
-        const gameLi = document.createElement('li')
-        // gameLi.style.listStyleType="none";
-        gameLi.innerHTML = getScoreLine(game,targetTeam);
-        ulParent.appendChild(gameLi);
-        gameLi.classList.add(isWinner(game,targetTeam) ? 'win' : 'lost')
-    }
-        return ulParent;
-};
+//     for (let game of games) {
+//         const gameLi = document.createElement('li')
+//         // gameLi.style.listStyleType="none";
+//         gameLi.innerHTML = getScoreLine(game,targetTeam);
+//         ulParent.appendChild(gameLi);
+//         gameLi.classList.add(isWinner(game,targetTeam) ? 'win' : 'lost')
+//     }
+//         return ulParent;
+// };
    
-function isWinner({ homeTeam, awayTeam}, targetTeam) {
-    let target = homeTeam.team === targetTeam ? homeTeam : awayTeam;
-   return target.isWinner
-}
+// function isWinner({ homeTeam, awayTeam}, targetTeam) {
+//     let target = homeTeam.team === targetTeam ? homeTeam : awayTeam;
+//    return target.isWinner
+// }
 
-const getScoreLine = ({ homeTeam,awayTeam}) => {
-    const {
-        team: hTeam,
-        points: hPoints
-    } = homeTeam;
-    const {
-        team: aTeam,
-        points: aPoints
-    } = awayTeam;
-    let GameTeams = `${aTeam} @ ${hTeam}`;
-    let GameScores = aPoints > hPoints ? `<b>${aPoints}</b> - ${hPoints}` : `${aPoints} - <b>${hPoints}</b>`
-    return `${GameTeams} ${GameScores} `;
-};
+// const getScoreLine = ({ homeTeam,awayTeam}) => {
+//     const {
+//         team: hTeam,
+//         points: hPoints
+//     } = homeTeam;
+//     const {
+//         team: aTeam,
+//         points: aPoints
+//     } = awayTeam;
+//     let GameTeams = `${aTeam} @ ${hTeam}`;
+//     let GameScores = aPoints > hPoints ? `<b>${aPoints}</b> - ${hPoints}` : `${aPoints} - <b>${hPoints}</b>`
+//     return `${GameTeams} ${GameScores} `;
+// };
 
-let game1 = makeChart(warriorsGames,'Golden State')
-score.appendChild(game1);
+// let game1 = makeChart(warriorsGames,'Golden State')
+// score.appendChild(game1);
 
-let game2 = makeChart(warriorsGames,'Houston')
-score.appendChild(game2)
+// let game2 = makeChart(warriorsGames,'Houston')
+// score.appendChild(game2)
 
+// listener         event            code to run 
+//
+// on click         click             submit
+// on hover         hover             expand box
 
+// let btn = document.querySelector('#clicker')
+// console.dir(btn)
+// let firstBtn = document.querySelector('#event button')
+// console.dir(firstBtn);
+// // btn.onclick = alert('heello');
+// console.log(btn)
+// btn.onclick=function(){
+//     console.log('You clicked me!!!');
+// }
+// console.dir(btn);
+// btn.addEventListener('click', function(){console.log('Event listener');} )
+// btn.addEventListener('mouseover', ()=> console.log('Mouse over'))
+// btn.addEventListener('mouseover',()=> btn.innerText='Stop touching me!!' )
+// btn.addEventListener('mouseout', ()=> btn.innerText='Click Me')
+// btn.addEventListener('click', ()=> btn.innerText = ' CLICK')
+
+// window.addEventListener('scroll',()=> console.log('stop scrolling'))
+
+// let inputRange = document.querySelector('#event input')
+
+// inputRange.addEventListener('mousedown',()=> console.log(inputRange.value))
+// inputRange.addEventListener('mouseup', ()=> console.log(inputRange.value))
