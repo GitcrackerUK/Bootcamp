@@ -1,0 +1,12 @@
+.container{margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height: 200px;
+    width: 200px;
+}
+.grow{
+    height: 400px !important;
+}
