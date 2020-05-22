@@ -2085,3 +2085,4 @@
 
 // inputRange.addEventListener('mousedown',()=> console.log(inputRange.value))
 // inputRange.addEventListener('mouseup', ()=> console.log(inputRange.value))
+

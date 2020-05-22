@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -33,14 +33,14 @@ h1 {
     font-weight: 700;
 }
 
-/* ----------------------- */
+
 .special {
     color: rgb(0, 247, 255);
 }
 
 .bottom {
     padding: 5%;
-    /* text-align: center; */
+
     background-color: rgb(230, 227, 222);
     margin-top: 200px;
 }
@@ -50,7 +50,7 @@ h1 {
 }
 
 #todos {
-    /* text-align: center; */
+
 
     color: coral;
 }
@@ -119,4 +119,5 @@ form {
 
 footer {
     margin-top: 500px;
-}
+} */
+
