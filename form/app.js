@@ -21,6 +21,7 @@
 // email.addEventListener('input',(e)=>{formData['email']= e.target.value})
 // pass.addEventListener('input',(e)=> formData['password']=e.target.value)
 // check.addEventListener('input',(e)=> {formData['check']=e.target.checked })
+
 const form = document.querySelector('form')
 const email = document.querySelector('#exampleInputEmail1')
 const pass = document.querySelector('#exampleInputPassword1')
@@ -44,7 +45,7 @@ form.addEventListener('submit', (e) => {
     subformValue['range'] = range.value
     subformValue['number'] = number.value
     subformValue['date'] = date.value
-    subformValue['check'] = check.checked
+    subformValue['Agree'] = (check.checked)?'Yes':'No';
     radioItem.forEach((item)=>{
         if(item.checked===true){
             subformValue['radio'] = item.value
@@ -74,6 +75,6 @@ date.addEventListener('input', (e) => {
     formValue['date'] = e.target.value
 })
 check.addEventListener('input', (e) => {
-    formValue['checked'] = e.target.checked
+    formValue['Agree'] = (e.target.checked)?'Yes':'No';
+    console.log(formValue);
 })
-console.log(subformValue);
