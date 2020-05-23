@@ -26,32 +26,61 @@ const email = document.querySelector('#exampleInputEmail1')
 const pass = document.querySelector('#exampleInputPassword1')
 const option = document.querySelector('#exampleFormControlSelect1')
 const radio = document.querySelector('#radio')
+const radioItem = document.querySelectorAll('#radio input')
 const range = document.querySelector('#ex1Slider')
 const number = document.querySelector('#number')
 const date = document.querySelector('#start')
 const check = document.querySelector('#exampleCheck1')
+const rad = document.querySelectorAll('#rad input')
 const button = document.querySelector('button')
-const formValue= {}
+const subformValue = {}
+const formValue = {}
 
-form.addEventListener('submit',(e)=>{
+form.addEventListener('submit', (e) => {
     e.preventDefault()
-    formValue['email']=email.value
-    formValue['pass']=pass.value
-    formValue['option']=option.value
-    formValue['radio']=radio.value
-    formValue['range']=range.value
-    formValue['number']=number.value
-    formValue['date']=date.value
-    formValue['check']=check.checked
-    console.log(formValue);
-    console.log(e);
-})
-email.addEventListener('input',(e)=>{
-formValue['email']=e.target.value;
-console.log(e.target.value);
-console.log(formValue);
-})
+    subformValue['email'] = email.value
+    subformValue['pass'] = pass.value
+    subformValue['option'] = option.value
+    subformValue['range'] = range.value
+    subformValue['number'] = number.value
+    subformValue['date'] = date.value
+    subformValue['check'] = check.checked
 
-radio.addEventListener('input',(e)=>{
-    formValue['radio']=e.target.value
+    radioItem.forEach((item)=>{
+        if(item.checked===true){
+            subformValue['radio'] = item.value
+        }
+    })
+    // for (let item of radioItem) {
+    //     if (item.checked === true) {
+    //         subformValue['radio'] = item.value
+    //     }
+    //     console.log(subformValue);
+    // }
+    console.log(subformValue);
 })
+email.addEventListener('input', (e) => {
+    formValue['email'] = e.target.value;
+})
+pass.addEventListener('input', (e) => {
+    formValue['password'] = e.target.value;
+})
+radio.addEventListener('input', (e) => {
+    formValue['radio'] = e.target.value
+})
+option.addEventListener('input', (e) => {
+    formValue['option'] = e.target.value
+})
+range.addEventListener('input', (e) => {
+    formValue['range'] = e.target.value
+})
+number.addEventListener('input', (e) => {
+    formValue['number'] = e.target.value
+})
+date.addEventListener('input', (e) => {
+    formValue['date'] = e.target.value
+})
+check.addEventListener('input', (e) => {
+    formValue['checked'] = e.target.checked
+})
+console.log(subformValue);
