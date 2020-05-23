@@ -15,7 +15,7 @@
         <form>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="email" class="form-control" id="exampleInputEmail1" name='email'
                     placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                     else.</small>
@@ -23,12 +23,12 @@
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input type="password" class="form-control" id="exampleInputPassword1" name='password' placeholder="Password">
             </div>
 
             <div id='option' class="form-group">
                 <label for="exampleFormControlSelect1">Example select</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select name='quantity' class="form-control" id="exampleFormControlSelect1">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -41,42 +41,42 @@
 
             <div class="form-group">
                 <label for="ex1Slider">How many items:</label>
-                <input id='ex1Slider' type="range" min="0" max="20" step="1" value="14" />
+                <input name='volume' id='ex1Slider' type="range" min="0" max="20" step="1" value="14" />
             </div>
 
 
             <div class="form-group">
                 <label for="number">Type you number:</label>
-                <input type="number" class="form-control" id="number" placeholder="014465655">
+                <input type="number" class="form-control" id="number" placeholder="014465655" name='phone'>
             </div>
 
             <div class="form-group">
                 <label for="start">Chose date</label>
-                <input type="date" id="start" name="trip-start" value="2020-05-22" min="2018-01-01" max="2020-12-31">
+                <input type="date" id="start" value="2020-05-22" min="2018-01-01" max="2020-12-31" name='date'>
 
             </div>
 
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name='terms'>
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             
             <div id=radio class="form-group">
                 <div>
-                    <input  type="radio" name="exampleRadios" id="1" value="option1" checked>
+                    <input  type="radio" name="fruits" id="1" value="option1" checked>
                     <label  for="1">
                         Orange
                     </label>
                 </div>
                 <div>
-                    <input  type="radio" name="exampleRadios" id="2" value="option2">
+                    <input  type="radio" name="fruits" id="2" value="option2">
                     <label  for="2">
                         Apple
                     </label>
                 </div>
 
                 <div>
-                    <input  type="radio" name="exampleRadios" id="3" value="option3">
+                    <input  type="radio" name="fruits" id="3" value="option3">
                     <label  for="3">
                         Banana
                     </label>
