@@ -45,18 +45,11 @@ form.addEventListener('submit', (e) => {
     subformValue['number'] = number.value
     subformValue['date'] = date.value
     subformValue['check'] = check.checked
-
     radioItem.forEach((item)=>{
         if(item.checked===true){
             subformValue['radio'] = item.value
         }
     })
-    // for (let item of radioItem) {
-    //     if (item.checked === true) {
-    //         subformValue['radio'] = item.value
-    //     }
-    //     console.log(subformValue);
-    // }
     console.log(subformValue);
 })
 email.addEventListener('input', (e) => {
