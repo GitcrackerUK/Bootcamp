@@ -80,34 +80,66 @@
 const fakeRequest = (url) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const ran = Math.random();
-            if (ran < 0.3) {
-                reject({
-                    status: 404
-                })
-            } else {
-                const pages ={
-                    '/users':[
-                        {id:1,username:'Bilbo'},
-                        {id:2,username:'Esmeralda'}
-                    ],
-                    '/about':'This is about page!!!'
-                };
-                const data = pages[url];
+            const pages = {
+                '/users': [{
+                        id: 1,
+                        username: 'Bilbo'
+                    },
+                    {
+                        id: 2,
+                        username: 'Esmeralda'
+                    }
+                ],
+                '/about': 'This is about page!!!'
+            };
+            const data = pages[url];
+            if (data) {
                 resolve({
                     status: 200,
                     data
-                })
+                });
+            } else {
+                reject({
+                    status: 404
+                });
             }
-        }, 3000)
+        }, 1000)
     })
 }
 
-fakeRequest('/users').then((res) => {
-    console.log('Status code', res.status);
-    console.log('Data:', res.data);
-    console.log('REQUEST WORKED!!')
-}).catch((res) => {
-    console.log('Status code', res.status);
-    console.log('REQUEST FAILED!!')
+// fakeRequest('/users').then((res) => {
+//     console.log(res.data[0].username);
+//     console.log('Status code', res.status);
+//     console.log('Data:', res.data);
+//     console.log('REQUEST WORKED!!')
+// }).catch((res) => {
+//     console.log('Status code', res.status);
+//     console.log('REQUEST FAILED!!')
+// })
+
+// fakeRequest('/about').then((res) => {
+//     console.log('Status code', res.status);
+//     console.log('Data:', res.data);
+//     console.log('REQUEST WORKED!!')
+// }).catch((res) => {
+//     console.log('Status code', res.status);
+//     console.log('REQUEST FAILED!!')
+// })
+// // fakeRequest('/user').
+let users;
+let userObj = [];
+let result = fakeRequest('/users').then((res) => {
+    users = res.data;
+    let body = document.querySelector('body')
+    let ul = document.createElement('ul')
+   
+    body.appendChild(ul)
+    console.log(res.status);
+    for (let user of users) {
+        let li = document.createElement('li')
+        ul.appendChild(li)
+        li.innerHTML = `user ${user.id} with name: <b>${user.username}</b> won competition, congratulation.    ` 
+
+        //  console.log(user.id, user.username)
+    }
 })
