@@ -221,3 +221,45 @@ const fakeRequest = (url) => {
 // 	.catch((err) => {
 // 		console.log(`Something went wrong:` , err)
 // 	})
+
+
+// const request = (url) => {
+// 	return new Promise((resolve, reject) => {
+// 		setTimeout(() => {
+// 			const pages = {
+// 				'/user': [{
+// 						id: 1,
+// 						username: 'Johnny'
+// 					},
+// 					{
+// 						id: 2,
+// 						username: 'Tony'
+// 					}
+// 				]
+
+
+// 			}
+// 			const data = pages[url]
+// 			if (data) {
+// 				resolve({
+// 					'status': 200,
+// 					data
+// 				})
+// 			} else {
+// 				reject({
+// 					'status': 404,
+// 					data
+// 				})
+// 			}
+// 		}, 1000)
+// 	})
+// }
+
+// request('/user').then((res)=>{
+// 	console.log(res);
+// 	console.log(res.status);
+// 	for(let user of res.data){
+// 		console.log(user.id,user.username)
+// 	}
+
+// })
