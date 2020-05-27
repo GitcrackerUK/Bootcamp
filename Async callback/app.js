@@ -141,52 +141,52 @@
 //     }
 // })
 
-const fakeRequest = (url) => {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			const pages = {
-				'/users': [{
-						id: 1,
-						username: 'Bilbo'
-					},
-					{
-						id: 5,
-						username: 'Esmerelda'
-					}
-				],
-				'/users/1': {
-					id: 1,
-					username: 'Bilbo',
-					upvotes: 360,
-					city: 'Lisbon',
-					topPostId: 454321
-				},
-				'/users/5': {
-					id: 5,
-					username: 'Esmerelda',
-					upvotes: 571,
-					city: 'Honolulu'
-				},
-				'/posts/454321': {
-					id: 454321,
-					title: 'Ladies & Gentlemen, may I introduce my pet pig, Hamlet'
-				},
-				'/about': 'This is the about page!'
-			};
-			const data = pages[url];
-			if (data) {
-				resolve({
-					status: 200,
-					data
-				}); //resolve with a value!
-			} else {
-				reject({
-					status: 404
-				}); //reject with a value!
-			}
-		}, 1000);
-	});
-};
+// const fakeRequest = (url) => {
+// 	return new Promise((resolve, reject) => {
+// 		setTimeout(() => {
+// 			const pages = {
+// 				'/users': [{
+// 						id: 1,
+// 						username: 'Bilbo'
+// 					},
+// 					{
+// 						id: 5,
+// 						username: 'Esmerelda'
+// 					}
+// 				],
+// 				'/users/1': {
+// 					id: 1,
+// 					username: 'Bilbo',
+// 					upvotes: 360,
+// 					city: 'Lisbon',
+// 					topPostId: 454321
+// 				},
+// 				'/users/5': {
+// 					id: 5,
+// 					username: 'Esmerelda',
+// 					upvotes: 571,
+// 					city: 'Honolulu'
+// 				},
+// 				'/posts/454321': {
+// 					id: 454321,
+// 					title: 'Ladies & Gentlemen, may I introduce my pet pig, Hamlet'
+// 				},
+// 				'/about': 'This is the about page!'
+// 			};
+// 			const data = pages[url];
+// 			if (data) {
+// 				resolve({
+// 					status: 200,
+// 					data
+// 				}); //resolve with a value!
+// 			} else {
+// 				reject({
+// 					status: 404
+// 				}); //reject with a value!
+// 			}
+// 		}, 1000);
+// 	});
+// };
 
 // fakeRequest('/users').then((res) => {
 // 	const userId = res.data[0].id
@@ -263,3 +263,76 @@ const fakeRequest = (url) => {
 // 	}
 
 // })
+
+const btn = document.querySelector('button')
+
+const moveX = (element, amount, delay) => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			const bodyBoundary = document.body.clientWidth;
+			const elRight = element.getBoundingClientRect().right;
+			const elLeft = element.getBoundingClientRect().left;
+			if (elRight + amount > bodyBoundary) {
+				reject({bodyBoundary,elRight,elLeft})
+			} else {
+				element.style.transform = `translateX(${elLeft+amount}px)`
+				resolve()
+			}
+
+		}, delay)
+
+
+	})
+}
+
+// moveX(btn, 200, 1000)
+// 	.then(() => {
+// 			return moveX(btn, 200, 1000)})
+// 	.then(() => {
+// 			return moveX(btn, 200, 1000)})
+// 	.then(() => {
+// 			return moveX(btn, 200, 1000)})
+// 	.then(() => {
+// 			return moveX(btn, 200, 1000)})
+// 	.then(() => {
+// 			return moveX(btn, 200, 1000)})
+// 	.catch((err)=>{
+// 	console.log('Out of space')
+// 	})
+
+// moveX(btn,100,1000)
+// .then(()=>moveX(btn,100,1000))
+// .then(()=>moveX(btn,100,1000))
+// .then(()=>moveX(btn,100,1000))
+// .then(()=>moveX(btn,100,1000))
+// .then(()=>moveX(btn,100,1000))
+// .catch(({bodyBoundary,elLeft,elRight})=> {
+// console.log('Out of space');
+// console.log(`Screen is ${bodyBoundary} but button is ${elLeft} from left`);
+// })
+
+
+
+const newPromise = (element, position)=>{
+	return new Promise((resolve,reject)=>{
+		const border = document.body.clientWidth
+		const posLeft = element.getBoundingClientRect().left
+		const posRight = element.getBoundingClientRect().right
+		if(posLeft + position > border){
+			reject({status:404,border,posLeft,posRight, newVal:position})
+		}else{
+			resolve({status:200,border,posLeft,posRight},
+				console.log(`Button is in the screen.`)
+			)
+		}
+	})
+}
+
+
+
+newPromise(btn,100)
+.then(()=>newPromise(btn,500))
+.then(()=>newPromise(btn,1000))
+.catch(({status,border,posLeft,posRight, newVal})=>{
+	console.log(`Status is ${status} because button new value ${newVal} is out of current screen width ${border}`);
+})
