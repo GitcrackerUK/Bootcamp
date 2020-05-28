@@ -41,11 +41,15 @@
 //  })
 
 axios.get('https://swapi.dev/api/people').then((res)=>{
+	let num = 0
 	for(let person of res.data.results){
+		num +=1
 		const tbody = document.querySelector('tbody')
 		const row = document.createElement('tr')
-		tbody.appendChild(row)
 		const th = document.createElement('th')
+		tbody.appendChild(row)
+		
+		th.innerText = num
 		row.appendChild(th)
 		th.setAttribute('scope','row')
 		console.log(res.data.results);
@@ -57,4 +61,10 @@ axios.get('https://swapi.dev/api/people').then((res)=>{
 			td.innerText = pers[item]
 		}
 	}
+	
 })
+let tbody = document.querySelector('tbody')
+
+// for(let item in th){
+// 	console.log(item);
+// }
