@@ -48,11 +48,9 @@ axios.get('https://swapi.dev/api/people').then((res)=>{
 		const row = document.createElement('tr')
 		const th = document.createElement('th')
 		tbody.appendChild(row)
-		
-		th.innerText = num
 		row.appendChild(th)
 		th.setAttribute('scope','row')
-		console.log(res.data.results);
+		th.innerText = num
 		let {name,gender,height,mass,eye_color} = person
 		const pers = {name,gender,height,mass,eye_color}
 		for(let item in pers){
@@ -60,10 +58,18 @@ axios.get('https://swapi.dev/api/people').then((res)=>{
 			row.appendChild(td)
 			td.innerText = pers[item]
 		}
-	}
+		
+	}	
+	let filledRow = document.querySelectorAll('tbody tr')
+		console.log(filledRow);
 	
+		for(let item of filledRow){
+			let btn = document.createElement('button')
+			item.appendChild(btn)
+			btn.innerText='Movie'
+			btn.setAttribute('class','btn btn-info mt-2')
+		}
 })
-let tbody = document.querySelector('tbody')
 
 // for(let item in th){
 // 	console.log(item);
