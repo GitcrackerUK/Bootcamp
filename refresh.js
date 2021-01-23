@@ -1,14 +1,14 @@
 // ===21.01.21===
 
-const str= "hello after long time"
-const time= "time to refresh a bit of JavaScript"
+const str = "hello after long time"
+const time = "time to refresh a bit of JavaScript"
 
 // console.log(`${str.toUpperCase()}`)
 
-function Capitalize(str){
-    let Str=[]
+function Capitalize(str) {
+    let Str = []
 
-    for(let letter of str){
+    for (let letter of str) {
         Str.push(letter)
     }
     let first = Str.shift()
@@ -21,14 +21,14 @@ let loopStr = Capitalize(str)
 
 console.log(loopStr)
 
- const Capitalized = str[0].toUpperCase() + str.slice(1)
+const Capitalized = str[0].toUpperCase() + str.slice(1)
 
 
- console.log(`${Capitalized}, my name is Pawel and ${time}`)
+console.log(`${Capitalized}, my name is Pawel and ${time}`)
 
- const str1 = "boogabo"
+const str1 = "boogabo"
 
- let upperStr = str1.toLocaleUpperCase()
+let upperStr = str1.toLocaleUpperCase()
 
 console.log(upperStr)
 
@@ -60,7 +60,7 @@ console.log("bogabo".indexOf('bo'))
 console.log("bogabo".indexOf('ga'))
 
 let sliced = tvShow.slice(3)
-let slicedFront = tvShow.slice(0,3)
+let slicedFront = tvShow.slice(0, 3)
 
 console.log(sliced)
 console.log(slicedFront)
@@ -71,7 +71,7 @@ console.log(price.slice(1))
 
 console.log("I'm good with javaScript".replace("javaScript", "React"))
 
-const age = "5"+"4";
+const age = "5" + "4";
 
 console.log(typeof age)
 
@@ -79,9 +79,9 @@ console.log("hello"[0])
 console.log("prodigy".toUpperCase())
 
 
-let Arr = [ "hello", "moon", "MonaLisa"]
+let Arr = ["hello", "moon", "MonaLisa"]
 
-for(let item of Arr){
+for (let item of Arr) {
     console.log(item.toUpperCase())
 }
 
@@ -91,9 +91,9 @@ let username = "    john.johN@COM"
 let trimmedUpperCased = username.trim().toUpperCase()
 
 console.log(trimmedUpperCased.toLowerCase())
-console.log("Garbage".replace("b",""))
+console.log("Garbage".replace("b", ""))
 
-let rest = "Garbage".slice(3).replace("b",'r')
+let rest = "Garbage".slice(3).replace("b", 'r')
 
 console.log(rest)
 
@@ -102,7 +102,7 @@ console.log("hello \nMoto")
 
 // string literals
 
-console.log(`It's ${5+6}pm `)
+console.log(`It's ${5 + 6}pm `)
 
 let money = 24
 
@@ -116,11 +116,96 @@ console.log(`There is ${cow.toUpperCase()}`)
 let myAge = 19
 
 
-function CheckAge(age){
-    return age>=18?`You are allowed to buy Alcohol because you are ${age}`:`Sorry, you are ${age} and you are under age!!`
+function CheckAge(age) {
+    return age >= 18 ? `You are allowed to buy Alcohol because you are ${age}` : `Sorry, you are ${age} and you are under age!!`
 }
 
 console.log(CheckAge(17))
 console.log(CheckAge(myAge))
 
 //template literals  alow interpolate
+
+//=====
+
+let user = null
+
+console.log(user)
+
+user = "John Jones"
+
+console.log(user)
+
+
+// declaring let
+let a = null
+
+console.log(a)
+
+// never declare let or const and assign to it undefined, might corse problem with debugging 
+function ScreenWidth() {
+    let width
+    function checkSize() {
+        width = window.innerWidth
+    }
+    window.addEventListener('resize', checkSize())
+    console.log(width)
+    return width
+}
+
+ScreenWidth()
+
+// 23.01.21  OOP JS
+let names = {
+    fname: "Dillion",
+    lname: "Megida"
+}
+
+console.log(names.fname)
+console.log(names.lname)
+console.log(names.hasOwnProperty("mname"));
+console.log(names)
+
+
+
+function DogObject(name, age) {
+    let dog = Object.create(constructorObject);
+    dog.name = name;
+    dog.age = age;
+    return dog
+}
+
+let constructorObject = {
+    speak: function () {
+        return "I am  a dog"
+    }
+}
+
+let bingo = DogObject("Bingo", 54)
+
+console.log(bingo.speak())
+console.log(bingo)
+
+  //class and instance
+
+
+  let SiteUser = {
+      name:"John",
+      surname:"Jones",
+      age:25,
+      email:`${this.name}@gmail.com`
+  }
+
+  console.log(SiteUser.email) // email doesn't work
+
+  function CreatUser(name,surname,age){
+      this.name=name;
+      this.surname=surname;
+      this.age = age;
+      this.email = `${name+surname}@gmail.com`
+  }
+
+let Tom = new CreatUser("Tom","Jones",33)
+
+
+console.log(Tom)
+
