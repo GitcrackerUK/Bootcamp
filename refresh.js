@@ -460,4 +460,62 @@ __REACT_DEVTOOLS_GLOBAL_HOOK__ = true;
 // console.log(colorsList.indexOf(colorInput))
 // console.log(colorsList[0])
 
-// Not operator
+// Not operator !
+// console.log(!1
+// )
+
+// console.log(!null) //true
+// console.log(!undefined) // true
+// console.log(!45) // false
+
+// console.log(!'')
+
+
+// let user = true
+
+
+// !user?console.log("Logged out"):console.log("Logged")
+
+// let Array = [1,234,4,5,6,787]
+
+// Array[0]
+
+// // to get access of last item from array use array.length-1
+
+
+
+// console.log(Array[Array.length-1])
+
+// // arrays are mutable
+
+// Array[2] = "troll"
+// console.log(Array)
+
+// // to add item to array to the end
+//  Array[Array.length] = "New Item" // Array[6] 
+
+//  console.log(Array)
+
+// let songs = ["Hello its me","Another day in a paradise","Only you","Makumba"]
+
+// add one tune to the back of array
+// move last song to front of array
+// remove first song from array
+
+// songs.push("Goodbye")
+// console.log(songs)
+// let last = songs.pop()
+// console.log(songs)
+// songs.unshift(last)
+// console.log(songs)
+// songs.shift()
+// console.log(songs)
+
+// let places = ["London","Barcelona","Tokyo"]
+
+// let all = songs.concat(places)
+// console.log(all)
+
+// console.log(all.includes("Lubin"))
+// console.log(all.includes("London"))
+// console.log(all.indexOf("London"))
