@@ -283,26 +283,26 @@ __REACT_DEVTOOLS_GLOBAL_HOOK__ = true;
 // console.log(typeof 22)
 
 // typeof is operator !! 
-function clg(props) {
-    console.log(props)
-}
+// function clg(props) {
+//     console.log(props)
+// }
 
 
 // clg(typeof 22) 
 
 // clg(typeof typeof)
 
-clg(typeof parseInt("22"))
+// clg(typeof parseInt("22"))
 
-let number = "11"
+// let number = "11"
 
-clg(typeof number)
+// clg(typeof number)
 
-let convertedToString = parseInt(number) + 9 //20
-clg(convertedToString)
+// let convertedToString = parseInt(number) + 9 //20
+// clg(convertedToString)
 
-clg(parseInt(22.3))// 22
-clg(parseFloat(22.3)) //22.3
+// clg(parseInt(22.3))// 22
+// clg(parseFloat(22.3)) //22.3
 
 //comparisons
 //>
@@ -345,4 +345,119 @@ clg(parseFloat(22.3)) //22.3
 
 
 
-console.log(1!==2)
+// console.log(1 !== 2, "is it true?", true ? "Yes" : "No")
+
+// if (1 === 1) {
+//     console.log(true)
+// }
+
+// let rating = 0
+
+// function CheckForTruthy(input){
+//     if(input){
+//         console.log("Truthy value")
+//     }else{
+//         console.log("Not truthy")
+//     }
+// }
+
+// CheckForTruthy(rating)
+// if (rating < 3) {
+//     console.log("Below average")
+// } else if(rating=3){
+//     console.log("Average")
+// } else {
+//     console.log("Above average")
+// }
+
+// if (rating && rating % 2 === 0) {
+//     console.log(rating)
+// } else (
+//     console.log("rating is " + rating)
+// )
+
+// console.log(typeof rating)
+
+// if ( rating !== null || rating % 2 === 0) {
+//     console.log(true)
+//     console.log(typeof null)
+//     console.log(rating % 2)
+// } else if (rating % 2 !== 0) {
+//     console.log(false)
+//     console.log(rating % 2)
+// } else {
+//     console.log(rating, "Not valid input")
+// }
+
+// console.log(typeof (typeof rating))
+
+// let password = "lala laas";
+
+
+// if (password && password.length >= 8) {
+//     if (password.indexOf(' ') === -1) {
+//         console.log("Logged !!")
+//     }else{console.log("Trim whitespace")}
+// } else {
+//     console.log("Password need be longer")
+// }
+
+// Logical operator
+//AND &&
+
+// console.log(true&&false)
+// console.log(true&&true)
+// console.log(false&&true)
+
+
+// let password = "Chick en34";
+
+
+// function checkPass(password){
+
+//     if(password.length>=6&&password.indexOf(' ')===-1){
+//         console.log("You are logged!")
+//     }else{
+//         console.log(password)
+//     }
+
+// }
+
+// checkPass(password)
+// checkPass(null)
+// checkPass("Hello")
+// checkPass(undefined)
+// checkPass("ThisIsmypass")
+
+// or ||
+// let password = 
+// if(password||typeof password=== Number){
+//     console.log(password)
+// }
+
+// let age = 40 
+// age = 12
+
+
+// if(age<16||age>60){
+// console.log("You are free to enter")
+// }
+
+// let colorInput = "purple"
+
+// let colorsList = ["purple", "orchid", "violet"]
+
+// for (let color of colorsList) {
+//     if (color === colorInput) { console.log("there is this color") }
+//     else { console.log(`${colorInput} is not in color List`) }
+// }
+
+// if (colorInput === colorsList[0] || colorInput === colorsList[1] || colorInput === colorsList[2] ){
+//     console.log(`${colorInput} is in color List`)
+// }
+
+// console.log(colorsList.includes(colorInput))
+// console.log(colorsList.indexOf(colorInput))
+// console.log(colorsList[0])
+
+// Not operator
