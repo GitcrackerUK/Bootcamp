@@ -1,4 +1,4 @@
-__REACT_DEVTOOLS_GLOBAL_HOOK__ = true;
+// __REACT_DEVTOOLS_GLOBAL_HOOK__ = true;
 // ===21.01.21===
 
 // const str = "hello after long time"
@@ -715,7 +715,56 @@ __REACT_DEVTOOLS_GLOBAL_HOOK__ = true;
 //     for(let j =0;j<row.length;j++){
 //         sum += row[j]
 //         console.log(`   ${sum}`)
-     
+
 //     }
 // }
 // console.log(sum)
+// let j = 0
+// while(j<10){
+// j++
+// console.log(`${j}`)
+// }
+
+// let i = false
+// while(i){
+//     console.log("object")
+// }
+
+// const ran = () => { return Math.floor(Math.random() * 10); }
+// let guess = ran()
+// let input = 0
+// while (guess !== input) {
+//     input = ran()
+//     console.log(`input is: ${input}`)
+//     console.log(`guess is: ${guess}`)
+// }
+// console.log(Math.floor(Math.random()*10))
+
+// for(let i =0 ; i<100;i++){
+//     console.log(`I is: ${i}`)
+//     if(i===5){
+//         console.log("break")
+//         break
+//     }
+// }
+
+// let guess = ran()
+// let target = null
+// while (true) {
+//     if (guess === target) break
+//     target = ran()
+//     console.log(target)
+// }
+
+import {ran} from './factory.js'
+import {colors} from './store.js'
+console.log(ran())
+
+
+for(let color of colors){
+    console.log(color)
+}
+
+
+
+
