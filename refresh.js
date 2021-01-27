@@ -683,3 +683,39 @@ __REACT_DEVTOOLS_GLOBAL_HOOK__ = true;
 //     console.log(`${i} x ${i} = ${i * i}`)
 // }
 //==27/01==
+
+// const examsScores = [67,87,65,78,99,65,67,56]
+// let total = 0;
+// let counter = 0;
+// let average = 0;
+// for(let i = 0;i<examsScores.length;i++){
+//     console.log(i)
+// total += examsScores[i]
+// counter++
+// }
+// console.log(total/counter)
+
+// for (let i = 1; i<=20;i++ ){
+//     console.log("outer loop", i)
+//     for(let j = 10; j>=1;j-=2){
+//         console.log("   inner loop", j)
+//     }
+// }
+
+// const gameBoard = [
+//     [4, 34, 54, 3, 2],
+//     [64, 8, 43, 2],
+//     [8, 32, 16, 4],
+//     [2, 8, 4, 2]
+// ]
+// let sum = 0;
+// for(let i = 0; i<gameBoard.length;i++){
+//     let row = gameBoard[i];
+//     console.log(row)
+//     for(let j =0;j<row.length;j++){
+//         sum += row[j]
+//         console.log(`   ${sum}`)
+     
+//     }
+// }
+// console.log(sum)
