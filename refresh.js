@@ -519,3 +519,167 @@ __REACT_DEVTOOLS_GLOBAL_HOOK__ = true;
 // console.log(all.includes("Lubin"))
 // console.log(all.includes("London"))
 // console.log(all.indexOf("London"))
+
+// let arr = ["name","address","position"]
+
+// for( let item of arr){
+//     console.log(item)
+// }
+
+// arr.splice(3,0,"company")
+
+
+// let rest = arr.shift()
+
+// arr.push(rest)
+
+
+
+// let backOfArray = arr.splice(arr.length-2,2)
+
+
+// let arr2 = arr.concat(backOfArray)
+
+
+// let arr3 = arr2.splice(1,1) 
+
+
+// console.log(arr)
+
+// arr.splice(1,1,"position","occupation")
+
+// console.log(arr)
+
+// arr.sort()
+// console.log(arr)
+
+// reference types
+
+// let fruit = "Orange"
+// let color = fruit // Value Type Variable
+
+// fruit = "Banana"
+// console.log(color)
+
+// let citrus = ["Orange", "Limos", "Greyphrut"] // reference type Variable
+
+// let x = 33
+
+// x += 2
+// console.log(x)
+
+// const arr = ["eggs", "carrots", "bred"]
+
+// arr.splice(arr.length, 0, "sausage")
+// console.log(arr)
+
+// const user = {
+//     // name:key,
+//     totalSteps: 3000,
+//     totalMiles: 223,
+//     averageCalBurn: 4556,
+//     workoutsThisWeek: 5,
+//     averageSleep: 3,
+//     exercises: ["jump", "pushups", "roll"]
+// }
+
+// console.log(user.averageCalBurn)
+
+// console.log(user)
+
+// const palette = {
+//     red: '#eb4d4b',
+//     yellow: '#f9ca24',
+//     blue: '#30336b'
+// }
+
+// let userChoice = 'red'
+
+// console.log(palette[userChoice])
+
+// let userRevues = {
+// }
+
+// userRevues['QueenBee'] = "This is very cool"
+
+// console.log(userRevues)
+
+
+// let objectOne = {
+//     Troll: true
+// }
+
+// objectOne["user"] = {
+//     userName: "Pascal",
+//     UserAge: "34",
+// }
+
+// console.log(objectOne)
+
+// const student = {
+//     firstName: 'David',
+//     lastName: 'Jones',
+//     strength: ["Music", "Art", "Dancing"],
+//     exams: {
+//         midterm: 92,
+//         final: 88
+//     },
+// }
+
+// let examAverage = student.exams.midterm + student.exams.final / 2
+
+
+// student["examAve"] = examAverage
+// console.log(student)
+
+
+// const game = {
+//     player1: {
+//         username: "Blue",
+//         score: null,
+//         skills: ["hello"]
+//     },
+//     player2: {
+//         username: "Green",
+//         score: null,
+//         skills: []
+//     },
+
+// }
+
+// const game2 = game;
+
+
+// game2["player3"] = {
+//     username: "Reed",
+//     score: null
+// }
+
+
+// console.log(game)
+// console.log(game2)
+
+// let nums = [1,2,3,4,5]
+// let moreNums = nums
+
+// let res = nums === moreNums
+
+// console.log(res)
+
+// const MartaNum = 271687357
+
+// console.log(MartaNum)
+
+// for (let i = 0; i < 10 ; i++) {
+//     console.log(`loop: ${i}`)
+// }
+// for (let i = 0; i < 10 ; i+=2) {
+//     console.log(`loop: ${i}`)
+// }
+// for (let i = 0; i < 100 ; i+=i) {
+//     console.log(`loop: ${i}`)
+// }
+// for (let i = 0; i <= 20; i++) {
+//     console.log(`${i} x ${i} = ${i * i}`)
+// }
+//==27/01==
