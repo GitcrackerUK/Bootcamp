@@ -1,0 +1,1 @@
+export let colors = ["Green","Red","Blue","Grey","Purple"]
