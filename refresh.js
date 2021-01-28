@@ -756,15 +756,163 @@
 //     console.log(target)
 // }
 
-import {ran} from './factory.js'
-import {colors} from './store.js'
-console.log(ran())
+
+// console.log(ran())
 
 
-for(let color of colors){
-    console.log(color)
-}
+// for(let color of colors){
+//     console.log(color)
+// }
+
+// for(let i = 0 ; i<colors.length;i++){
+//     console.log(colors[i])
+// }
+
+// for(let char of "My sweet home"){
+//     console.log(char.toLocaleUpperCase())
+// }
+
+
+// for(let i = 0;i<magicSquare.length;i++){
+//     let row = magicSquare[i]
+//     let sum = 0 ;
+//     for(let j = 0;j<row.length;j++){
+//         sum += row[j]
+//     }
+//     console.log(sum)
+// }
+
+// import {ran} from './factory.js'
+// import {colors,magicSquare} from './store.js'
+
+// for(let item of magicSquare){
+//     let sum = 0
+//     for(let nestedItem of item){
+//         sum += nestedItem
+//     }
+//     console.log(sum)
+// }
+// let colorsToLower = []
+// for (let i = 0; i < colors.length; i++) {
+//     colorsToLower.push(colors[i].toLocaleLowerCase())
+//     }
+// console.log(colors)    
+// console.log(colorsToLower)    
+
+// const NestedForLoop = (magicSquare) => {
+//     let totalOfAll = 0
+//     for (let i = 0; i < magicSquare.length; i++) {
+//         let row = magicSquare[i]
+//         let sum = 0;
+//         for (let j = 0; j < row.length; j++) {
+//             sum += row[j]
+//         }
+//         totalOfAll += sum
+//     }
+//     return totalOfAll
+// }
+
+// console.log(NestedForLoop(magicSquare))
+
+// import { colors, magicSquare } from './store.js'
+
+// for (let color of colors) {
+//     console.log(color)
+// }
+
+// console.log(magicSquare)
+
+// for(let i =0;i<colors.length;i++){
+//     console.log(colors[i])
+// }
+// import { movieReviews } from './store.js'
+
+// // object is not iterable !!
+//  console.log(Object.keys(movieReviews))
+// const obj = {
+//     color:"green",
+//     width:"20px",
+//     height:"200px",
+// }
+// const keyArr = [];
+// for(let property of Object.keys(obj)){
+//    keyArr.push(property)
+// }
+// const valueArr = [];
+// for(let property of Object.keys(obj)){
+// valueArr.push(obj[property].toUpperCase())
+// }
+
+// console.log(keyArr)
+// console.log(valueArr)
+
+// const objectValues = Object.values(movieReviews);
+// console.log(objectValues)
+
+
+// let total = 0;
+// for(let rating of objectValues){
+//     total += rating
+// }
+// let aver  = total/objectValues.length;
+
+// console.log(total)
+// console.log(aver)
 
 
 
+// functions
+// const funct1 = Cat
+// function Cat(){
+//     console.log("Meo")
+// }
 
+// funct1()
+// // you can assign function to variable
+// // assignment need to be without parterres !!
+
+// const Meo = funct1
+
+
+// Meo()
+
+
+// const add_gen =function(n){
+//     return function(x){
+//        return function(z){
+//         return n+x/z
+//        }
+//     }
+// }
+
+// console.log(add_gen(2)(2)(2))
+
+// import { ran } from './factory.js'
+
+// function rollDie() {
+//     let die = ran(6)
+//     console.log(die)
+// }
+// rollDie();
+
+// function trowMultipleDie(number) {
+//     for (let i = 0; i < number; i++) {
+//         rollDie()
+//     }
+// }
+
+// trowMultipleDie(6)
+
+// // const add_gen =function(n){
+// //     return function(x){
+// //        return function(z){
+// //         return n+x/z
+// //        }
+// //     }
+// // }
+
+// console.log(add_gen(2)(2)(2))
+// const outerfunction  = add_gen(2)
+// const midlefunction = outerfunction(2)
+// const innerfunction  = midlefunction(2)
+// console.log(innerfunction)
