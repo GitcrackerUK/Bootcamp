@@ -916,3 +916,50 @@
 // const midlefunction = outerfunction(2)
 // const innerfunction  = midlefunction(2)
 // console.log(innerfunction)
+
+//create function with two parameters and call it by passing two arguments from variable a and b 
+
+
+// function call(a,b){
+//     return a+b.toUpperCase()
+// }
+
+// const a = "Pawel";
+// const b = "Siwek";
+
+
+
+// console.log(call(a,b))
+// return
+
+//return can return only one value
+// function add(a, s) {
+//     return a, s
+// }
+
+// console.log(add(2, 3))  // 3
+
+// // to return many values from function use array like so
+
+// function retAll(a, b, c) {
+//     return [a, b, c]
+// }
+
+
+// console.log(retAll(1, 2, 4))
+
+// // return finish executions of function 
+
+// function isColor(str) {
+//     if (str && typeof str === "string" && str.toLowerCase() === "purple") {
+//         return (`${str} is my favorite color.`)
+//     }
+//     return (`${str} is not my favorite color`)
+
+// }
+
+
+// console.log(isColor("green"))
+// console.log(isColor("Purple"))
+
+
