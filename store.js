@@ -11,3 +11,4 @@ export const movieReviews = {
 	'Little Miss Sunshine' : 8.5,
 	Coraline               : 7.5
 };
+export const alphabet = "a b c d e fg h i j k lm no pqr s t u v wx y z";

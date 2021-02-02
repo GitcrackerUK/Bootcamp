@@ -962,4 +962,124 @@
 // console.log(isColor("green"))
 // console.log(isColor("Purple"))
 
+// function checkPurple(color){
+//     return color.toLowerCase()==="purple"
+// }
 
+// console.log(checkPurple("purple"))
+
+// const color = "purple"
+
+// console.log(color.toLowerCase()==="purple"?true:false)
+// const arr = ["green", "purple", "yellow", "black"];
+
+// function containsPurple(arr) {
+
+//     for (let color of arr) {
+
+//         if (color === "purple"|| color=== "magenta") {
+//             return true;
+//         }
+
+//     }
+//     return false
+// }
+
+// console.log(containsPurple(arr))
+
+// function isPassword(pass, userName) {
+//     if (pass && userName && pass.indexOf(userName) === -1 && pass.length >= 8 && pass.indexOf(" ") === -1) {
+//         return true
+//     }
+//     return false
+// }
+
+// console.log(isPassword("password", "Tom"))
+
+// function isPassword2(pass, userName) {
+//     if (!pass || !userName || pass.indexOf(userName) !== -1 || pass.length < 8 || pass.indexOf(" ") !== -1) {
+//         return false
+//     }
+//     return true
+// }
+
+// console.log(isPassword2("passdwww", "ron"))
+
+// function isPassword3(pass, username) {
+//     const toShort = pass.length < 8;
+//     const hasNoSpace = pass.indexOf(" ") !== -1;
+//     const similar = pass.indexOf(username) !== -1;
+
+//     if(toShort||hasNoSpace||similar) return [toShort,hasNoSpace,similar, `Return is ${false}`]
+    
+//     return true
+
+// }
+
+// console.log(isPassword3("Janet8sdfs5","Janet"))
+
+// function isPassword4(pass, username) {
+//     const toShort = pass.length < 8;
+//     const hasNoSpace = pass.indexOf(" ") !== -1;
+//     const similar = pass.indexOf(username) !== -1;
+
+//     return  (!toShort||hasNoSpace||!similar) 
+    
+   
+// }
+
+// console.log(isPassword4("Janet8sdfs5","Janet"))
+
+//write function to check average of all items in array
+
+// function checkAverage(arr){
+//     let sum = 0;
+//     let arrItems = 0;
+//     for(let item of arr){
+//         sum+=item
+//         arrItems++
+//     }
+//     return sum/arrItems
+// }
+
+
+// const arr = [1,2,5,44,32,2,3,4,5,6]
+// const arrAveTwentyFive = [0,50]
+// const arrAverage = checkAverage(arr);
+// console.log(arrAverage)
+// console.log(checkAverage(arrAveTwentyFive))
+
+
+
+//define function with one parameter
+// loop over each item in array
+// add every array item to variable sum
+// return divide sum by length of array 
+
+// function ave(arr){
+//     let sum = 0;
+//     for(let item of arr){
+//         sum += item
+//     }
+//     return sum/ arr.length
+// }
+
+// console.log(ave([0,50]))
+
+import {alphabet} from './store.js'
+import {trimWhiteSpaces} from './factory.js'
+
+
+
+
+function isPangram(alph,str){
+    let string = trimWhiteSpaces(toLowerCase(str));
+    const alphabet = trimWhiteSpaces(toLowerCase(alph));
+    for(let letter of alphabet){
+        if(string.indexOf(letter) === -1) return false
+    }
+    return true    
+}
+
+
+console.log(isPangram(alphabet,"waLtzbad  nymp -hforquickjigsvex"))

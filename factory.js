@@ -12,3 +12,10 @@ export const NestedForLoop = (magicSquare) => {
     }
     return totalOfAll
 }
+export function trimWhiteSpaces(str){
+    let trimmed = ""
+    for(let letter of str){
+        letter !== " "?trimmed +=letter:null
+    }
+    return trimmed
+}
