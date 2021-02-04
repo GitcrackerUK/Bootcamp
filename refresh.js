@@ -1011,7 +1011,7 @@
 //     const similar = pass.indexOf(username) !== -1;
 
 //     if(toShort||hasNoSpace||similar) return [toShort,hasNoSpace,similar, `Return is ${false}`]
-    
+
 //     return true
 
 // }
@@ -1024,8 +1024,8 @@
 //     const similar = pass.indexOf(username) !== -1;
 
 //     return  (!toShort||hasNoSpace||!similar) 
-    
-   
+
+
 // }
 
 // console.log(isPassword4("Janet8sdfs5","Janet"))
@@ -1066,20 +1066,173 @@
 
 // console.log(ave([0,50]))
 
-import {alphabet} from './store.js'
-import {trimWhiteSpaces} from './factory.js'
+// import {alphabet} from './store.js'
+// import {trimWhiteSpaces} from './factory.js'
 
 
 
 
-function isPangram(alph,str){
-    let string = trimWhiteSpaces(toLowerCase(str));
-    const alphabet = trimWhiteSpaces(toLowerCase(alph));
-    for(let letter of alphabet){
-        if(string.indexOf(letter) === -1) return false
-    }
-    return true    
+// function isPangram(alph,str){
+//     let string = trimWhiteSpaces(toLowerCase(str));
+//     const alphabet = trimWhiteSpaces(toLowerCase(alph));
+//     for(let letter of alphabet){
+//         if(string.indexOf(letter) === -1) return false
+//     }
+//     return true    
+// }
+
+
+// console.log(isPangram(alphabet,"waLtzbad  nymp -hforquickjigsvex"))
+
+
+// let Person = function(name) {
+//     this.name = name ;
+// }
+
+// let person =  Person("tony")
+
+// function copyContents(from, to ){
+
+// }
+
+// var referenceBox = document.createElement('div') // link is append to this div
+
+// var link = document.createElement('div');
+
+// link.href= 'http://www.google.com';
+
+// link.textContent = 'a link';
+
+// referenceBox.appendChild(link);
+
+// for(var i = 0; i<5;i++){  
+//     var newBox = document.createElement('div')
+
+//         document.body.appendChild(newBox); // creates and adds five dives
+
+//         for(var i= 0;i<referenceBox.childNodes.length; i++){
+//             newBox.appendChild(referenceBox.childNodes[i]);
+//         }
+// }
+
+//Same link can't have multiple parents
+
+// var Person = function(firstName,lastName,dateOfBirth,mesasurments){
+//     this.firstName =firstName,
+//     this.lastName = lastName,
+//     this.dateOfBirth = dateOfBirth,
+//     this.mesasurments = mesasurments
+// }
+
+// person = new Person("Tony","Johnson",new Date(2013,2,12),{weight:'70kg'})
+// personClone = JSON.parse(JSON.stringify(person))
+
+// console.log(person.mesasurments['weight'] === personClone['weight'])
+
+
+// var x = 1 
+// function foo(){
+//     var x =3;
+// }
+// foo()
+
+// console.log(x)
+
+// function bar(){
+//     x=4;
+// }
+// bar();
+// console.log(x)
+
+
+// console.log(typeof a)
+// console.log(typeof b)
+
+// function a(){
+
+// }
+
+// var b =function(){
+
+// }
+
+
+
+
+//9.  3,4
+//10. 1,3,5,7
+//11. 2
+//12. ---
+//13. 1
+//14. 3
+//15. 1
+//16. all
+//17. 3
+//18. none
+//19.  3
+
+
+// function foo(a,b,c){
+//     a++;
+//     b= "new string";
+//     c["key"]="new value";
+// }
+// var a = 1,
+// b= "old string",
+// c ={"key":"old value"}
+
+// foo(a,b,c)
+
+// console.log(a,b,c)
+
+// var a = ['apple','banana','coconut'];
+// var b = a ;
+// var c = a.slice()
+
+// a.push('date')
+
+// console.log(`a = ${a}`)
+// console.log(`b = ${b}`)
+// console.log(`c = ${c}`)
+
+// var person  = new Object();
+// console.log(person)
+
+// var person = {
+//     FirstName: "John",
+// }
+// person.ShowName = new function(){
+//     alert(FirstName);
+// }
+
+// person.ShowName();
+
+// person.ShowName = function(){
+//     alert(this.firstName);
+// }
+// person.ShowName()
+
+// console.log(person.ShowName())
+const movieReviews = {
+    Arrival: 9.5,
+    Alien: 9,
+    Amelie: 8,
+    'In Burges': 9,
+    Amadeus: 10,
+    'Kill Bill': 8,
+    'Litle Miss': 8.6,
+    Coraline: 7.5
 }
 
+const moviesKeys = Object.keys(movieReviews);
+console.log(moviesKeys)
 
-console.log(isPangram(alphabet,"waLtzbad  nymp -hforquickjigsvex"))
+for(let item in movieReviews){
+    console.log(item)
+    console.log(movieReviews[item])
+}
+
+function read(obj){for(let prop in obj){
+    console.log(obj[prop])
+}}
+read(movieReviews);
