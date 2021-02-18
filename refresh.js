@@ -1213,26 +1213,45 @@
 // person.ShowName()
 
 // console.log(person.ShowName())
-const movieReviews = {
-    Arrival: 9.5,
-    Alien: 9,
-    Amelie: 8,
-    'In Burges': 9,
-    Amadeus: 10,
-    'Kill Bill': 8,
-    'Litle Miss': 8.6,
-    Coraline: 7.5
+// const movieReviews = {
+//     Arrival: 9.5,
+//     Alien: 9,
+//     Amelie: 8,
+//     'In Burges': 9,
+//     Amadeus: 10,
+//     'Kill Bill': 8,
+//     'Litle Miss': 8.6,
+//     Coraline: 7.5
+// }
+
+// const moviesKeys = Object.keys(movieReviews);
+// console.log(moviesKeys)
+
+// for(let item in movieReviews){
+//     console.log(item)
+//     console.log(movieReviews[item])
+// }
+
+// function read(obj){for(let prop in obj){
+//     console.log(obj[prop])
+// }}
+// read(movieReviews);
+
+const btn = document.querySelector('button');
+
+
+
+// setTimeout(()=>{
+//     btn.style.transform = 'translateX(100px)'
+//     setTimeout(()=>{
+//         btn.style.transform = 'translateX(200px)'
+//     },2000)
+// },1000)
+
+const moveX = ( element,amount, delay)=>{
+    setTimeout(()=>{
+        element.style.transform = `translateX(${amount}px)`
+    },delay)
 }
 
-const moviesKeys = Object.keys(movieReviews);
-console.log(moviesKeys)
-
-for(let item in movieReviews){
-    console.log(item)
-    console.log(movieReviews[item])
-}
-
-function read(obj){for(let prop in obj){
-    console.log(obj[prop])
-}}
-read(movieReviews);
+moveX(btn,100,1000)
