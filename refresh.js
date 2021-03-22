@@ -1217,3 +1217,10 @@
 
 // console.log(arr);
 // console.log(filtered);
+
+// const cutSchools = (cut, list) => list.filter((school) => school !== cut);
+
+// const schools = ['Washington', 'Boston', 'New York', 'Denver'];
+
+// const noWashington = cutSchools('Washington', schools);
+// console.log(noWashington);
