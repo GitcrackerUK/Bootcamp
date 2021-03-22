@@ -24,7 +24,6 @@
 
 // const Capitalized = str[0].toUpperCase() + str.slice(1)
 
-
 // console.log(`${Capitalized}, my name is Pawel and ${time}`)
 
 // const str1 = "boogabo"
@@ -33,11 +32,9 @@
 
 // console.log(upperStr)
 
-
 // console.log(upperStr.toLowerCase)
 
 // let color = "   purple   "
-
 
 // console.log(color.trim().toUpperCase())
 
@@ -47,8 +44,7 @@
 
 // str.toLocaleUpperCase()
 
-
-// // to use methods with additional arguments you need pass argument to parentheses 
+// // to use methods with additional arguments you need pass argument to parentheses
 
 // let arg = 'cat'
 
@@ -56,7 +52,7 @@
 
 // console.log(tvShow.indexOf(arg))
 
-// // values  passed to methods are called arguments or parameters 
+// // values  passed to methods are called arguments or parameters
 // console.log("bogabo".indexOf('bo'))
 // console.log("bogabo".indexOf('ga'))
 
@@ -79,7 +75,6 @@
 // console.log("hello"[0])
 // console.log("prodigy".toUpperCase())
 
-
 // let Arr = ["hello", "moon", "MonaLisa"]
 
 // for (let item of Arr) {
@@ -87,7 +82,6 @@
 // }
 
 // let username = "    john.johN@COM"
-
 
 // let trimmedUpperCased = username.trim().toUpperCase()
 
@@ -99,7 +93,6 @@
 // console.log(rest)
 
 // console.log("hello \nMoto")
-
 
 // // string literals
 
@@ -115,7 +108,6 @@
 
 // console.log(`There is ${cow.toUpperCase()}`)
 // let myAge = 19
-
 
 // function CheckAge(age) {
 //     return age >= 18 ? `You are allowed to buy Alcohol because you are ${age}` : `Sorry, you are ${age} and you are under age!!`
@@ -136,13 +128,12 @@
 
 // console.log(user)
 
-
 // // declaring let
 // let a = null
 
 // console.log(a)
 
-// // never declare let or const and assign to it undefined, might corse problem with debugging 
+// // never declare let or const and assign to it undefined, might corse problem with debugging
 // function ScreenWidth() {
 //     let width
 //     function checkSize() {
@@ -166,8 +157,6 @@
 // console.log(names.hasOwnProperty("mname"));
 // console.log(names)
 
-
-
 // function DogObject(name, age) {
 //     let dog = Object.create(constructorObject);
 //     dog.name = name;
@@ -188,7 +177,6 @@
 
 // //class and instance
 
-
 // let SiteUser = {
 //     name: "John",
 //     surname: "Jones",
@@ -207,12 +195,9 @@
 
 // let Tom = new CreatUser("Tom", "Jones", 33)
 
-
 // console.log(Tom)
 
-
 // to create object prototype need be used function like so
-
 
 // function CreateBotChat(name, time, img, bot) {
 //     this.name = name;
@@ -221,11 +206,9 @@
 //     this.bot = bot;
 // }
 
-
 // let TomChat = new CreateBotChat("Jack", 22.20, "jack.img", false)
 
 // console.log(TomChat)
-
 
 // function SingleDay(WokeUp,WentToBed){
 
@@ -235,7 +218,7 @@
 //     day.push(i)
 //     night.push(i+12)
 // }
-// const allDay = day.concat(night); 
+// const allDay = day.concat(night);
 
 // let  dayLength = function CheckLength(){
 
@@ -243,7 +226,7 @@
 // }
 // return {
 //    days:{day, night },
-//     allDay, 
+//     allDay,
 //     // 07:00-22:00
 //    dayLength(),
 // }
@@ -256,7 +239,7 @@
 //     this.dayEnd = dayEnd;
 //     this.activities =  activities;
 //     this.mood = mood;
-//     // this.dayLength = 
+//     // this.dayLength =
 // }
 
 // let Monday = new Day('09:20','23:00',["Running","Walking","Studying","Playing GTA"],'Good')
@@ -282,13 +265,12 @@
 
 // console.log(typeof 22)
 
-// typeof is operator !! 
+// typeof is operator !!
 // function clg(props) {
 //     console.log(props)
 // }
 
-
-// clg(typeof 22) 
+// clg(typeof 22)
 
 // clg(typeof typeof)
 
@@ -317,7 +299,6 @@
 // let user = "PAWEL".toLowerCase();
 // let access = null;
 
-
 // if(user.length===Admin.length){
 //     for (let i = 0; i < Admin.length + 1; i++) {
 //             if (Admin[i] === user[i]) {
@@ -333,17 +314,12 @@
 
 // clg(permission)
 
-
 // >
 //<
 //<=
 //>=
 //===
 //!==
-
-
-
-
 
 // console.log(1 !== 2, "is it true?", true ? "Yes" : "No")
 
@@ -393,7 +369,6 @@
 
 // let password = "lala laas";
 
-
 // if (password && password.length >= 8) {
 //     if (password.indexOf(' ') === -1) {
 //         console.log("Logged !!")
@@ -409,9 +384,7 @@
 // console.log(true&&true)
 // console.log(false&&true)
 
-
 // let password = "Chick en34";
-
 
 // function checkPass(password){
 
@@ -430,14 +403,13 @@
 // checkPass("ThisIsmypass")
 
 // or ||
-// let password = 
+// let password =
 // if(password||typeof password=== Number){
 //     console.log(password)
 // }
 
-// let age = 40 
+// let age = 40
 // age = 12
-
 
 // if(age<16||age>60){
 // console.log("You are free to enter")
@@ -470,9 +442,7 @@
 
 // console.log(!'')
 
-
 // let user = true
-
 
 // !user?console.log("Logged out"):console.log("Logged")
 
@@ -482,8 +452,6 @@
 
 // // to get access of last item from array use array.length-1
 
-
-
 // console.log(Array[Array.length-1])
 
 // // arrays are mutable
@@ -492,7 +460,7 @@
 // console.log(Array)
 
 // // to add item to array to the end
-//  Array[Array.length] = "New Item" // Array[6] 
+//  Array[Array.length] = "New Item" // Array[6]
 
 //  console.log(Array)
 
@@ -528,21 +496,15 @@
 
 // arr.splice(3,0,"company")
 
-
 // let rest = arr.shift()
 
 // arr.push(rest)
 
-
-
 // let backOfArray = arr.splice(arr.length-2,2)
-
 
 // let arr2 = arr.concat(backOfArray)
 
-
-// let arr3 = arr2.splice(1,1) 
-
+// let arr3 = arr2.splice(1,1)
 
 // console.log(arr)
 
@@ -604,7 +566,6 @@
 
 // console.log(userRevues)
 
-
 // let objectOne = {
 //     Troll: true
 // }
@@ -628,10 +589,8 @@
 
 // let examAverage = student.exams.midterm + student.exams.final / 2
 
-
 // student["examAve"] = examAverage
 // console.log(student)
-
 
 // const game = {
 //     player1: {
@@ -649,12 +608,10 @@
 
 // const game2 = game;
 
-
 // game2["player3"] = {
 //     username: "Reed",
 //     score: null
 // }
-
 
 // console.log(game)
 // console.log(game2)
@@ -756,9 +713,7 @@
 //     console.log(target)
 // }
 
-
 // console.log(ran())
-
 
 // for(let color of colors){
 //     console.log(color)
@@ -771,7 +726,6 @@
 // for(let char of "My sweet home"){
 //     console.log(char.toLocaleUpperCase())
 // }
-
 
 // for(let i = 0;i<magicSquare.length;i++){
 //     let row = magicSquare[i]
@@ -796,8 +750,8 @@
 // for (let i = 0; i < colors.length; i++) {
 //     colorsToLower.push(colors[i].toLocaleLowerCase())
 //     }
-// console.log(colors)    
-// console.log(colorsToLower)    
+// console.log(colors)
+// console.log(colorsToLower)
 
 // const NestedForLoop = (magicSquare) => {
 //     let totalOfAll = 0
@@ -849,7 +803,6 @@
 // const objectValues = Object.values(movieReviews);
 // console.log(objectValues)
 
-
 // let total = 0;
 // for(let rating of objectValues){
 //     total += rating
@@ -858,8 +811,6 @@
 
 // console.log(total)
 // console.log(aver)
-
-
 
 // functions
 // const funct1 = Cat
@@ -873,9 +824,7 @@
 
 // const Meo = funct1
 
-
 // Meo()
-
 
 // const add_gen =function(n){
 //     return function(x){
@@ -917,8 +866,7 @@
 // const innerfunction  = midlefunction(2)
 // console.log(innerfunction)
 
-//create function with two parameters and call it by passing two arguments from variable a and b 
-
+//create function with two parameters and call it by passing two arguments from variable a and b
 
 // function call(a,b){
 //     return a+b.toUpperCase()
@@ -926,8 +874,6 @@
 
 // const a = "Pawel";
 // const b = "Siwek";
-
-
 
 // console.log(call(a,b))
 // return
@@ -945,10 +891,9 @@
 //     return [a, b, c]
 // }
 
-
 // console.log(retAll(1, 2, 4))
 
-// // return finish executions of function 
+// // return finish executions of function
 
 // function isColor(str) {
 //     if (str && typeof str === "string" && str.toLowerCase() === "purple") {
@@ -957,7 +902,6 @@
 //     return (`${str} is not my favorite color`)
 
 // }
-
 
 // console.log(isColor("green"))
 // console.log(isColor("Purple"))
@@ -1023,8 +967,7 @@
 //     const hasNoSpace = pass.indexOf(" ") !== -1;
 //     const similar = pass.indexOf(username) !== -1;
 
-//     return  (!toShort||hasNoSpace||!similar) 
-
+//     return  (!toShort||hasNoSpace||!similar)
 
 // }
 
@@ -1042,19 +985,16 @@
 //     return sum/arrItems
 // }
 
-
 // const arr = [1,2,5,44,32,2,3,4,5,6]
 // const arrAveTwentyFive = [0,50]
 // const arrAverage = checkAverage(arr);
 // console.log(arrAverage)
 // console.log(checkAverage(arrAveTwentyFive))
 
-
-
 //define function with one parameter
 // loop over each item in array
 // add every array item to variable sum
-// return divide sum by length of array 
+// return divide sum by length of array
 
 // function ave(arr){
 //     let sum = 0;
@@ -1069,21 +1009,16 @@
 // import {alphabet} from './store.js'
 // import {trimWhiteSpaces} from './factory.js'
 
-
-
-
 // function isPangram(alph,str){
 //     let string = trimWhiteSpaces(toLowerCase(str));
 //     const alphabet = trimWhiteSpaces(toLowerCase(alph));
 //     for(let letter of alphabet){
 //         if(string.indexOf(letter) === -1) return false
 //     }
-//     return true    
+//     return true
 // }
 
-
 // console.log(isPangram(alphabet,"waLtzbad  nymp -hforquickjigsvex"))
-
 
 // let Person = function(name) {
 //     this.name = name ;
@@ -1105,7 +1040,7 @@
 
 // referenceBox.appendChild(link);
 
-// for(var i = 0; i<5;i++){  
+// for(var i = 0; i<5;i++){
 //     var newBox = document.createElement('div')
 
 //         document.body.appendChild(newBox); // creates and adds five dives
@@ -1129,8 +1064,7 @@
 
 // console.log(person.mesasurments['weight'] === personClone['weight'])
 
-
-// var x = 1 
+// var x = 1
 // function foo(){
 //     var x =3;
 // }
@@ -1144,7 +1078,6 @@
 // bar();
 // console.log(x)
 
-
 // console.log(typeof a)
 // console.log(typeof b)
 
@@ -1155,9 +1088,6 @@
 // var b =function(){
 
 // }
-
-
-
 
 //9.  3,4
 //10. 1,3,5,7
@@ -1170,7 +1100,6 @@
 //17. 3
 //18. none
 //19.  3
-
 
 // function foo(a,b,c){
 //     a++;
@@ -1237,9 +1166,7 @@
 // }}
 // read(movieReviews);
 
-const btn = document.querySelector('button');
-
-
+// const btn = document.querySelector('button');
 
 // setTimeout(()=>{
 //     btn.style.transform = 'translateX(100px)'
@@ -1248,10 +1175,45 @@ const btn = document.querySelector('button');
 //     },2000)
 // },1000)
 
-const moveX = ( element,amount, delay)=>{
-    setTimeout(()=>{
-        element.style.transform = `translateX(${amount}px)`
-    },delay)
-}
+// const moveX = ( element,amount, delay)=>{
+//     setTimeout(()=>{
+//         element.style.transform = `translateX(${amount}px)`
+//     },delay)
+// }
 
-moveX(btn,100,1000)
+// moveX(btn,100,1000)
+
+// reduce
+
+// const arr = [1,2,34,4,5,7,89,534]
+
+// let reduced = arr.reduce((max,initial)=>{
+//   return  max>initial?max:initial
+// })
+
+// console.log(reduced)
+
+// const btn = document.querySelector('button')
+
+// btn.addEventListener("click", ()=>{
+//     console.log("click")
+// })
+
+// btn.innerText = "Hello my dear friend"
+
+// btn.addEventListener('mouseover', ()=>{
+// btn.innerText= "You touching me!!!"
+// })
+
+// btn.addEventListener('mouseleave',()=>{
+//     btn.innerText = "Hello my dear friend"
+// })
+
+// const arr = ['Washington', 'Boston', 'New York', 'Denver'];
+
+// const filtered = arr.filter((item) => {
+//     return item[0] === 'W';
+// });
+
+// console.log(arr);
+// console.log(filtered);
