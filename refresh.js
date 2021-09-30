@@ -1224,3 +1224,22 @@
 
 // const noWashington = cutSchools('Washington', schools);
 // console.log(noWashington);
+
+// Asynchronous callbacks 
+console.log("Print");
+setTimeout(()=>{
+    console.log("print 2");
+},1000);
+console.log("print 3")
+
+const btn =document.querySelector('button')
+
+setTimeout(()=>{
+    btn.style.transform = 'translate(10px)';
+    setTimeout(()=>{
+        btn.style.transform = 'translate(20px)';
+        setTimeout(()=>{
+            btn.style.transform = 'translate(30px)'
+        },1000)
+    },1000)
+},1000)
