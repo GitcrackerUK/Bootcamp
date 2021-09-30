@@ -1244,24 +1244,23 @@ const btn = document.querySelector('button');
 //     },1000)
 // },1000)
 
-const moveX = (element, amount, delay, callback) => {
+const moveX = (element, amount, delay, callback, onSuccess, onFailure) => {
     const screenWith = document.body.clientWidth;
-    const buttonDimensions = btn.getBoundingClientRect()
-    const buttonRightEge = buttonDimensions.right
-    if(buttonRightEge + amount > screenWith){
-        console.log('Done - cannot go that far')
-    }else{
+    const buttonDimensions = btn.getBoundingClientRect();
+    const buttonRightEge = buttonDimensions.right;
+    if (buttonRightEge + amount > screenWith) {
+        onFailure();
+    } else {
         setTimeout(() => {
             element.style.transform = `translateX(${amount}px)`;
-            console.log('buttonRightEge',buttonRightEge)
-            console.log('screenWith',screenWith)
-            callback();
+            console.log('buttonRightEge', buttonRightEge);
+            console.log('screenWith', screenWith);
+            onSuccess();
         }, delay);
     }
-    
 };
-moveX(btn, 100, 1000, () => {
-    moveX(btn, 200, 2000, () => {
-        moveX(btn, 300, 3000);
-    });
-});
+// moveX(btn, 100, 1000, () => {
+//     moveX(btn, 200, 2000, () => {
+//         moveX(btn, 300, 3000);
+//     });
+// });
