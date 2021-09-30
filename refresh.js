@@ -1245,10 +1245,20 @@ const btn = document.querySelector('button');
 // },1000)
 
 const moveX = (element, amount, delay, callback) => {
-    setTimeout(() => {
-        element.style.transform = `translateX(${amount}px)`;
-        callback();
-    }, delay);
+    const screenWith = document.body.clientWidth;
+    const buttonDimensions = btn.getBoundingClientRect()
+    const buttonRightEge = buttonDimensions.right
+    if(buttonRightEge + amount > screenWith){
+        console.log('Done - cannot go that far')
+    }else{
+        setTimeout(() => {
+            element.style.transform = `translateX(${amount}px)`;
+            console.log('buttonRightEge',buttonRightEge)
+            console.log('screenWith',screenWith)
+            callback();
+        }, delay);
+    }
+    
 };
 moveX(btn, 100, 1000, () => {
     moveX(btn, 200, 2000, () => {
