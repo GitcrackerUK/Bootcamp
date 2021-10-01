@@ -1232,7 +1232,7 @@
 // },1000);
 // console.log("print 3")
 
-const btn = document.querySelector('button');
+// const btn = document.querySelector('button');
 
 // setTimeout(()=>{
 //     btn.style.transform = 'translate(10px)';
@@ -1244,23 +1244,42 @@ const btn = document.querySelector('button');
 //     },1000)
 // },1000)
 
-const moveX = (element, amount, delay, callback, onSuccess, onFailure) => {
-    const screenWith = document.body.clientWidth;
-    const buttonDimensions = btn.getBoundingClientRect();
-    const buttonRightEge = buttonDimensions.right;
-    if (buttonRightEge + amount > screenWith) {
-        onFailure();
-    } else {
-        setTimeout(() => {
-            element.style.transform = `translateX(${amount}px)`;
-            console.log('buttonRightEge', buttonRightEge);
-            console.log('screenWith', screenWith);
-            onSuccess();
-        }, delay);
-    }
-};
+// const moveX = (element, amount, delay, onSuccess, onFailure) => {
+//     const screenWith = document.body.clientWidth;
+//     const buttonDimensions = element.getBoundingClientRect();
+//     const buttonRightEge = buttonDimensions.right;
+//     if (buttonRightEge + amount > screenWith) {
+//         onFailure();
+//     } else {
+//         setTimeout(() => {
+//             element.style.transform = `translateX(${amount}px)`;
+//             console.log('buttonRightEge', buttonRightEge);
+//             console.log('screenWith', screenWith);
+//             onSuccess();
+//         }, delay);
+//     }
+// };
 // moveX(btn, 100, 1000, () => {
 //     moveX(btn, 200, 2000, () => {
 //         moveX(btn, 300, 3000);
 //     });
 // });
+
+// Promise
+
+const Place = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve();
+    }, 2000);
+
+    setTimeout(() => {
+        reject();
+    }, 1000);
+});
+
+Place.then(() => {
+    console.log('Resolved');
+});
+Place.catch(() => {
+    console.log('Reject');
+});
