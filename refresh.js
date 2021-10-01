@@ -1267,40 +1267,97 @@
 
 // Promise
 
-const Place = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve();
-    }, 2000);
+// const Place = new Promise((resolve, reject) => {
+//     const num = Math.random() * 10;
+//     setTimeout(() => {
+//         if (num <= 5) {
+//             resolve();
+//         } else reject();
+//     }, 2000);
+// });
 
-    setTimeout(() => {
-        reject();
-    }, 1000);
-});
+// Place.then(() => {
+//     console.log('Resolved');
+// });
+// Place.catch(() => {
+//     console.log('Reject');
+// });
 
-Place.then(() => {
-    console.log('Resolved');
-});
-Place.catch(() => {
-    console.log('Reject');
-});
+// const Work = () => {
+//     return new Promise((resolve, reject) => {
+//         const num = Math.random() * 10;
+//         console.log(num);
+//         setTimeout(() => {
+//             if (num <= 5) {
+//                 resolve();
+//             } else reject();
+//         }, 2000);
+//     });
+// };
 
-const Work = () => {
+// Work()
+//     .then(() => {
+//         console.log('This is resolve');
+//     })
+//     .catch(() => {
+//         console.log('This is reject promise');
+//     });
+
+// const Plate = () => {
+//     return new Promise((resolve, reject) => {
+//         const num = Math.floor(Math.random() * 10);
+//         console.log(num)
+//         if (num > 5) {
+//             resolve();
+//         } else {
+//             reject();
+//         }
+//     });
+// };
+
+// Plate() //
+// .then(() => {
+//         console.log('resolved')
+//     })
+// .catch(() => {
+//         console.log('rejected')
+//     });
+
+//     return new Promise((resolve, reject) => {
+
+//     })
+
+//     (params) => {
+
+//     }
+
+const fakeRequest = (url) => {
     return new Promise((resolve, reject) => {
-        const num = Math.random() * 10;
-        console.log(num)
         setTimeout(() => {
-            if (num <= 5) {
-                resolve();
-            } else (
-                reject()
-                )
-        }, 2000);
+            const num = Math.random()
+            console.log(num)
+            if(num < 0.3){
+                reject({
+                    status:404
+                })
+            }else{
+                resolve({
+                    status:200
+                })
+            }
+        }, 200)
     });
 };
+const text = (params) => {
+    return `WITH STATUS:${params}`
+}
 
-Work().then(() => {
-    console.log('This is resolve')
-}).catch(() => {
-    console.log('This is reject promise')
+fakeRequest()//
+.then((res) => {
+    console.log(`REQUEST WORKED ${text(res.status)}`)
 })
-
+.catch(
+    (res) => {
+     console.log(`REQUEST FAILED ${text(res.status)}`)   
+    }
+)
