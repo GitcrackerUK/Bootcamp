@@ -1283,3 +1283,24 @@ Place.then(() => {
 Place.catch(() => {
     console.log('Reject');
 });
+
+const Work = () => {
+    return new Promise((resolve, reject) => {
+        const num = Math.random() * 10;
+        console.log(num)
+        setTimeout(() => {
+            if (num <= 5) {
+                resolve();
+            } else (
+                reject()
+                )
+        }, 2000);
+    });
+};
+
+Work().then(() => {
+    console.log('This is resolve')
+}).catch(() => {
+    console.log('This is reject promise')
+})
+
