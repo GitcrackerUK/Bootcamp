@@ -1331,33 +1331,124 @@
 
 //     }
 
-const fakeRequest = (url) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const num = Math.random()
-            console.log(num)
-            if(num < 0.3){
-                reject({
-                    status:404
-                })
-            }else{
-                resolve({
-                    status:200
-                })
-            }
-        }, 200)
-    });
-};
-const text = (params) => {
-    return `WITH STATUS:${params}`
+// const fakeRequest = (url) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const pages = {
+//                 '/users': {
+//                     page: 'This is User page.',
+//                     users: [
+//                         { id: 1, username: 'Bilbo' },
+//                         { id: 2, username: 'Anna' },
+//                     ],
+//                 },
+//                 '/about': {
+//                     page: 'This is About page.',
+//                 },
+//             };
+//             const data = pages[url];
+//             if (!data) {
+//                 reject({
+//                     status: 404,
+//                 });
+//             } else {
+//                 resolve({
+//                     status: 200,
+//                     data,
+//                 });
+//             }
+//         }, 200);
+//     });
+// };
+// const text = (params) => {
+//     return `WITH STATUS:${params}`;
+// };
+
+// fakeRequest('/about') //
+//     .then((res) => {
+//         console.log(res.data.page);
+//         console.log(`REQUEST WORKED ${text(res.status)}`);
+//     })
+//     .catch((res) => {
+//         console.log(`REQUEST FAILED ${text(res.status)}`);
+//     });
+
+// fakeRequest('/users') //
+//     .then((res) => {
+//         console.log(res.data.page);
+//         console.log(`REQUEST WORKED ${text(res.status)}`);
+//     })
+//     .catch((res) => {
+//         console.log(`REQUEST FAILED ${text(res.status)}`);
+//     });
+// fakeRequest('/locks') //
+//     .then((res) => {
+//         console.log(res.data.page);
+//         console.log(`REQUEST WORKED ${text(res.status)}`);
+//     })
+//     .catch((res) => {
+//         console.log(`REQUEST FAILED ${text(res.status)}`);
+//     });
+
+// const Prom = (num) => {
+//     return new Promise((resolve, reject) => {
+//         console.log('This is promise');
+//         if (num) {
+//             setTimeout(() => {
+//                 resolve('Resolved Promise');
+//             },1000);
+//         } else {
+//             reject('Reject Promise');
+//         }
+//     });
+// };
+
+// const asynFunc = async function (Prom) {
+
+//     console.log('This is async');
+//     const payload = await Prom;
+
+//     console.log('This is async received');
+//     return payload;
+// };
+
+// let num = 1;
+
+// asynFunc(
+//         Prom(num)
+//             .then((params) => {
+//                 console.log(params);
+//             })
+//             .catch((params) => {
+//                 console.log(params);
+//             })
+// )
+
+// loop
+for(let i = 0; i<=10 ; i++ ){
+console.log(`loop${i}`)
 }
 
-fakeRequest()//
-.then((res) => {
-    console.log(`REQUEST WORKED ${text(res.status)}`)
-})
-.catch(
-    (res) => {
-     console.log(`REQUEST FAILED ${text(res.status)}`)   
+for(let i = 5; i<=10 ; i += 3 ){
+console.log(`loop${i}`)
+}
+
+function add(number, max){
+    for(let num = 1; num <=max ; num++  ){
+        console.log(`${num} + ${number} = ${num+number}`)
     }
-)
+}
+
+add(4,10)
+
+for (let index = 0; index < 5; index++) {
+  console.log(index)
+    
+}
+
+
+// reversed loop
+
+for (let index = 20; index >= 0; index-- ) {
+    console.log(`index ${index}`)
+}
