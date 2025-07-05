@@ -16,6 +16,13 @@ type BlockOfFlats ={
     address: string;
     numberOfFlats: number;  
 }
+type Weather = {
+    state: string;
+    temperature:number;
+    humidity: number;
+    windSpeed: number; 
+    windDirection: string;
+}
 let NewProject:BlockOfFlats = {
     name: "Sunset Apartments",
     address: "123 Ocean Drive",
@@ -36,3 +43,15 @@ let AvenueFlats:BlockOfFlats = {
     address: "789 Avenue Road",
     numberOfFlats: 10
 }
+
+let NewInTheHome:Garage = {
+    address: "789 New Street",
+    numberOfCars: 3
+};  
+let readingWeather: Weather = {
+    state: "Sunny",
+    temperature: 25,
+    humidity: 60,
+    windSpeed: 15,
+    windDirection: "North"
+};  

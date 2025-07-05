@@ -24,3 +24,9 @@ let AvenueFlats = {
     address: "789 Avenue Road",
     numberOfFlats: 10
 };
+let NewInTheHome = {
+    address: "789 New Street",
+    numberOfCars: 3
+};
+
+
