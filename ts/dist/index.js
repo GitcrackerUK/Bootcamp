@@ -125,3 +125,10 @@ employee = {
     hobbies: ['swimming', 'slipping', 'sitting']
 };
 console.log(employee);
+// To define object can be used FLEXIBLE TYPE with "Record"
+let obj1;
+obj1 = {
+    name: 'John',
+    age: 33,
+    // maritalStat:undefined throws an error as there is not declared type undefined.
+};

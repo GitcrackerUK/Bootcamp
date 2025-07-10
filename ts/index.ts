@@ -199,3 +199,12 @@ employee = {
 }
 
 console.log(employee);
+
+// To define object can be used FLEXIBLE TYPE with "Record"
+
+let obj1: Record<string,string|number>
+obj1={
+	name:'John',
+	age:33,
+	// maritalStat:undefined throws an error as there is not declared type undefined.
+}
