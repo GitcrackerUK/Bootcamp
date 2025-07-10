@@ -250,3 +250,27 @@ function t1(a:string|number, a2:boolean){
 
 console.log(t1("Tony",true));
 console.log(t1("Tony",false));
+
+enum Actor {
+	Drama,
+	Comedy,
+	Action
+}
+
+let John = Actor.Action
+
+console.log('Thats the enum John',John);
+
+// Better way to assign specific value/type to the variable than enum is to create own values.
+let driver:'Slow'|'Fast'|'Quick' ;
+
+driver = 'Slow' ;
+// This is more intuitive and make more sense.
+
+let Payment: 'Cash'|'Bank transfer'|'Check';
+// Payment = 'Coin'  Throws an error as 'Coin' is not assigned to Payment.
+
+function Add(a:number,b:number):number{
+	let sum = a + b
+	return sum
+}

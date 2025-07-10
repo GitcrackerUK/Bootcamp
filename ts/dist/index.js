@@ -171,3 +171,21 @@ function t1(a, a2) {
 }
 console.log(t1("Tony", true));
 console.log(t1("Tony", false));
+var Actor;
+(function (Actor) {
+    Actor[Actor["Drama"] = 0] = "Drama";
+    Actor[Actor["Comedy"] = 1] = "Comedy";
+    Actor[Actor["Action"] = 2] = "Action";
+})(Actor || (Actor = {}));
+let John = Actor.Action;
+console.log('Thats the enum John', John);
+// Better way to assign specific value/type to the variable than enum is to create own values.
+let driver;
+driver = 'Slow';
+// This is more intuitive and make more sense.
+let Payment;
+// Payment = 'Coin'  Throws an error as 'Coin' is not assigned to Payment.
+function Add(a, b) {
+    let sum = a + b;
+    return sum;
+}
