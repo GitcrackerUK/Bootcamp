@@ -185,7 +185,12 @@ driver = 'Slow';
 // This is more intuitive and make more sense.
 let Payment;
 // Payment = 'Coin'  Throws an error as 'Coin' is not assigned to Payment.
+// Adding extra type after braces and before curly check if return value is what expected.  function():string{}
 function Add(a, b) {
     let sum = a + b;
     return sum;
+}
+// If there is no return in function as a type for return VOID should be used.
+function logic() {
+    console.log('No return');
 }

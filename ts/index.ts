@@ -270,7 +270,12 @@ driver = 'Slow' ;
 let Payment: 'Cash'|'Bank transfer'|'Check';
 // Payment = 'Coin'  Throws an error as 'Coin' is not assigned to Payment.
 
+// Adding extra type after braces and before curly check if return value is what expected.  function():string{}
 function Add(a:number,b:number):number{
 	let sum = a + b
 	return sum
+}
+// If there is no return in function as a type for return VOID should be used.
+function logic():void{
+	console.log('No return');
 }
