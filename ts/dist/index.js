@@ -132,3 +132,24 @@ obj1 = {
     age: 33,
     // maritalStat:undefined throws an error as there is not declared type undefined.
 };
+// To create own type, use ENUM to create a type or number of types which can be assigned.
+var Role;
+(function (Role) {
+    Role[Role["Admin"] = 0] = "Admin";
+    Role[Role["Editor"] = 1] = "Editor";
+    Role[Role["Visitor"] = 2] = "Visitor";
+})(Role || (Role = {}));
+let userRole = Role.Admin;
+userRole = Role.Visitor;
+var Item;
+(function (Item) {
+    Item[Item["Car"] = 0] = "Car";
+    Item[Item["Cat"] = 1] = "Cat";
+    Item[Item["Horse"] = 2] = "Horse";
+    Item[Item["Plain"] = 3] = "Plain";
+})(Item || (Item = {}));
+let avatar = Item.Horse;
+var Tree;
+(function (Tree) {
+})(Tree || (Tree = {}));
+console.log(Tree);

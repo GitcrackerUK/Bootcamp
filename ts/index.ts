@@ -208,3 +208,27 @@ obj1={
 	age:33,
 	// maritalStat:undefined throws an error as there is not declared type undefined.
 }
+
+// To create own type, use ENUM to create a type or number of types which can be assigned.
+enum Role{
+	Admin,
+	Editor,
+	Visitor
+}
+
+let userRole:Role = Role.Admin; 
+userRole = Role.Visitor;
+
+enum Item{
+	Car,
+	Cat,
+	Horse,
+	Plain
+}
+
+let avatar:Item = Item.Horse
+
+enum Tree{
+
+}
+console.log(Tree);
