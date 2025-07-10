@@ -153,3 +153,21 @@ var Tree;
 (function (Tree) {
 })(Tree || (Tree = {}));
 console.log(Tree);
+function t1(a, a2) {
+    let payload;
+    if (a2) {
+        payload = {
+            name: 'John',
+            a: 'The name is'
+        };
+    }
+    else {
+        payload = {
+            name: null,
+            a: 0
+        };
+    }
+    return payload;
+}
+console.log(t1("Tony", true));
+console.log(t1("Tony", false));
