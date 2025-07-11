@@ -279,3 +279,45 @@ function Add(a:number,b:number):number{
 function logic():void{
 	console.log('No return');
 }
+function fiat(cb:()=>string){
+	return cb()
+}
+
+function callB(){
+	return 'What a hot day!!'
+}
+function callB1(){
+	return 34
+}
+let result = fiat(callB)
+let result1 = fiat(callB)
+console.log(result);
+console.log(result1);
+
+type Swimmer = {
+	name:string,
+	age:number|string,
+	greet:()=>string
+}
+
+let fastSwimmer:Swimmer = {
+	name:'Tony',
+	age:'34',
+	greet(){
+		return `My name is ${this.name} and my age is ${this.age}`;
+}};
+
+console.log(fastSwimmer.greet());
+
+// One of useful features of the JavaScript is creating the object with key value pares and function inside this object
+// which can access the values in this object with use of THIS. It only works with regular function and no with the arrow func.
+
+let a: string|null;
+a = null;
+a = 'Ethereum';
+
+let element = document.getElementById('index1');
+
+if(!element){
+	throw Error ('There is no input element!')
+}
