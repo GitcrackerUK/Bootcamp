@@ -330,5 +330,9 @@ function showError(msg?:string){
 }
 showError()
 // showError('Looks good to me!!')
+<<<<<<< HEAD
 
  
+=======
+// Optional chaining is useful when there is no data and it returns undefined instead of throwing an error!
+>>>>>>> f65ea2c (Optional chaining (?) in the attribute passed to the function.)
