@@ -316,8 +316,19 @@ let a: string|null;
 a = null;
 a = 'Ethereum';
 
-let element = document.getElementById('index1');
+// let element = document.getElementById('index1');
 
-if(!element){
-	throw Error ('There is no input element!')
+// if(!element){
+// 	throw Error ('There is no input element!')
+// }
+
+function showError(msg?:string){
+	if(!msg){
+		msg='This is hot call!!'
+	}
+	throw Error(msg)
 }
+showError()
+// showError('Looks good to me!!')
+
+ 

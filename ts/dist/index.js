@@ -220,7 +220,15 @@ console.log(fastSwimmer.greet());
 let a;
 a = null;
 a = 'Ethereum';
-let element = document.getElementById('index1');
-if (!element) {
-    throw Error('There is no input element!');
+// let element = document.getElementById('index1');
+// if(!element){
+// 	throw Error ('There is no input element!')
+// }
+function showError(msg) {
+    if (!msg) {
+        msg = 'This is hot call!!';
+    }
+    throw Error(msg);
 }
+showError();
+// showError('Looks good to me!!')
