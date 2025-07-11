@@ -1,10 +1,7 @@
 "use strict";
-// TypeScript Basics
-// Primitives data types
 let age;
 let bread;
 let isActive;
-// Reference data types
 let daysOf;
 let NewProject = {
     name: 'Sunset Apartments',
@@ -35,12 +32,10 @@ let readingWeather = {
     windSpeed: 15,
     windDirection: 'North',
 };
-// In typeScript we can assign a value to it and the type will be assigned automatically.
 let ageGroup = 25;
 ageGroup = 30;
 let userName = 'Tony';
 userName = 'Trade';
-// To declare the function types:
 function declare(a, b) {
     return a + b;
 }
@@ -57,44 +52,32 @@ let sumMaster;
 sumMaster = sumOfTwo(sumWithInitialValue(1), sumWithInitialValue(3, 3));
 console.log(sumMaster);
 sumWithInitialValue(4);
-// To be able to assign all possible data type ANY can be used but it is missing the point of TS.
-let ageUser = 32; // any
+let ageUser = 32;
 ageUser = '32';
 ageUser = false;
 ageUser = [];
 ageUser = {};
-//UNION
-// To be able to assign more than one type to variable like '34' and 34 string/number.
-// UNION type can be used with
 let newAge;
-// newAge = true; Throws an error
 newAge = 45;
 newAge = '33';
 let ar1;
-// Tuple
 ar1 = ['dog', 2];
 console.log(ar1[0], ar1[1]);
-// ar1 = ['cat',33,33] throw an error as tuple has only 2 valyes aigned but is passed 3
-// ar1 = [ 2, 'dog']; throw and error 
 console.log(ar1);
 let hobbies = ['sports', 'cooking'];
 hobbies.push('swimming');
 hobbies.pop();
-let users; // array which accepts only strings.
-let dates; // array which accepts strings and numbers.
-//To use this way of defining type variable need to be assign with square brackets first and not with .push or other methods.
+let users;
+let dates;
 users = [];
 dates = ['20/2/22', 33];
-// After assigning square brackets and maybe even data methods like .push can be used.
 users.push('John');
 let weather;
 let possibleResults;
-//Objects
 let standardOBJ = {
     name: 'John',
     surname: 'Smith'
 };
-// Defining types.
 let cats = {
     name: 'meow',
     age: '4',
@@ -104,14 +87,11 @@ let cats = {
         homeNumber: 45,
     },
 };
-// NON NULL and NON UNDEFINED value
 let nonEmpty;
 nonEmpty = ['cat', 4, null, undefined];
-console.log(nonEmpty); // Shows array with null and undefined.
-// nonEmpty = null; It throws an error as null is assigned directly to the variable which has {}.
+console.log(nonEmpty);
 nonEmpty = 34;
 nonEmpty = '33';
-// nonEmpty = undefined; Throws an error.
 let employee;
 employee = {
     name: 'John',
@@ -125,14 +105,11 @@ employee = {
     hobbies: ['swimming', 'slipping', 'sitting']
 };
 console.log(employee);
-// To define object can be used FLEXIBLE TYPE with "Record"
 let obj1;
 obj1 = {
     name: 'John',
     age: 33,
-    // maritalStat:undefined throws an error as there is not declared type undefined.
 };
-// To create own type, use ENUM to create a type or number of types which can be assigned.
 var Role;
 (function (Role) {
     Role[Role["Admin"] = 0] = "Admin";
@@ -179,18 +156,13 @@ var Actor;
 })(Actor || (Actor = {}));
 let John = Actor.Action;
 console.log('Thats the enum John', John);
-// Better way to assign specific value/type to the variable than enum is to create own values.
 let driver;
 driver = 'Slow';
-// This is more intuitive and make more sense.
 let Payment;
-// Payment = 'Coin'  Throws an error as 'Coin' is not assigned to Payment.
-// Adding extra type after braces and before curly check if return value is what expected.  function():string{}
 function Add(a, b) {
     let sum = a + b;
     return sum;
 }
-// If there is no return in function as a type for return VOID should be used.
 function logic() {
     console.log('No return');
 }
@@ -215,20 +187,28 @@ let fastSwimmer = {
     }
 };
 console.log(fastSwimmer.greet());
-// One of useful features of the JavaScript is creating the object with key value pares and function inside this object
-// which can access the values in this object with use of THIS. It only works with regular function and no with the arrow func.
 let a;
 a = null;
 a = 'Ethereum';
-// let element = document.getElementById('index1');
-// if(!element){
-// 	throw Error ('There is no input element!')
-// }
 function showError(msg) {
     if (!msg) {
         msg = 'This is hot call!!';
     }
     throw Error(msg);
 }
-showError();
-// showError('Looks good to me!!')
+let asdaItem = {
+    item: 'shampoo',
+    price: 23.23,
+};
+let tescoItem = {
+    item: 'Bread',
+    price: 12,
+    available: true,
+    delivery: 'Car'
+};
+let str = null;
+console.log(typeof str);
+let truthy = 'string';
+let falsy = '';
+console.log(Boolean(truthy));
+console.log(Boolean(falsy));
