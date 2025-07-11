@@ -322,17 +322,40 @@ a = 'Ethereum';
 // 	throw Error ('There is no input element!')
 // }
 
-function showError(msg?:string){
+// Optional chaining is useful when there is no data and it returns undefined instead of throwing an error!
+function showError(msg?:string){ 
 	if(!msg){
 		msg='This is hot call!!'
 	}
 	throw Error(msg)
 }
-showError()
+// showError()
 // showError('Looks good to me!!')
-<<<<<<< HEAD
 
- 
-=======
-// Optional chaining is useful when there is no data and it returns undefined instead of throwing an error!
->>>>>>> f65ea2c (Optional chaining (?) in the attribute passed to the function.)
+type shopping = {
+	item:string,
+	price:number,
+	available?:boolean,
+	delivery?:'Car'|'Truck'
+}
+
+let asdaItem:shopping = {
+	item:'shampoo',
+	price:23.23,
+}
+// By adding optional operator to a object key type automatically this key value pare is not mandatory in this object.
+ let tescoItem:shopping = {
+	item:'Bread',
+	price:12,
+	available:true,
+	delivery:'Car'
+ }
+
+ let str = null
+ console.log(typeof str);
+
+ let truthy = 'string'
+ let falsy = '';
+
+ console.log(Boolean(truthy));
+ console.log(Boolean(falsy));
