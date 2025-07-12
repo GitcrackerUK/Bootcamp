@@ -212,4 +212,3 @@ let truthy = 'string';
 let falsy = '';
 console.log(Boolean(truthy));
 console.log(Boolean(falsy));
-//# sourceMappingURL=index.js.map
