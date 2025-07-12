@@ -232,3 +232,11 @@ enum Tree{
 
 }
 console.log(Tree);
+
+function value(cb:Function){
+	cb();
+}
+
+const inputEl = document.getElementById('user1') as HTMLInputElement | null;
+
+console.log(inputEl?.value);

@@ -153,3 +153,8 @@ var Tree;
 (function (Tree) {
 })(Tree || (Tree = {}));
 console.log(Tree);
+function value(cb) {
+    cb();
+}
+const inputEl = document.getElementById('user1');
+console.log(inputEl === null || inputEl === void 0 ? void 0 : inputEl.value);
