@@ -4,3 +4,4 @@ exports.home2Array = exports.adresArray = exports.homeArray = exports.isHome = e
 exports.home2Array = ['home', 'street', 'city'];
 const dotCom = 'https://www.example.com';
 const reducer = true;
+//# sourceMappingURL=basics.js.map
