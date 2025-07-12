@@ -237,9 +237,9 @@ function value(cb:Function){
 	cb();
 }
 
-const inputEl = document.getElementById('user1') as HTMLInputElement | null;
+// const inputEl = document.getElementById('user1') as HTMLInputElement | null;
 
-console.log(inputEl?.value);
+// console.log(inputEl?.value);
 
 function t1(a:string|number, a2:boolean){
     let payload:object;
@@ -368,3 +368,16 @@ let asdaItem:shopping = {
 
  console.log(Boolean(truthy));
  console.log(Boolean(falsy));
+
+function checkType(a:any,b:any){
+	let arr = {}
+	arr = {
+		a:typeof a,
+		b:typeof b
+	}
+	return arr
+}
+
+console.log(checkType(44,'23'));
+// To compile the TS file on save, simply run in the terminal "tsc --watch" and it will automatically
+// compile the file into JS with the settings from the tsconfig.json file. 

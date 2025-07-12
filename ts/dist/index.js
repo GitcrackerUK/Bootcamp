@@ -130,16 +130,9 @@ var Tree;
 (function (Tree) {
 })(Tree || (Tree = {}));
 console.log(Tree);
-<<<<<<< HEAD
 function value(cb) {
     cb();
 }
-const inputEl = document.getElementById('user1');
-console.log(inputEl === null || inputEl === void 0 ? void 0 : inputEl.value);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f901d4e2b3cc829b0bbca999a1b051627f64bfb5
 function t1(a, a2) {
     let payload;
     if (a2) {
@@ -222,7 +215,12 @@ let truthy = 'string';
 let falsy = '';
 console.log(Boolean(truthy));
 console.log(Boolean(falsy));
-<<<<<<< HEAD
-=======
->>>>>>> 472965429a4b21c02b3772ca47f56e63e7a1027c
->>>>>>> f901d4e2b3cc829b0bbca999a1b051627f64bfb5
+function checkType(a, b) {
+    let arr = {};
+    arr = {
+        a: typeof a,
+        b: typeof b
+    };
+    return arr;
+}
+console.log(checkType(44, '23'));
