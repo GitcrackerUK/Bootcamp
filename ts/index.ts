@@ -232,6 +232,7 @@ enum Tree{
 
 }
 console.log(Tree);
+<<<<<<< HEAD
 
 function value(cb:Function){
 	cb();
@@ -240,3 +241,132 @@ function value(cb:Function){
 const inputEl = document.getElementById('user1') as HTMLInputElement | null;
 
 console.log(inputEl?.value);
+=======
+function t1(a:string|number, a2:boolean){
+    let payload:object;
+    if(a2){
+        payload = {
+            name:'John',
+            a:'The name is'
+        }
+    }else{
+        payload = {
+            name:null,
+            a:0
+        }
+    }
+    return payload
+}
+
+console.log(t1("Tony",true));
+console.log(t1("Tony",false));
+
+enum Actor {
+	Drama,
+	Comedy,
+	Action
+}
+
+let John = Actor.Action
+
+console.log('Thats the enum John',John);
+
+// Better way to assign specific value/type to the variable than enum is to create own values.
+let driver:'Slow'|'Fast'|'Quick' ;
+
+driver = 'Slow' ;
+// This is more intuitive and make more sense.
+
+let Payment: 'Cash'|'Bank transfer'|'Check';
+// Payment = 'Coin'  Throws an error as 'Coin' is not assigned to Payment.
+
+// Adding extra type after braces and before curly check if return value is what expected.  function():string{}
+function Add(a:number,b:number):number{
+	let sum = a + b
+	return sum
+}
+// If there is no return in function as a type for return VOID should be used.
+function logic():void{
+	console.log('No return');
+}
+function fiat(cb:()=>string){
+	return cb()
+}
+
+function callB(){
+	return 'What a hot day!!'
+}
+function callB1(){
+	return 34
+}
+let result = fiat(callB)
+let result1 = fiat(callB)
+console.log(result);
+console.log(result1);
+
+type Swimmer = {
+	name:string,
+	age:number|string,
+	greet:()=>string
+}
+
+let fastSwimmer:Swimmer = {
+	name:'Tony',
+	age:'34',
+	greet(){
+		return `My name is ${this.name} and my age is ${this.age}`;
+}};
+
+console.log(fastSwimmer.greet());
+
+// One of useful features of the JavaScript is creating the object with key value pares and function inside this object
+// which can access the values in this object with use of THIS. It only works with regular function and no with the arrow func.
+
+let a: string|null;
+a = null;
+a = 'Ethereum';
+
+// let element = document.getElementById('index1');
+
+// if(!element){
+// 	throw Error ('There is no input element!')
+// }
+
+// Optional chaining is useful when there is no data and it returns undefined instead of throwing an error!
+function showError(msg?:string){ 
+	if(!msg){
+		msg='This is hot call!!'
+	}
+	throw Error(msg)
+}
+// showError()
+// showError('Looks good to me!!')
+
+type shopping = {
+	item:string,
+	price:number,
+	available?:boolean,
+	delivery?:'Car'|'Truck'
+}
+
+let asdaItem:shopping = {
+	item:'shampoo',
+	price:23.23,
+}
+// By adding optional operator to a object key type automatically this key value pare is not mandatory in this object.
+ let tescoItem:shopping = {
+	item:'Bread',
+	price:12,
+	available:true,
+	delivery:'Car'
+ }
+
+ let str = null
+ console.log(typeof str);
+
+ let truthy = 'string'
+ let falsy = '';
+
+ console.log(Boolean(truthy));
+ console.log(Boolean(falsy));
+>>>>>>> 472965429a4b21c02b3772ca47f56e63e7a1027c
