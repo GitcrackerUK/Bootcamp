@@ -232,6 +232,7 @@ enum Tree{
 
 }
 console.log(Tree);
+<<<<<<< HEAD
 
 function value(cb:Function){
 	cb();
@@ -240,6 +241,10 @@ function value(cb:Function){
 const inputEl = document.getElementById('user1') as HTMLInputElement | null;
 
 console.log(inputEl?.value);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f901d4e2b3cc829b0bbca999a1b051627f64bfb5
 function t1(a:string|number, a2:boolean){
     let payload:object;
     if(a2){
@@ -367,3 +372,7 @@ let asdaItem:shopping = {
 
  console.log(Boolean(truthy));
  console.log(Boolean(falsy));
+<<<<<<< HEAD
+=======
+>>>>>>> 472965429a4b21c02b3772ca47f56e63e7a1027c
+>>>>>>> f901d4e2b3cc829b0bbca999a1b051627f64bfb5
