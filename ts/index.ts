@@ -108,64 +108,62 @@ let newAge: string | number;
 newAge = 45;
 newAge = '33';
 
-let ar1: [string,number];
-
+let ar1: [string, number];
 
 // Tuple
-ar1 = ['dog',2];
-console.log(ar1[0],ar1[1]);
+ar1 = ['dog', 2];
+console.log(ar1[0], ar1[1]);
 
 // ar1 = ['cat',33,33] throw an error as tuple has only 2 valyes aigned but is passed 3
-// ar1 = [ 2, 'dog']; throw and error 
+// ar1 = [ 2, 'dog']; throw and error
 console.log(ar1);
 
-let hobbies = ['sports','cooking'];
+let hobbies = ['sports', 'cooking'];
 hobbies.push('swimming');
 hobbies.pop();
 
-
-let users:string[]; // array which accepts only strings.
-let dates:(string|number)[]; // array which accepts strings and numbers.
+let users: string[]; // array which accepts only strings.
+let dates: (string | number)[]; // array which accepts strings and numbers.
 //To use this way of defining type variable need to be assign with square brackets first and not with .push or other methods.
-users = []
-dates = ['20/2/22',33]
+users = [];
+dates = ['20/2/22', 33];
 // After assigning square brackets and maybe even data methods like .push can be used.
 users.push('John');
 
-let weather:Array<string|number>;
+let weather: Array<string | number>;
 
-let possibleResults:[string,number]
+let possibleResults: [string, number];
 
 //Objects
 
 let standardOBJ = {
-	name:'John',
-	surname:'Smith'
-}
+	name: 'John',
+	surname: 'Smith',
+};
 
 // Defining types.
-let cats:{
-	name:string;
-	age:number|string;
-	home:{
-		street: string,
+let cats: {
+	name: string;
+	age: number | string;
+	home: {
+		street: string;
 		homeNumber: number;
 	};
-	hobbies:string[]
+	hobbies: string[];
 } = {
-	name:'meow',
-	age:'4',
-	hobbies:['swimming','jumping','painting'],
-	home:{
+	name: 'meow',
+	age: '4',
+	hobbies: ['swimming', 'jumping', 'painting'],
+	home: {
 		street: 'Hardwick Road',
 		homeNumber: 45,
 	},
-}
+};
 // NON NULL and NON UNDEFINED value
 
-let nonEmpty:{};
+let nonEmpty: {};
 
-nonEmpty = ['cat',4,null,undefined];
+nonEmpty = ['cat', 4, null, undefined];
 console.log(nonEmpty); // Shows array with null and undefined.
 
 // nonEmpty = null; It throws an error as null is assigned directly to the variable which has {}.
@@ -174,66 +172,64 @@ nonEmpty = 34;
 nonEmpty = '33';
 // nonEmpty = undefined; Throws an error.
 
-let employee:{
-	name:string,
-	surname:string,
-	address:{
-		street:string,
-		houseNumber:string|number,
-		city:string
-	}
-	age: string|number,
-	hobbies:string[]
+let employee: {
+	name: string;
+	surname: string;
+	address: {
+		street: string;
+		houseNumber: string | number;
+		city: string;
+	};
+	age: string | number;
+	hobbies: string[];
 };
 
 employee = {
-	name:'John',
-	surname:'Thompson',
-	address:{
-		street:'Niceone street',
-		houseNumber:'33',
-		city:'Cardiff'
+	name: 'John',
+	surname: 'Thompson',
+	address: {
+		street: 'Niceone street',
+		houseNumber: '33',
+		city: 'Cardiff',
 	},
-	age:'45',
-	hobbies:['swimming','slipping','sitting']
-}
+	age: '45',
+	hobbies: ['swimming', 'slipping', 'sitting'],
+};
 
 console.log(employee);
 
 // To define object can be used FLEXIBLE TYPE with "Record"
 
-let obj1: Record<string,string|number>
-obj1={
-	name:'John',
-	age:33,
+let obj1: Record<string, string | number>;
+obj1 = {
+	name: 'John',
+	age: 33,
 	// maritalStat:undefined throws an error as there is not declared type undefined.
-}
+};
 
 // To create own type, use ENUM to create a type or number of types which can be assigned.
-enum Role{
+enum Role {
 	Admin,
 	Editor,
-	Visitor
+	Visitor,
 }
 
-let userRole:Role = Role.Admin; 
+let userRole: Role = Role.Admin;
 userRole = Role.Visitor;
 
-enum Item{
+enum Item {
 	Car,
 	Cat,
 	Horse,
-	Plain
+	Plain,
 }
 
-let avatar:Item = Item.Horse
+let avatar: Item = Item.Horse;
 
-enum Tree{
-
-}
+enum Tree {}
 console.log(Tree);
 
-function value(cb:Function){
+function value(cb: Function) {
 	cb();
 }
 
@@ -241,87 +237,88 @@ function value(cb:Function){
 
 // console.log(inputEl?.value);
 
-function t1(a:string|number, a2:boolean){
-    let payload:object;
-    if(a2){
-        payload = {
-            name:'John',
-            a:'The name is'
-        }
-    }else{
-        payload = {
-            name:null,
-            a:0
-        }
-    }
-    return payload
+function t1(a: string | number, a2: boolean) {
+	let payload: object;
+	if (a2) {
+		payload = {
+			name: 'John',
+			a: 'The name is',
+		};
+	} else {
+		payload = {
+			name: null,
+			a: 0,
+		};
+	}
+	return payload;
 }
 
-console.log(t1("Tony",true));
-console.log(t1("Tony",false));
+console.log(t1('Tony', true));
+console.log(t1('Tony', false));
 
 enum Actor {
 	Drama,
 	Comedy,
-	Action
+	Action,
 }
 
-let John = Actor.Action
+let John = Actor.Action;
 
-console.log('Thats the enum John',John);
+console.log('Thats the enum John', John);
 
 // Better way to assign specific value/type to the variable than enum is to create own values.
-let driver:'Slow'|'Fast'|'Quick' ;
+let driver: 'Slow' | 'Fast' | 'Quick';
 
-driver = 'Slow' ;
+driver = 'Slow';
 // This is more intuitive and make more sense.
 
-let Payment: 'Cash'|'Bank transfer'|'Check';
+let Payment: 'Cash' | 'Bank transfer' | 'Check';
 // Payment = 'Coin'  Throws an error as 'Coin' is not assigned to Payment.
 
 // Adding extra type after braces and before curly check if return value is what expected.  function():string{}
-function Add(a:number,b:number):number{
-	let sum = a + b
-	return sum
+function Add(a: number, b: number): number {
+	let sum = a + b;
+	return sum;
 }
 // If there is no return in function as a type for return VOID should be used.
-function logic():void{
+function logic(): void {
 	console.log('No return');
 }
-function fiat(cb:()=>string){
-	return cb()
+function fiat(cb: () => string) {
+	return cb();
 }
 
-function callB(){
-	return 'What a hot day!!'
+function callB() {
+	return 'What a hot day!!';
 }
-function callB1(){
-	return 34
+function callB1() {
+	return 34;
 }
-let result = fiat(callB)
-let result1 = fiat(callB)
+let result = fiat(callB);
+let result1 = fiat(callB);
 console.log(result);
 console.log(result1);
 
 type Swimmer = {
-	name:string,
-	age:number|string,
-	greet:()=>string
-}
+	name: string;
+	age: number | string;
+	greet: () => string;
+};
 
-let fastSwimmer:Swimmer = {
-	name:'Tony',
-	age:'34',
-	greet(){
+let fastSwimmer: Swimmer = {
+	name: 'Tony',
+	age: '34',
+	greet() {
 		return `My name is ${this.name} and my age is ${this.age}`;
-}};
+	},
+};
 
 console.log(fastSwimmer.greet());
 
 // One of useful features of the JavaScript is creating the object with key value pares and function inside this object
 // which can access the values in this object with use of THIS. It only works with regular function and no with the arrow func.
 
-let a: string|null;
+let a: string | null;
 a = null;
 a = 'Ethereum';
 
@@ -332,52 +329,121 @@ a = 'Ethereum';
 // }
 
 // Optional chaining is useful when there is no data and it returns undefined instead of throwing an error!
-function showError(msg?:string){ 
-	if(!msg){
-		msg='This is hot call!!'
+function showError(msg?: string) {
+	if (!msg) {
+		msg = 'This is hot call!!';
 	}
-	throw Error(msg)
+	throw Error(msg);
 }
 // showError()
 // showError('Looks good to me!!')
 
 type shopping = {
-	item:string,
-	price:number,
-	available?:boolean,
-	delivery?:'Car'|'Truck'
-}
+	item: string;
+	price: number;
+	available?: boolean;
+	delivery?: 'Car' | 'Truck';
+};
 
-let asdaItem:shopping = {
-	item:'shampoo',
-	price:23.23,
-}
+let asdaItem: shopping = {
+	item: 'shampoo',
+	price: 23.23,
+};
 // By adding optional operator to a object key type automatically this key value pare is not mandatory in this object.
- let tescoItem:shopping = {
-	item:'Bread',
-	price:12,
-	available:true,
-	delivery:'Car'
- }
+let tescoItem: shopping = {
+	item: 'Bread',
+	price: 12,
+	available: true,
+	delivery: 'Car',
+};
 
- let str = null
- console.log(typeof str);
+let str = null;
+console.log(typeof str);
 
- let truthy = 'string'
- let falsy = '';
+let truthy = 'string';
+let falsy = '';
 
- console.log(Boolean(truthy));
- console.log(Boolean(falsy));
+console.log(Boolean(truthy));
+console.log(Boolean(falsy));
 
-function checkType(a:any,b:any){
-	let arr = {}
+function checkType(a: any, b: any) {
+	let arr = {};
 	arr = {
-		a:typeof a,
-		b:typeof b
-	}
-	return arr
+		a: typeof a,
+		b: typeof b,
+	};
+	return arr;
 }
 
-console.log(checkType(44,'23'));
+console.log(checkType(44, '23'));
 // To compile the TS file on save, simply run in the terminal "tsc --watch" and it will automatically
-// compile the file into JS with the settings from the tsconfig.json file. 
+// compile the file into JS with the settings from the tsconfig.json file.
+
+// code for the ES6 js project
+
+const Name: string = 'Pawel';
+let age1: number | string = 22;
+
+var results1: number; // Global scope
+function add(a: number, b: number) {
+	var results1: number; // Local scope
+
+	return result1;
+}
+
+if (true) {
+	let age: number = 22; //
+}
+
+const add1 = (a: number = 4, b: number ) => a + b; // If only one argument is passed to the function then default value is used.
+const add2 = (a: number , b: number = 4 ) => a + b; // If only one argument is passed to the function TS will be complaining as default val is not accessible.
+
+const printOut1 = (output:string|number)=> console.log(output);
+
+const printOut:(output:number|string)=>void = output => console.log(`This is output: ${output}`);
+
+
+const button1 = document.querySelector('button');
+
+if(button1){
+	button1.addEventListener('click',e=>console.log(e))
+}
+
+printOut(add1(2,4));
+printOut1(add1(2,4));
+
+const hobbies1:Array<string> = ['jumping','swimming','running'];
+const activeHobbies:Array<string> = ['hiking','diving'];
+const dates2:Array<number> = [2,2,5,6745];
+const dates4:Array<boolean> = [true,true,false];
+
+activeHobbies.push(...hobbies1);
+
+type personTypes = {
+	name:string;
+	age:number;
+}
+
+
+const person:personTypes = {
+	name:'Pawel',
+	age:22
+}
+
+const copy:personTypes = {...person}
+
+let arr1:Array<string|number|boolean> = []
+arr1 = [...hobbies1,...dates2,...dates4]
+
+function consoleL(a: Array<string | number | boolean>): void {
+	console.log(a);
+}
+
+consoleL(arr1);
+
+const nextAdd = (...number:number[]) => {
+	for(const item in number){
+		console.log(item);
+	};
+}
+

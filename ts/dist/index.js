@@ -76,7 +76,7 @@ let weather;
 let possibleResults;
 let standardOBJ = {
     name: 'John',
-    surname: 'Smith'
+    surname: 'Smith',
 };
 let cats = {
     name: 'meow',
@@ -99,10 +99,10 @@ employee = {
     address: {
         street: 'Niceone street',
         houseNumber: '33',
-        city: 'Cardiff'
+        city: 'Cardiff',
     },
     age: '45',
-    hobbies: ['swimming', 'slipping', 'sitting']
+    hobbies: ['swimming', 'slipping', 'sitting'],
 };
 console.log(employee);
 let obj1;
@@ -138,19 +138,19 @@ function t1(a, a2) {
     if (a2) {
         payload = {
             name: 'John',
-            a: 'The name is'
+            a: 'The name is',
         };
     }
     else {
         payload = {
             name: null,
-            a: 0
+            a: 0,
         };
     }
     return payload;
 }
-console.log(t1("Tony", true));
-console.log(t1("Tony", false));
+console.log(t1('Tony', true));
+console.log(t1('Tony', false));
 var Actor;
 (function (Actor) {
     Actor[Actor["Drama"] = 0] = "Drama";
@@ -187,7 +187,7 @@ let fastSwimmer = {
     age: '34',
     greet() {
         return `My name is ${this.name} and my age is ${this.age}`;
-    }
+    },
 };
 console.log(fastSwimmer.greet());
 let a;
@@ -207,7 +207,7 @@ let tescoItem = {
     item: 'Bread',
     price: 12,
     available: true,
-    delivery: 'Car'
+    delivery: 'Car',
 };
 let str = null;
 console.log(typeof str);
@@ -219,8 +219,50 @@ function checkType(a, b) {
     let arr = {};
     arr = {
         a: typeof a,
-        b: typeof b
+        b: typeof b,
     };
     return arr;
 }
 console.log(checkType(44, '23'));
+const Name = 'Pawel';
+let age1 = 22;
+var results1;
+function add(a, b) {
+    var results1;
+    return result1;
+}
+if (true) {
+    let age = 22;
+}
+const add1 = (a = 4, b) => a + b;
+const add2 = (a, b = 4) => a + b;
+const printOut1 = (output) => console.log(output);
+const printOut = output => console.log(`This is output: ${output}`);
+const button1 = document.querySelector('button');
+if (button1) {
+    button1.addEventListener('click', e => console.log(e));
+}
+printOut(add1(2, 4));
+printOut1(add1(2, 4));
+const hobbies1 = ['jumping', 'swimming', 'running'];
+const activeHobbies = ['hiking', 'diving'];
+const dates2 = [2, 2, 5, 6745];
+const dates4 = [true, true, false];
+activeHobbies.push(...hobbies1);
+const person = {
+    name: 'Pawel',
+    age: 22
+};
+const copy = Object.assign({}, person);
+let arr1 = [];
+arr1 = [...hobbies1, ...dates2, ...dates4];
+function consoleL(a) {
+    console.log(a);
+}
+consoleL(arr1);
+const nextAdd = (...number) => {
+    for (const item in number) {
+        console.log(item);
+    }
+    ;
+};
