@@ -5,10 +5,10 @@
 // duration
 
 type InvestmentData = {
-    initialAmount:number,
-    annualContribution:number,
-    expectedReturn:number,
-    duration:number
+    initialAmount:number, // Initial investment figure which is deposited at the beginning of an investment.
+    annualContribution:number, // Amount of money which is paid by the investor into the investment annually.
+    expectedReturn:number, // APR for the investment per year.
+    duration:number // Number of years of the investment.
 };
 
 type InvestmentResult = {
@@ -21,8 +21,6 @@ type InvestmentResult = {
 type CalculationResult = InvestmentResult[]|string
 
 function calculateInvest(data:InvestmentData):CalculationResult{
-    // Create message variable to store info.
-    let message:string;
     // Data need to be destructure the object. 
     const {initialAmount,annualContribution,expectedReturn,duration} = data;
     let total = initialAmount;
@@ -34,7 +32,7 @@ function calculateInvest(data:InvestmentData):CalculationResult{
         if(initialAmount < 0){
             return 'Initial investment must be at least zero';
         }else{
-            message = 'For better investment return, deposit at least $100';
+            return'For better investment return, deposit at least $100';
         }
     };
     if(duration <= 0 ){
@@ -42,7 +40,7 @@ function calculateInvest(data:InvestmentData):CalculationResult{
     };
     if ( expectedReturn < 0 ){
         total = 0
-        message = 'Expected return must be at least zero!';
+        return 'Expected return must be at least zero!';
     };
     const annualResults:InvestmentResult[] = [];
 
@@ -62,10 +60,30 @@ function calculateInvest(data:InvestmentData):CalculationResult{
     return annualResults
 }
 
-function printResults(){
-
+function printResults(results:CalculationResult){
+    if(typeof results === 'string'){
+        console.log(results);
+        return
+    }
+    for(const yearResults of results){
+        console.log(yearResults.year);
+        console.log(`Total for this year is: ${yearResults.totalAmount.toFixed(0)}`);
+        console.log(`Interests earned this year:${yearResults.totalInterestEarned.toFixed(0)}`);
+        console.log(`Total contribution for this year:${yearResults.totalContribution.toFixed(0)}`);
+        console.log(`--------------------------------------`);
+    }
 }
 
-// const results = calculateInvest();
 
-printResults();
+let investment:InvestmentData = {
+    initialAmount:20000,
+    annualContribution: 4000,
+    expectedReturn:0.08,
+    duration:20
+}
+
+
+const results = calculateInvest(investment);
+
+printResults(results)
+

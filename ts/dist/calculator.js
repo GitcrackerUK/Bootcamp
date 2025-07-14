@@ -1,18 +1,27 @@
 "use strict";
 function calculateInvest(data) {
     const { initialAmount, annualContribution, expectedReturn, duration } = data;
-    if (initialAmount < 0) {
-        return 'Initial investment must be at least zero';
-    }
-    if (duration <= 0) {
-        return 'No valid amount of years provided.';
-    }
-    if (expectedReturn < 0) {
-        return 'Expected return must be at least zero!';
-    }
     let total = initialAmount;
     let totalContribution = 0;
     let totalInterestEarned = 0;
+    if (initialAmount <= 0) {
+        if (initialAmount < 0) {
+            return 'Initial investment must be at least zero';
+        }
+        else {
+            return 'For better investment return, deposit at least $100';
+        }
+    }
+    ;
+    if (duration <= 0) {
+        return 'No valid amount of years provided. Select at least 1Year';
+    }
+    ;
+    if (expectedReturn < 0) {
+        total = 0;
+        return 'Expected return must be at least zero!';
+    }
+    ;
     const annualResults = [];
     for (let i = 0; i < duration; i++) {
         total = total * (1 + expectedReturn);
@@ -28,6 +37,24 @@ function calculateInvest(data) {
     }
     return annualResults;
 }
-function printResults() {
+function printResults(results) {
+    if (typeof results === 'string') {
+        console.log(results);
+        return;
+    }
+    for (const yearResults of results) {
+        console.log(yearResults.year);
+        console.log(`Total for this year is: ${yearResults.totalAmount.toFixed(0)}`);
+        console.log(`Interests earned this year:${yearResults.totalInterestEarned.toFixed(0)}`);
+        console.log(`Total contribution for this year:${yearResults.totalContribution.toFixed(0)}`);
+        console.log(`--------------------------------------`);
+    }
 }
-printResults();
+let investment = {
+    initialAmount: 20000,
+    annualContribution: 4000,
+    expectedReturn: 0.08,
+    duration: 20
+};
+const results = calculateInvest(investment);
+printResults(results);
