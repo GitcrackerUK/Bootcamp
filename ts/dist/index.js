@@ -237,10 +237,10 @@ if (true) {
 const add1 = (a = 4, b) => a + b;
 const add2 = (a, b = 4) => a + b;
 const printOut1 = (output) => console.log(output);
-const printOut = output => console.log(`This is output: ${output}`);
+const printOut = (output) => console.log(`This is output: ${output}`);
 const button1 = document.querySelector('button');
 if (button1) {
-    button1.addEventListener('click', e => console.log(e));
+    button1.addEventListener('click', (e) => console.log(e));
 }
 printOut(add1(2, 4));
 printOut1(add1(2, 4));
@@ -250,8 +250,8 @@ const dates2 = [2, 2, 5, 6745];
 const dates4 = [true, true, false];
 activeHobbies.push(...hobbies1);
 const person = {
-    name: 'Pawel',
-    age: 22
+    firstName: 'Pawel',
+    age: 22,
 };
 const copy = Object.assign({}, person);
 let arr1 = [];
@@ -262,13 +262,22 @@ function consoleL(a) {
 consoleL(arr1);
 const nextAdd = (...number) => {
     for (const item of number) {
-        if (typeof item === "number") {
+        if (typeof item === 'number') {
             console.log(`This is number: ${item}`);
         }
-        else if (typeof item === "string") {
+        else if (typeof item === 'string') {
             console.log(parseInt(item, 10) ? `This is string converted into the number: ${item}` : `The input ${item} is not a number!`);
         }
     }
-    ;
 };
 nextAdd(2, 3, 44, 55, 14, '23', '22', 'we');
+let flo = [1, 2, 3, 45, 5, 6, 87, 8];
+let clod = [];
+let auw = [];
+flo.push([34, 467, 65, 4]);
+flo.push(...[34, 467, 65, 4]);
+auw.push([3, 2, 3, 4]);
+console.log(flo);
+const [i1, i2, i3, ...remainingNumbers] = flo;
+console.log(`This is destructured array:${i1}${i2}${i3}${remainingNumbers}`);
+console.log(`This is destructured array:${[i1, i2, i3, remainingNumbers]}`);

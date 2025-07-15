@@ -395,45 +395,43 @@ if (true) {
 	let age: number = 22; //
 }
 
-const add1 = (a: number = 4, b: number ) => a + b; // If only one argument is passed to the function then default value is used.
-const add2 = (a: number , b: number = 4 ) => a + b; // If only one argument is passed to the function TS will be complaining as default val is not accessible.
+const add1 = (a: number = 4, b: number) => a + b; // If only one argument is passed to the function then default value is used.
+const add2 = (a: number, b: number = 4) => a + b; // If only one argument is passed to the function TS will be complaining as default val is not accessible.
 
-const printOut1 = (output:string|number)=> console.log(output);
+const printOut1 = (output: string | number) => console.log(output);
 
-const printOut:(output:number|string)=>void = output => console.log(`This is output: ${output}`);
-
+const printOut: (output: number | string) => void = (output) => console.log(`This is output: ${output}`);
 
 const button1 = document.querySelector('button');
 
-if(button1){
-	button1.addEventListener('click',e=>console.log(e))
+if (button1) {
+	button1.addEventListener('click', (e) => console.log(e));
 }
 
-printOut(add1(2,4));
-printOut1(add1(2,4));
+printOut(add1(2, 4));
+printOut1(add1(2, 4));
 
-const hobbies1:Array<string> = ['jumping','swimming','running'];
-const activeHobbies:Array<string> = ['hiking','diving'];
-const dates2:Array<number> = [2,2,5,6745];
-const dates4:Array<boolean> = [true,true,false];
+const hobbies1: Array<string> = ['jumping', 'swimming', 'running'];
+const activeHobbies: Array<string> = ['hiking', 'diving'];
+const dates2: Array<number> = [2, 2, 5, 6745];
+const dates4: Array<boolean> = [true, true, false];
 
 activeHobbies.push(...hobbies1);
 
 type personTypes = {
-	name:string;
-	age:number;
-}
+	firstName: string;
+	age: number;
+};
 
+const person: personTypes = {
+	firstName: 'Pawel',
+	age: 22,
+};
 
-const person:personTypes = {
-	name:'Pawel',
-	age:22
-}
+const copy: personTypes = { ...person };
 
-const copy:personTypes = {...person}
-
-let arr1:Array<string|number|boolean> = []
-arr1 = [...hobbies1,...dates2,...dates4]
+let arr1: Array<string | number | boolean> = [];
+arr1 = [...hobbies1, ...dates2, ...dates4];
 
 function consoleL(a: Array<string | number | boolean>): void {
 	console.log(a);
@@ -441,17 +439,31 @@ function consoleL(a: Array<string | number | boolean>): void {
 
 consoleL(arr1);
 
-const nextAdd = (...number:(number|string)[]) => {
-	for(const item of number){
-		if( typeof item === "number"){
+const nextAdd = (...number: (number | string)[]) => {
+	for (const item of number) {
+		if (typeof item === 'number') {
 			console.log(`This is number: ${item}`);
-		}else if (typeof item === "string"){
-			console.log(parseInt(item, 10)?`This is string converted into the number: ${item}`:`The input ${item} is not a number!`);
+		} else if (typeof item === 'string') {
+			console.log(parseInt(item, 10) ? `This is string converted into the number: ${item}` : `The input ${item} is not a number!`);
 		}
-	};
-}
+	}
+};
 
+nextAdd(2, 3, 44, 55, 14, '23', '22', 'we');
 
-nextAdd(2,3,44,55,14,'23','22','we');
+let flo: Array<number | number[]> = [1, 2, 3, 45, 5, 6, 87, 8]; // Added nested array type.
+let clod: number[] = [];
+let auw: (number | number[])[] = [];
 
+flo.push([34, 467, 65, 4]);
+flo.push(...[34, 467, 65, 4]);
+// clod.push([3,2,3,4]) Throw an error as there is no array of numbers type
+auw.push([3,2,3,4]) // It takes array of numbers
+console.log(flo);
 
+const [i1,i2,i3, ... remainingNumbers] = flo;
+
+console.log(`This is destructured array:${i1}${i2}${i3}${remainingNumbers}`);
+console.log(`This is destructured array:${[i1,i2,i3,remainingNumbers]}`);
+
+const {firstName, age} = person;
