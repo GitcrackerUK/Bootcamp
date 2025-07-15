@@ -441,9 +441,17 @@ function consoleL(a: Array<string | number | boolean>): void {
 
 consoleL(arr1);
 
-const nextAdd = (...number:number[]) => {
-	for(const item in number){
-		console.log(item);
+const nextAdd = (...number:(number|string)[]) => {
+	for(const item of number){
+		if( typeof item === "number"){
+			console.log(`This is number: ${item}`);
+		}else if (typeof item === "string"){
+			console.log(parseInt(item, 10)?`This is string converted into the number: ${item}`:`The input ${item} is not a number!`);
+		}
 	};
 }
+
+
+nextAdd(2,3,44,55,14,'23','22','we');
+
 
