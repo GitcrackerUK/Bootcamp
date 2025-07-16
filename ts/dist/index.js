@@ -251,7 +251,7 @@ const dates4 = [true, true, false];
 activeHobbies.push(...hobbies1);
 const person = {
     firstName: 'Pawel',
-    age: 22,
+    age11: 22,
 };
 const copy = Object.assign({}, person);
 let arr1 = [];
@@ -281,3 +281,24 @@ console.log(flo);
 const [i1, i2, i3, ...remainingNumbers] = flo;
 console.log(`This is destructured array:${i1}${i2}${i3}${remainingNumbers}`);
 console.log(`This is destructured array:${[i1, i2, i3, remainingNumbers]}`);
+const { firstName: name2, age11: newAge22 } = person;
+console.log(`This assigned name:${name2}`);
+const div = document.createElement("div");
+const promise = new Promise((resolve) => resolve("test"));
+document.querySelectorAll("div").forEach((el) => console.log(el));
+class Person {
+    constructor(a, b) {
+    }
+}
+;
+class Car {
+    loggedOut(a, b) {
+        return `This is Car Class and this is make:${a} and this is model ${b}`;
+    }
+    constructor(brand, model) {
+        this.brand = brand;
+        this.model = model;
+    }
+}
+let Bmw = new Car('bmw', '3 series');
+console.log(Bmw);

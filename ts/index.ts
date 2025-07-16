@@ -420,12 +420,12 @@ activeHobbies.push(...hobbies1);
 
 type personTypes = {
 	firstName: string;
-	age: number;
+	age11: number;
 };
 
 const person: personTypes = {
 	firstName: 'Pawel',
-	age: 22,
+	age11: 22,
 };
 
 const copy: personTypes = { ...person };
@@ -458,12 +458,45 @@ let auw: (number | number[])[] = [];
 flo.push([34, 467, 65, 4]);
 flo.push(...[34, 467, 65, 4]);
 // clod.push([3,2,3,4]) Throw an error as there is no array of numbers type
-auw.push([3,2,3,4]) // It takes array of numbers
+auw.push([3, 2, 3, 4]); // It takes array of numbers
 console.log(flo);
 
-const [i1,i2,i3, ... remainingNumbers] = flo;
+const [i1, i2, i3, ...remainingNumbers] = flo;
 
 console.log(`This is destructured array:${i1}${i2}${i3}${remainingNumbers}`);
-console.log(`This is destructured array:${[i1,i2,i3,remainingNumbers]}`);
+console.log(`This is destructured array:${[i1, i2, i3, remainingNumbers]}`);
 
-const {firstName, age} = person;
+const { firstName: name2, age11: newAge22 } = person;
+console.log(`This assigned name:${name2}`);
+// console.log(` This is not assigned:${firstName}`); Throws an error as the firstName is not defined in this scope.
+
+// DOM API (from "dom")
+const div = document.createElement("div");
+
+// ES6 features (from "es6")
+const promise = new Promise((resolve) => resolve("test"));
+
+// Iterable DOM collections (from "dom.iterable")
+document.querySelectorAll("div").forEach((el) => console.log(el));
+
+class Person {
+
+    // name: string;
+    // occupation: string;
+
+    constructor(a: string, b: string) {
+
+    }
+};
+
+class Car{
+	loggedOut(a:string,b:string){
+		return `This is Car Class and this is make:${a} and this is model ${b}`
+	}
+	constructor(public brand:string,public model:string){
+	}
+}
+
+let Bmw = new Car('bmw','3 series');
+
+console.log(Bmw);
