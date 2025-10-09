@@ -1425,30 +1425,42 @@
 // )
 
 // loop
-for(let i = 0; i<=10 ; i++ ){
-console.log(`loop${i}`)
+for (let i = 0; i <= 10; i++) {
+    console.log(`loop${i}`)
 }
 
-for(let i = 5; i<=10 ; i += 3 ){
-console.log(`loop${i}`)
+for (let i = 5; i <= 10; i += 3) {
+    console.log(`loop${i}`)
 }
 
-function add(number, max){
-    for(let num = 1; num <=max ; num++  ){
-        console.log(`${num} + ${number} = ${num+number}`)
+function add(number, max) {
+    for (let num = 1; num <= max; num++) {
+        console.log(`${num} + ${number} = ${num + number}`)
     }
 }
 
-add(4,10)
+add(4, 10)
 
 for (let index = 0; index < 5; index++) {
-  console.log(index)
-    
+    console.log(index)
+
 }
 
 
 // reversed loop
 
-for (let index = 20; index >= 0; index-- ) {
+for (let index = 20; index >= 0; index--) {
     console.log(`index ${index}`)
 }
+
+function runThis(otherF, text) {
+    console.log('Running....');
+    otherF(text);
+}
+
+function innerF(text) {
+    console.log('Inner function....');
+    console.log(text);
+}
+runThis(innerF, 'This is a text passed into inner Funnction.');
+// promises

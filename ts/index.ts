@@ -16,7 +16,7 @@ type BlockOfFlats = {
 	address: string;
 	numberOfFlats: number;
 };
-type Weather = {
+type Weather11 = {
 	state: string;
 	temperature: number;
 	humidity: number;
@@ -48,7 +48,7 @@ let NewInTheHome: Garage = {
 	address: '789 New Street',
 	numberOfCars: 3,
 };
-let readingWeather: Weather = {
+let readingWeather: Weather11 = {
 	state: 'Sunny',
 	temperature: 25,
 	humidity: 60,
@@ -130,7 +130,7 @@ dates = ['20/2/22', 33];
 // After assigning square brackets and maybe even data methods like .push can be used.
 users.push('John');
 
-let weather: Array<string | number>;
+let weather22: Array<string | number>;
 
 let possibleResults: [string, number];
 
@@ -493,10 +493,61 @@ class Car{
 	loggedOut(a:string,b:string){
 		return `This is Car Class and this is make:${a} and this is model ${b}`
 	}
-	constructor(public brand:string,public model:string){
+	constructor(private brand:string,public model:string){
 	}
 }
 
-let Bmw = new Car('bmw','3 series');
+class Weather{
+	condition:string;
+	temperature:number|string
 
-console.log(Bmw);
+	constructor(a:string,b:string|number){
+		this.condition = a;
+		this.temperature = b;
+	}
+}
+
+class neighbor{
+	constructor(private name:string, private address:string){} 
+	// PRIVATE
+	// PUBLIC
+	// READONLY
+	// With the PRIVATE flag before the class argument makes it accessible only in the class. 
+	// To be able to access the value in the class PUBLIC need to be used.
+}
+
+const monday  = new Weather('Sunny',22);
+
+let Bmw = new Car('bmw','3 series');
+let Audi = new Car('audi','a4');
+
+class Kat{
+
+	private activities:string[] = []
+
+	constructor(){
+
+	}
+}
+
+let newCat = new Kat;
+console.log(newCat);
+
+class luckyNumber{
+	constructor(public a:number,public b:number){
+
+	}
+	get value(){
+		return this.a + 2
+	}
+	set value(a){
+		this.a = a + 2;
+	}
+}
+
+let first = new luckyNumber(2,12)
+
+first.value = 10;
+
+
+console.log(first.value);

@@ -72,7 +72,7 @@ let dates;
 users = [];
 dates = ['20/2/22', 33];
 users.push('John');
-let weather;
+let weather22;
 let possibleResults;
 let standardOBJ = {
     name: 'John',
@@ -300,5 +300,40 @@ class Car {
         this.model = model;
     }
 }
+class Weather {
+    constructor(a, b) {
+        this.condition = a;
+        this.temperature = b;
+    }
+}
+class neighbor {
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+}
+const monday = new Weather('Sunny', 22);
 let Bmw = new Car('bmw', '3 series');
-console.log(Bmw);
+let Audi = new Car('audi', 'a4');
+class Kat {
+    constructor() {
+        this.activities = [];
+    }
+}
+let newCat = new Kat;
+console.log(newCat);
+class luckyNumber {
+    constructor(a, b) {
+        this.a = a;
+        this.b = b;
+    }
+    get value() {
+        return this.a + 2;
+    }
+    set value(a) {
+        this.a = a + 2;
+    }
+}
+let first = new luckyNumber(2, 12);
+first.value = 10;
+console.log(first.value);
